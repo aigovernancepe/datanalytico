@@ -8,16 +8,12 @@ const year = new Date().getFullYear();
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
       <!-- Brand + Contact -->
       <div>
-        <a href={`${import.meta.env.BASE_URL}`} class="flex items-center gap-2 no-underline mb-5">
-          <svg class="h-7 w-auto" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <polygon points="2,52 14,52 16.6,37 4.6,37" fill="#048caa"/>
-            <polygon points="12,52 24,52 28.2,28 16.2,28" fill="#ff9933"/>
-            <polygon points="22,52 34,52 40,18 28,18" fill="#048caa"/>
-            <polygon points="32,52 44,52 52.1,6 40.1,6" fill="#ff9933"/>
-          </svg>
-          <span class="text-lg font-black tracking-tight">
-            <span class="text-primary">data</span><span class="text-white">nalytico</span>
-          </span>
+        <a href={`${import.meta.env.BASE_URL}`} class="flex items-center no-underline mb-5">
+          <img
+            src={`${import.meta.env.BASE_URL}brand/Logo_datanalytico_linksbuendig.png`}
+            alt="datanalytico.com"
+            class="h-9 w-auto brightness-0 invert"
+          />
         </a>
         <div class="text-xl font-bold">
           <a href={business.phoneTel} class="text-accent hover:text-accent-light no-underline">{business.phone}</a>
