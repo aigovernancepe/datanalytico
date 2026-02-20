@@ -18,7 +18,6 @@ const schema = [
       '@type': 'PostalAddress',
       addressLocality: business.city,
       addressRegion: business.state,
-      postalCode: business.zip,
       addressCountry: business.country
     },
     areaServed: cities.map(c => ({ '@type': 'City', name: c.name })),
