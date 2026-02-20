@@ -17,8 +17,17 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
 <!-- Main Header -->
 <header class="bg-white border-b border-gray-200 h-[70px] sticky top-0 z-50 shadow-sm">
   <div class="container flex items-center justify-between h-full">
-    <a href={`${import.meta.env.BASE_URL}`} class="text-[1.375rem] font-black text-brand-dark tracking-tight no-underline">
-      Data<span class="text-primary">nalytico</span>
+    <a href={`${import.meta.env.BASE_URL}`} class="flex items-center gap-2 no-underline">
+      <!-- Logo icon - 4 ascending parallelogram bars -->
+      <svg class="h-8 w-auto" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <polygon points="2,52 14,52 16.6,37 4.6,37" fill="#048caa"/>
+        <polygon points="12,52 24,52 28.2,28 16.2,28" fill="#ff9933"/>
+        <polygon points="22,52 34,52 40,18 28,18" fill="#048caa"/>
+        <polygon points="32,52 44,52 52.1,6 40.1,6" fill="#ff9933"/>
+      </svg>
+      <span class="text-[1.375rem] font-black tracking-tight">
+        <span class="text-primary">data</span><span class="text-accent">nalytico</span>
+      </span>
     </a>
 
     <nav class="hidden lg:block" aria-label="Main navigation">
