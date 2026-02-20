@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
+import ProcessSteps from '../../components/ProcessSteps.astro';
 import { coreServices, findChildService, business, cities } from '../../data/architecture';
 import architecture from '../../../architecture.json';
 
@@ -58,15 +59,7 @@ const schema = {
       {data?.processSteps && (
         <section class="mb-12 pb-12 border-b border-gray-200">
           <h2 class="mb-4">Unser {result.name} Prozess</h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
-            {data.processSteps.map((step: any, i: number) => (
-              <div class="p-8 bg-brand-bg rounded-xl border border-gray-200">
-                <div class="inline-flex items-center justify-center w-9 h-9 bg-primary text-white rounded-full font-bold text-sm mb-4">{i + 1}</div>
-                <h3 class="text-[1.0625rem] mb-2">{step.title}</h3>
-                <p class="text-[0.9375rem] text-brand-text-light mb-0">{step.description}</p>
-              </div>
-            ))}
-          </div>
+          <ProcessSteps steps={data.processSteps} />
         </section>
       )}
 
