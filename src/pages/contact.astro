@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import { business, coreServices, serviceAreas } from '../data/architecture';
+
+const crumbs = [
+  { label: 'Home', url: '/' },
+  { label: 'Contact', url: '/contact' }
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  mainEntity: { '@id': `https://${business.domain}/#business` }
+};
+---
+
+<BaseLayout title={`Contact ${business.name} — Free SEO Consultation`} description="Get in touch with Datanalytico for a free local SEO consultation." schema={schema}>
+  <Breadcrumb crumbs={crumbs} />
+
+  <section class="bg-brand-dark text-white py-16 text-center">
+    <div class="container">
+      <h1 class="text-white mb-4">Contact {business.name}</h1>
+      <p class="text-white/75 text-lg">Get in touch for a free local SEO consultation.</p>
+    </div>
+  </section>
+
+  <div class="py-16">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-[1fr_1.5fr] gap-12 max-w-[1000px] mx-auto">
+        <!-- Contact Info -->
+        <div>
+          <div class="mb-8">
+            <h3 class="text-[0.8125rem] uppercase tracking-wider text-brand-text-light mb-2">Phone</h3>
+            <a href={business.phoneTel} class="text-[1.375rem] font-bold text-primary no-underline">{business.phone}</a>
+          </div>
+          <div class="mb-8">
+            <h3 class="text-[0.8125rem] uppercase tracking-wider text-brand-text-light mb-2">Email</h3>
+            <a href={`mailto:${business.email}`}>{business.email}</a>
+          </div>
+          <div class="mb-8">
+            <h3 class="text-[0.8125rem] uppercase tracking-wider text-brand-text-light mb-2">Location</h3>
+            <p>{business.city}, {business.stateAbbrev} {business.zip}<br />Switzerland</p>
+          </div>
+          <div class="mb-8">
+            <h3 class="text-[0.8125rem] uppercase tracking-wider text-brand-text-light mb-2">Service Areas</h3>
+            <div class="flex gap-2 flex-wrap">
+              {serviceAreas.map(area => (
+                <a href={`${import.meta.env.BASE_URL}areas/${area.toLowerCase()}`} class="px-3 py-1 border border-gray-200 rounded-full text-sm font-medium no-underline">{area}</a>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div>
+          <h2 class="mb-2">Send Us a Message</h2>
+          <p class="text-brand-text-light mb-8">Tell us about your business and what you need. We respond within one business day.</p>
+          <form class="flex flex-col gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="name" class="block text-sm font-semibold mb-1 text-brand-text">Name</label>
+                <input type="text" id="name" placeholder="Your name" required class="w-full py-3 px-4 border border-gray-200 rounded-lg font-sans text-[0.9375rem] text-brand-text bg-white focus:outline-none focus:border-primary" />
+              </div>
+              <div>
+                <label for="phone" class="block text-sm font-semibold mb-1 text-brand-text">Phone</label>
+                <input type="tel" id="phone" placeholder="Your phone number" required class="w-full py-3 px-4 border border-gray-200 rounded-lg font-sans text-[0.9375rem] text-brand-text bg-white focus:outline-none focus:border-primary" />
+              </div>
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-semibold mb-1 text-brand-text">Email</label>
+              <input type="email" id="email" placeholder="your@email.com" required class="w-full py-3 px-4 border border-gray-200 rounded-lg font-sans text-[0.9375rem] text-brand-text bg-white focus:outline-none focus:border-primary" />
+            </div>
+            <div>
+              <label for="service" class="block text-sm font-semibold mb-1 text-brand-text">Service Needed</label>
+              <select id="service" required class="w-full py-3 px-4 border border-gray-200 rounded-lg font-sans text-[0.9375rem] text-brand-text bg-white focus:outline-none focus:border-primary">
+                <option value="" disabled selected>Select a service</option>
+                {coreServices.map(s => (
+                  <option value={s.slug}>{s.name}</option>
+                ))}
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-semibold mb-1 text-brand-text">Message</label>
+              <textarea id="message" placeholder="Tell us about your business and goals" rows="4" class="w-full py-3 px-4 border border-gray-200 rounded-lg font-sans text-[0.9375rem] text-brand-text bg-white focus:outline-none focus:border-primary resize-y"></textarea>
+            </div>
+            <button type="submit" class="btn btn--accent btn--full">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="flex justify-center gap-8 flex-wrap mt-12 pt-8 border-t border-gray-200 text-[0.8125rem] text-brand-text-light">
+        <span>No spam. No sales pressure.</span>
+        <span>Free initial consultation.</span>
+        <span>Response within 1 business day.</span>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

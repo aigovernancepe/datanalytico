@@ -1,0 +1,205 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { business, coreServices, cities, serviceAreas } from '../data/architecture';
+import homepageContent from '../../homepage-content.json';
+
+const { hero, whyChooseUs, capsuleContent, services, about, faqs, finalCta } = homepageContent;
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    '@id': `https://${business.domain}/#business`,
+    name: business.name,
+    telephone: business.phone,
+    email: business.email,
+    url: `https://${business.domain}/`,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: business.city,
+      addressRegion: business.state,
+      postalCode: business.zip,
+      addressCountry: business.country
+    },
+    areaServed: cities.map(c => ({ '@type': 'City', name: c.name })),
+    sameAs: []
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f: any) => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer }
+    }))
+  }
+];
+---
+
+<BaseLayout title="Datanalytico — Local SEO Agentur | Basel, Schweiz" description={hero.subheadline} schema={schema}>
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-brand-dark to-[#162a45] text-white py-16 text-center">
+    <div class="container">
+      <h1 class="text-white text-[2.25rem] md:text-[2.75rem] mb-4">{hero.h1}</h1>
+      <p class="text-white/80 text-lg max-w-[600px] mx-auto mb-8">{hero.subheadline}</p>
+      <div class="flex gap-4 justify-center flex-wrap mb-8">
+        <a href={hero.primaryCta.action} class="btn btn--accent">{hero.primaryCta.text}</a>
+        <a href={`${import.meta.env.BASE_URL}contact`} class="btn btn--outline">{hero.secondaryCta.text}</a>
+      </div>
+      <div class="flex flex-wrap justify-center gap-x-8 gap-y-4 pt-6 border-t border-white/15">
+        {hero.trustStrip.map((signal: string) => (
+          <span class="flex items-center gap-1 text-[0.8125rem] text-white/70">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="text-accent flex-shrink-0"><polyline points="20 6 9 17 4 12" /></svg>
+            {signal}
+          </span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-16 bg-white">
+    <div class="container">
+      <h2 class="text-center mb-8">Why Businesses Choose Datanalytico</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        {whyChooseUs.map((item: any, i: number) => (
+          <div class="p-8 border border-gray-200 rounded-xl bg-brand-bg">
+            <div class="text-3xl font-black text-primary opacity-30 mb-2">{String(i + 1).padStart(2, '0')}</div>
+            <h3 class="mb-2">{item.headline}</h3>
+            <p class="text-brand-text-light text-[0.9375rem] mb-0">{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Lead Capture Form -->
+  <section class="py-16 bg-primary text-white">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-[800px] mx-auto">
+        <div>
+          <h2 class="text-white">Get a Free Local SEO Review</h2>
+          <p class="text-white/85">Tell us about your business and we will show you exactly where you stand in local search — and what it takes to move up.</p>
+        </div>
+        <form class="flex flex-col gap-4">
+          <input type="text" placeholder="Your Name" class="w-full py-3 px-4 border border-white/30 rounded-lg bg-white/10 text-white font-sans text-[0.9375rem] placeholder:text-white/50 focus:outline-none focus:border-accent" required />
+          <input type="tel" placeholder="Phone Number" class="w-full py-3 px-4 border border-white/30 rounded-lg bg-white/10 text-white font-sans text-[0.9375rem] placeholder:text-white/50 focus:outline-none focus:border-accent" required />
+          <input type="email" placeholder="Email Address" class="w-full py-3 px-4 border border-white/30 rounded-lg bg-white/10 text-white font-sans text-[0.9375rem] placeholder:text-white/50 focus:outline-none focus:border-accent" required />
+          <select class="w-full py-3 px-4 border border-white/30 rounded-lg bg-white/10 text-white font-sans text-[0.9375rem] focus:outline-none focus:border-accent" required>
+            <option value="" disabled selected>Select a Service</option>
+            {coreServices.map(s => (
+              <option value={s.slug} class="text-brand-dark">{s.name}</option>
+            ))}
+          </select>
+          <textarea placeholder="Tell us about your business" class="w-full py-3 px-4 border border-white/30 rounded-lg bg-white/10 text-white font-sans text-[0.9375rem] placeholder:text-white/50 focus:outline-none focus:border-accent resize-y" rows="3"></textarea>
+          <button type="submit" class="btn btn--accent btn--full">Send My Free Review</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="py-16">
+    <div class="container">
+      <h2 class="text-center mb-8">What We Do for Local Businesses</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {services.map((svc: any) => {
+          const slug = svc.slug === 'google-ads' ? 'ppc-google-ads' : svc.slug;
+          return (
+            <div class="p-8 bg-white border border-gray-200 rounded-xl hover:border-primary hover:shadow-md transition-all">
+              <h3 class="mb-2"><a href={`${import.meta.env.BASE_URL}${slug}`} class="text-brand-dark hover:text-primary no-underline">{svc.name}</a></h3>
+              <p class="text-brand-text-light text-[0.9375rem] leading-relaxed">{svc.description}</p>
+              <a href={`${import.meta.env.BASE_URL}${slug}`} class="font-semibold text-sm text-primary">Learn more &rarr;</a>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- Capsule Content -->
+  <section class="py-16 bg-white">
+    <div class="container">
+      {capsuleContent.blocks.map((block: any, i: number) => (
+        <div class:list={['max-w-[800px] mx-auto mb-12 pb-12 border-b border-gray-200', { 'border-b-0 mb-0 pb-0': i === capsuleContent.blocks.length - 1 }]}>
+          <h2 class="text-[1.375rem] mb-4">{block.h2}</h2>
+          <p class="text-brand-text-light leading-relaxed mb-0">{block.capsule}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Service Areas -->
+  <section class="py-16">
+    <div class="container">
+      <h2 class="text-center mb-8">Areas We Serve</h2>
+      <p class="text-center text-brand-text-light max-w-[600px] mx-auto mb-8">Based in {business.city}, serving businesses across Switzerland's major business centers.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        {cities.map(city => (
+          <a href={`${import.meta.env.BASE_URL}areas/${city.slug}`} class="block p-8 bg-white border border-gray-200 rounded-xl hover:border-primary hover:shadow-md transition-all no-underline">
+            <h3 class="mb-1">{city.name}</h3>
+            <p class="text-[0.8125rem] text-primary mb-2">{city.canton} &middot; {city.population.toLocaleString()} residents</p>
+            <p class="text-[0.9375rem] text-brand-text-light mb-0">{city.description}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="py-16 bg-white">
+    <div class="container">
+      <div class="max-w-[800px] mx-auto text-center">
+        <h2>{about.heading}</h2>
+        <p class="text-brand-text-light leading-relaxed mb-8">{about.content}</p>
+        <a href={`${import.meta.env.BASE_URL}about`} class="btn btn--primary">About Datanalytico &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16">
+    <div class="container">
+      <h2 class="text-center mb-8">Frequently Asked Questions</h2>
+      <div class="max-w-[800px] mx-auto">
+        {faqs.map((faq: any) => (
+          <details class="border-b border-gray-200 group">
+            <summary class="w-full flex justify-between items-center py-6 text-base font-semibold text-brand-dark cursor-pointer list-none hover:text-primary gap-4">
+              <span>{faq.question}</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 transition-transform group-open:rotate-180"><polyline points="6 9 12 15 18 9" /></svg>
+            </summary>
+            <div class="pb-6">
+              <p class="text-brand-text-light leading-relaxed mb-0">{faq.answer}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Locations -->
+  <section class="py-16 bg-brand-dark text-white">
+    <div class="container">
+      <h2 class="text-center text-white mb-8">Locations We Serve</h2>
+      <div class="flex justify-center gap-6 flex-wrap">
+        {serviceAreas.map(area => (
+          <a href={`${import.meta.env.BASE_URL}areas/${area.toLowerCase()}`} class="text-white/70 text-lg font-semibold px-6 py-2 border border-white/20 rounded-lg hover:text-white hover:border-primary hover:bg-primary/20 no-underline transition-all">
+            {area}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-16 bg-accent text-brand-dark">
+    <div class="container text-center max-w-[700px] mx-auto">
+      <h2 class="text-3xl mb-4">{finalCta.headline}</h2>
+      <p class="text-[1.0625rem] mb-8">{finalCta.subtext}</p>
+      <div class="flex gap-4 justify-center flex-wrap">
+        <a href={`tel:${business.phone.replace(/\s/g, '')}`} class="btn btn--dark btn--lg">Call {business.phone}</a>
+        <a href={`${import.meta.env.BASE_URL}contact`} class="btn btn--outline-dark btn--lg">Send a Message</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

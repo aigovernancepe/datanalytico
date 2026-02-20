@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply font-sans text-base leading-relaxed text-brand-text bg-brand-bg antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans text-brand-dark leading-tight;
+  }
+
+  h1 {
+    @apply text-3xl font-black tracking-tight md:text-4xl;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    @apply text-2xl font-bold md:text-3xl;
+    letter-spacing: -0.015em;
+  }
+
+  h3 {
+    @apply text-xl font-bold;
+  }
+
+  a {
+    @apply text-primary transition-colors duration-150;
+  }
+
+  a:hover {
+    @apply text-primary-dark;
+  }
+}
+
+@layer components {
+  .container {
+    @apply w-full max-w-content mx-auto px-6;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3 rounded-lg font-semibold text-[0.9375rem] transition-all duration-150 cursor-pointer no-underline border-2 border-transparent;
+  }
+  .btn--accent {
+    @apply bg-accent text-white;
+  }
+  .btn--accent:hover {
+    @apply bg-accent-dark text-white;
+  }
+  .btn--primary {
+    @apply bg-primary text-white;
+  }
+  .btn--primary:hover {
+    @apply bg-primary-dark text-white;
+  }
+  .btn--outline {
+    @apply bg-transparent text-white;
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+  .btn--outline:hover {
+    @apply border-white text-white;
+  }
+  .btn--outline-dark {
+    @apply bg-transparent border-brand-dark text-brand-dark;
+  }
+  .btn--outline-dark:hover {
+    @apply bg-brand-dark text-white;
+  }
+  .btn--dark {
+    @apply bg-brand-dark text-white;
+  }
+  .btn--dark:hover {
+    background-color: #1a2d47;
+    @apply text-white;
+  }
+  .btn--full {
+    @apply w-full;
+  }
+  .btn--lg {
+    @apply py-4 px-8 text-[1.0625rem];
+  }
+}

@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import { blogPosts } from '../../data/blogPosts';
+import { business } from '../../data/architecture';
+
+export function getStaticPaths() {
+  return blogPosts.map(post => ({ params: { postSlug: post.slug } }));
+}
+
+const { postSlug } = Astro.params;
+const post = blogPosts.find(p => p.slug === postSlug);
+
+if (!post) return Astro.redirect('/404');
+
+const crumbs = [
+  { label: 'Home', url: '/' },
+  { label: 'Blog', url: '/blog' },
+  { label: post.title, url: `/blog/${post.slug}` }
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: post.title,
+  description: post.description,
+  datePublished: post.date,
+  author: { '@type': 'Organization', name: post.author },
+  publisher: { '@type': 'Organization', name: business.name, url: `https://${business.domain}/` }
+};
+---
+
+<BaseLayout title={`${post.title} — Datanalytico Blog`} description={post.description} schema={schema}>
+  <Breadcrumb crumbs={crumbs} />
+
+  <section class="bg-brand-dark text-white py-16 text-center">
+    <div class="container">
+      <h1 class="text-white mb-4">{post.title}</h1>
+      <div class="flex gap-2 items-center justify-center text-white/60 text-sm mt-2">
+        <time datetime={post.date}>{new Date(post.date).toLocaleDateString('en-CH', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+        <span>&middot;</span>
+        <span>{post.author}</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="py-16">
+    <div class="container max-w-[900px] mx-auto">
+      <article>
+        {post.content.map(block => {
+          if (block.type === 'h2') return <h2 class="mt-12 mb-4">{block.text}</h2>;
+          if (block.type === 'h3') return <h3 class="mt-8 mb-3">{block.text}</h3>;
+          return <p class="leading-relaxed text-brand-text-light">{block.text}</p>;
+        })}
+      </article>
+
+      <section class="text-center p-12 bg-brand-bg rounded-xl my-12">
+        <h2 class="mb-2">Need Help with Local SEO?</h2>
+        <p class="text-brand-text-light mb-6">Datanalytico helps Swiss businesses rank higher in local search. Contact us for a free review.</p>
+        <div class="flex gap-4 justify-center flex-wrap">
+          <a href={business.phoneTel} class="btn btn--accent">Call {business.phone}</a>
+          <a href={`${import.meta.env.BASE_URL}contact`} class="btn btn--primary">Get a Free Review</a>
+        </div>
+      </section>
+
+      <p><a href={`${import.meta.env.BASE_URL}blog`}>&larr; Back to all posts</a></p>
+    </div>
+  </div>
+</BaseLayout>
