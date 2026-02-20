@@ -1,5 +1,6 @@
 ---
 import { business, navigation } from '../data/architecture';
+import LanguageToggle from './LanguageToggle.astro';
 
 const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
 ---
@@ -7,7 +8,7 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
 <!-- Top Bar -->
 <div class="bg-brand-dark text-white text-[0.8125rem] h-9 flex items-center">
   <div class="container flex justify-between items-center">
-    <span class="opacity-85">Serving {business.city}, {business.stateAbbrev} &amp; Surrounding Areas</span>
+    <span class="opacity-85" data-i18n="header.serving">Oberwil, BL &amp; Umgebung</span>
     <span class="font-semibold">
       <a href={business.phoneTel} class="text-white hover:text-accent">{business.phone}</a>
     </span>
@@ -25,18 +26,20 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
       />
     </a>
 
-    <nav class="hidden lg:block" aria-label="Main navigation">
+    <nav class="hidden lg:block" aria-label="Hauptnavigation">
       <ul class="flex gap-8">
         {navigation.map(item => {
           const href = item.url === '/' ? `${import.meta.env.BASE_URL}` : `${import.meta.env.BASE_URL}${item.url.slice(1)}`;
           const isActive = item.url === '/'
             ? currentPath === import.meta.env.BASE_URL.replace(/\/$/, '')
             : currentPath.startsWith(`${import.meta.env.BASE_URL}${item.url.slice(1)}`);
+          const i18nKey = `nav.${item.url === '/' ? 'home' : item.url === '/services' ? 'services' : item.url === '/areas' ? 'areas' : item.url === '/about' ? 'about' : 'contact'}`;
           return (
             <li>
               <a
                 href={href}
                 class:list={['text-brand-text text-[0.9375rem] font-medium hover:text-primary no-underline', { 'text-primary': isActive }]}
+                data-i18n={i18nKey}
               >
                 {item.label}
               </a>
@@ -46,7 +49,8 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
       </ul>
     </nav>
 
-    <div class="hidden lg:block">
+    <div class="hidden lg:flex items-center gap-3">
+      <LanguageToggle />
       <a href={business.phoneTel} class="inline-flex items-center gap-2 bg-accent text-white px-5 py-2 rounded-full font-semibold text-sm hover:bg-accent-dark hover:text-white no-underline transition-colors">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
         {business.phone}
@@ -54,27 +58,31 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
     </div>
 
     <!-- Hamburger -->
-    <button
-      class="flex flex-col gap-[5px] p-2 cursor-pointer z-[200] lg:hidden"
-      id="hamburger"
-      aria-label="Open menu"
-      aria-expanded="false"
-    >
-      <span class="block w-6 h-0.5 bg-brand-dark transition-transform duration-250"></span>
-      <span class="block w-6 h-0.5 bg-brand-dark transition-opacity duration-250"></span>
-      <span class="block w-6 h-0.5 bg-brand-dark transition-transform duration-250"></span>
-    </button>
+    <div class="flex items-center gap-3 lg:hidden">
+      <LanguageToggle />
+      <button
+        class="flex flex-col gap-[5px] p-2 cursor-pointer z-[200]"
+        id="hamburger"
+        aria-label="Menü öffnen"
+        aria-expanded="false"
+      >
+        <span class="block w-6 h-0.5 bg-brand-dark transition-transform duration-250"></span>
+        <span class="block w-6 h-0.5 bg-brand-dark transition-opacity duration-250"></span>
+        <span class="block w-6 h-0.5 bg-brand-dark transition-transform duration-250"></span>
+      </button>
+    </div>
   </div>
 </header>
 
 <!-- Mobile Menu -->
-<nav class="fixed top-[106px] inset-x-0 bottom-0 bg-white z-[99] p-8 translate-x-full transition-transform duration-250 lg:hidden" id="mobile-menu" aria-label="Mobile navigation">
+<nav class="fixed top-[106px] inset-x-0 bottom-0 bg-white z-[99] p-8 translate-x-full transition-transform duration-250 lg:hidden" id="mobile-menu" aria-label="Mobile Navigation">
   <ul class="flex flex-col gap-6">
     {navigation.map(item => {
       const href = item.url === '/' ? `${import.meta.env.BASE_URL}` : `${import.meta.env.BASE_URL}${item.url.slice(1)}`;
+      const i18nKey = `nav.${item.url === '/' ? 'home' : item.url === '/services' ? 'services' : item.url === '/areas' ? 'areas' : item.url === '/about' ? 'about' : 'contact'}`;
       return (
         <li>
-          <a href={href} class="text-brand-text text-lg font-medium block py-2 border-b border-gray-100 hover:text-primary no-underline">
+          <a href={href} class="text-brand-text text-lg font-medium block py-2 border-b border-gray-100 hover:text-primary no-underline" data-i18n={i18nKey}>
             {item.label}
           </a>
         </li>
@@ -83,7 +91,7 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
   </ul>
   <div class="mt-8">
     <a href={business.phoneTel} class="flex items-center justify-center gap-2 bg-accent text-white py-3.5 rounded-lg font-bold text-lg no-underline hover:bg-accent-dark hover:text-white">
-      Call {business.phone}
+      <span data-i18n="header.call">Anrufen</span> {business.phone}
     </a>
   </div>
 </nav>
@@ -97,15 +105,14 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
       if (!isOpen) {
         mobileMenu.classList.remove('translate-x-full');
         hamburger.setAttribute('aria-expanded', 'true');
-        hamburger.setAttribute('aria-label', 'Close menu');
-        // Animate hamburger spans
+        hamburger.setAttribute('aria-label', 'Menü schliessen');
         const spans = hamburger.querySelectorAll('span');
         spans[0].style.transform = 'translateY(7px) rotate(45deg)';
         spans[1].style.opacity = '0';
         spans[2].style.transform = 'translateY(-7px) rotate(-45deg)';
       } else {
         hamburger.setAttribute('aria-expanded', 'false');
-        hamburger.setAttribute('aria-label', 'Open menu');
+        hamburger.setAttribute('aria-label', 'Menü öffnen');
         const spans = hamburger.querySelectorAll('span');
         spans[0].style.transform = '';
         spans[1].style.opacity = '';

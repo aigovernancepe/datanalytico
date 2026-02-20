@@ -18,8 +18,8 @@ if (!service) return Astro.redirect('/404');
 const data = serviceData[serviceSlug as keyof typeof serviceData] as any;
 
 const crumbs = [
-  { label: 'Home', url: '/' },
-  { label: 'Services', url: '/services' },
+  { label: 'Startseite', url: '/' },
+  { label: 'Dienstleistungen', url: '/services' },
   { label: service.name, url: service.url }
 ];
 
@@ -29,31 +29,31 @@ const schema = {
   serviceType: service.name,
   provider: { '@id': `https://${business.domain}/#business` },
   areaServed: cities.map(c => ({ '@type': 'City', name: c.name })),
-  description: `${service.name} for local businesses in Switzerland.`
+  description: `${service.name} für lokale Unternehmen in der Schweiz.`
 };
 ---
 
-<BaseLayout title={`${service.name} in ${business.city}, ${business.stateAbbrev} — Datanalytico`} description={`${service.name} for local businesses across Basel, Zurich, and Bern.`} schema={schema}>
+<BaseLayout title={`${service.name} in ${business.city}, ${business.stateAbbrev} — Datanalytico`} description={`${service.name} für lokale Unternehmen in Basel, Zürich und Bern.`} schema={schema}>
   <Breadcrumb crumbs={crumbs} />
 
   <section class="bg-brand-dark text-white py-16 text-center">
     <div class="container">
       <h1 class="text-white mb-4">{service.name} in {business.city}, {business.stateAbbrev}</h1>
-      <p class="text-white/75 text-lg">{service.name} for local businesses across Basel, Zurich, and Bern.</p>
+      <p class="text-white/75 text-lg">{service.name} für lokale Unternehmen in Basel, Zürich und Bern.</p>
     </div>
   </section>
 
   <div class="py-16">
     <div class="container max-w-[900px] mx-auto">
       <section class="mb-12 pb-12 border-b border-gray-200">
-        <h2 class="mb-4">How Does {service.name} Help Your Business?</h2>
-        <p class="leading-relaxed text-brand-text-light">{service.name} is one of the most effective ways for local businesses in Switzerland to gain visibility on Google. When customers in Basel, Zurich, or Bern search for what you offer, your business needs to appear in Google Maps, in organic results, and in AI-generated answers.</p>
-        <p class="leading-relaxed text-brand-text-light">Datanalytico delivers {service.name.toLowerCase()} built on verified Swiss search data. We research what your customers actually type into Google, identify gaps your competitors are missing, and build a plan that moves your rankings month over month.</p>
+        <h2 class="mb-4">Wie hilft {service.name} Ihrem Unternehmen?</h2>
+        <p class="leading-relaxed text-brand-text-light">{service.name} ist eine der effektivsten Methoden für lokale Unternehmen in der Schweiz, um Sichtbarkeit auf Google zu gewinnen. Wenn Kunden in Basel, Zürich oder Bern nach Ihrem Angebot suchen, muss Ihr Unternehmen in Google Maps, in den organischen Ergebnissen und in AI-generierten Antworten erscheinen.</p>
+        <p class="leading-relaxed text-brand-text-light">Datanalytico liefert {service.name.toLowerCase()} basierend auf verifizierten Schweizer Suchdaten. Wir recherchieren, was Ihre Kunden tatsächlich bei Google eingeben, identifizieren Lücken, die Ihre Wettbewerber übersehen, und erstellen einen Plan, der Ihre Rankings Monat für Monat verbessert.</p>
       </section>
 
       {data?.processSteps && (
         <section class="mb-12 pb-12 border-b border-gray-200">
-          <h2 class="mb-4">What Does Our {service.name} Process Look Like?</h2>
+          <h2 class="mb-4">Wie sieht unser {service.name} Prozess aus?</h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
             {data.processSteps.map((step: any, i: number) => (
               <div class="p-8 bg-brand-bg rounded-xl border border-gray-200">
@@ -68,22 +68,22 @@ const schema = {
 
       {data?.priceRange && (
         <section class="mb-12 pb-12 border-b border-gray-200">
-          <h2 class="mb-4">How Much Does {service.name} Cost in Switzerland?</h2>
+          <h2 class="mb-4">Was kostet {service.name} in der Schweiz?</h2>
           <p class="leading-relaxed text-brand-text-light">
-            {service.name} from Datanalytico typically costs between CHF {data.priceRange.min.toLocaleString()} and CHF {data.priceRange.max.toLocaleString()} per {data.priceRange.period}.
-            Pricing depends on competition level, number of target cities, and scope. Call <a href={business.phoneTel}>{business.phone}</a> for a quote.
+            {service.name} von Datanalytico kostet typischerweise zwischen CHF {data.priceRange.min.toLocaleString()} und CHF {data.priceRange.max.toLocaleString()} pro {data.priceRange.period === 'month' ? 'Monat' : data.priceRange.period}.
+            Die Preise hängen vom Wettbewerbsniveau, der Anzahl der Zielstädte und dem Umfang ab. Rufen Sie <a href={business.phoneTel}>{business.phone}</a> an für ein Angebot.
           </p>
         </section>
       )}
 
       {service.children.length > 0 && (
         <section class="mb-12 pb-12 border-b border-gray-200">
-          <h2 class="mb-4">Specialized Services</h2>
+          <h2 class="mb-4">Spezialisierte Dienstleistungen</h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
             {service.children.map(child => (
               <a href={`${import.meta.env.BASE_URL}${child.url.slice(1)}`} class="block p-6 bg-white border border-gray-200 rounded-lg hover:border-primary hover:shadow-sm no-underline transition-all">
                 <h3 class="text-base mb-1 text-brand-dark">{child.name}</h3>
-                <span class="text-sm text-primary font-medium">Learn more &rarr;</span>
+                <span class="text-sm text-primary font-medium">Mehr erfahren &rarr;</span>
               </a>
             ))}
           </div>
@@ -91,7 +91,7 @@ const schema = {
       )}
 
       <section class="mb-12 pb-12 border-b border-gray-200">
-        <h2 class="mb-4">{service.name} by City</h2>
+        <h2 class="mb-4">{service.name} nach Stadt</h2>
         <div class="flex flex-col gap-2 mt-4">
           {cities.map(city => (
             <a href={`${import.meta.env.BASE_URL}areas/${city.slug}/${serviceSlug}`} class="inline-block py-2 px-4 bg-brand-bg border border-gray-200 rounded-lg font-medium text-[0.9375rem] hover:border-primary hover:bg-white no-underline transition-all">
@@ -102,11 +102,11 @@ const schema = {
       </section>
 
       <section class="text-center p-12 bg-brand-bg rounded-xl my-12">
-        <h2 class="mb-2">Ready to Improve Your Local Rankings?</h2>
-        <p class="text-brand-text-light mb-6">Datanalytico delivers {service.name.toLowerCase()} that produce measurable results. No long-term contracts required.</p>
+        <h2 class="mb-2">Bereit, Ihre lokalen Rankings zu verbessern?</h2>
+        <p class="text-brand-text-light mb-6">Datanalytico liefert {service.name.toLowerCase()} mit messbaren Ergebnissen. Keine Langzeitverträge erforderlich.</p>
         <div class="flex gap-4 justify-center flex-wrap">
-          <a href={business.phoneTel} class="btn btn--accent">Call {business.phone}</a>
-          <a href={`${import.meta.env.BASE_URL}contact`} class="btn btn--primary">Get a Free Review</a>
+          <a href={business.phoneTel} class="btn btn--accent">Anrufen {business.phone}</a>
+          <a href={`${import.meta.env.BASE_URL}contact`} class="btn btn--primary">Kostenlose Analyse</a>
         </div>
       </section>
     </div>

@@ -28,19 +28,19 @@ const year = new Date().getFullYear();
 
       <!-- Quick Links -->
       <div>
-        <h4 class="text-white text-sm font-bold uppercase tracking-wider mb-6">Quick Links</h4>
+        <h4 class="text-white text-sm font-bold uppercase tracking-wider mb-6" data-i18n="footer.quickLinks">Schnellzugriff</h4>
         <div class="flex flex-col gap-2">
-          <a href={`${import.meta.env.BASE_URL}`} class="text-white/70 text-[0.9375rem] hover:text-white no-underline">Home</a>
-          <a href={`${import.meta.env.BASE_URL}services`} class="text-white/70 text-[0.9375rem] hover:text-white no-underline">Services</a>
-          <a href={`${import.meta.env.BASE_URL}about`} class="text-white/70 text-[0.9375rem] hover:text-white no-underline">About Us</a>
-          <a href={`${import.meta.env.BASE_URL}contact`} class="text-white/70 text-[0.9375rem] hover:text-white no-underline">Contact</a>
+          <a href={`${import.meta.env.BASE_URL}`} class="text-white/70 text-[0.9375rem] hover:text-white no-underline" data-i18n="footer.home">Startseite</a>
+          <a href={`${import.meta.env.BASE_URL}services`} class="text-white/70 text-[0.9375rem] hover:text-white no-underline" data-i18n="footer.services">Dienstleistungen</a>
+          <a href={`${import.meta.env.BASE_URL}about`} class="text-white/70 text-[0.9375rem] hover:text-white no-underline" data-i18n="footer.about">Über uns</a>
+          <a href={`${import.meta.env.BASE_URL}contact`} class="text-white/70 text-[0.9375rem] hover:text-white no-underline" data-i18n="footer.contact">Kontakt</a>
           <a href={`${import.meta.env.BASE_URL}blog`} class="text-white/70 text-[0.9375rem] hover:text-white no-underline">Blog</a>
         </div>
       </div>
 
       <!-- Service Areas -->
       <div>
-        <h4 class="text-white text-sm font-bold uppercase tracking-wider mb-6">Service Areas</h4>
+        <h4 class="text-white text-sm font-bold uppercase tracking-wider mb-6" data-i18n="footer.serviceAreas">Einzugsgebiete</h4>
         <div class="flex flex-wrap gap-2">
           {serviceAreas.map(area => (
             <a href={`${import.meta.env.BASE_URL}areas/${area.toLowerCase()}`} class="inline-block px-3 py-1 border border-white/20 rounded-full text-[0.8125rem] text-white/70 hover:border-primary hover:text-white no-underline transition-all">
@@ -52,7 +52,7 @@ const year = new Date().getFullYear();
 
       <!-- Social -->
       <div>
-        <h4 class="text-white text-sm font-bold uppercase tracking-wider mb-6">Follow Us</h4>
+        <h4 class="text-white text-sm font-bold uppercase tracking-wider mb-6" data-i18n="footer.followUs">Folgen Sie uns</h4>
         <div class="flex gap-4 mt-4">
           <a href="#" aria-label="Facebook" rel="noopener noreferrer" class="flex items-center justify-center w-9 h-9 border border-white/20 rounded-full text-white/70 text-[0.8125rem] font-semibold hover:border-primary hover:text-white hover:bg-primary no-underline transition-all">FB</a>
           <a href="#" aria-label="LinkedIn" rel="noopener noreferrer" class="flex items-center justify-center w-9 h-9 border border-white/20 rounded-full text-white/70 text-[0.8125rem] font-semibold hover:border-primary hover:text-white hover:bg-primary no-underline transition-all">LI</a>
@@ -62,7 +62,7 @@ const year = new Date().getFullYear();
     </div>
 
     <div class="pt-8 border-t border-white/10 text-center text-[0.8125rem] text-white/50">
-      &copy; {year} {business.name}. All rights reserved.
+      &copy; {year} {business.name}. <span data-i18n="footer.rights">Alle Rechte vorbehalten.</span>
     </div>
   </div>
 </footer>

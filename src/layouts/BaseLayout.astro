@@ -10,12 +10,12 @@ interface Props {
   schema?: object | object[];
 }
 
-const { title, description = 'Datanalytico — Local SEO Agentur in Basel, Schweiz. We help local businesses get found on Google.', schema } = Astro.props;
+const { title, description = 'Datanalytico — Local SEO Agentur in Basel, Schweiz. Wir helfen lokalen Unternehmen, auf Google gefunden zu werden.', schema } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,5 +42,248 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   </main>
   <Footer />
   <FloatingCallButton />
+
+  <script>
+    // Language toggle system
+    // Default: German (DE) — content is rendered in German in HTML
+    // Toggle: English (EN) — translations swapped via JS
+    (function() {
+      const STORAGE_KEY = 'datanalytico-lang';
+
+      // English translations
+      const en = {
+        // Navigation
+        'nav.home': 'Home',
+        'nav.services': 'Services',
+        'nav.areas': 'Areas We Serve',
+        'nav.about': 'About',
+        'nav.contact': 'Contact',
+        // Header
+        'header.serving': 'Serving Oberwil, BL & Surrounding Areas',
+        'header.call': 'Call',
+        // Footer
+        'footer.quickLinks': 'Quick Links',
+        'footer.serviceAreas': 'Service Areas',
+        'footer.followUs': 'Follow Us',
+        'footer.rights': 'All rights reserved.',
+        'footer.home': 'Home',
+        'footer.services': 'Services',
+        'footer.about': 'About Us',
+        'footer.contact': 'Contact',
+        'footer.blog': 'Blog',
+        // Homepage - Hero
+        'home.hero.h1': 'Local SEO Services in Switzerland | Rank Higher, Win More Leads',
+        'home.hero.sub': 'Swiss businesses using local SEO get 3x more leads. Datanalytico delivers results in Basel, Zurich, and Bern.',
+        'home.hero.cta1': 'Get a Free SEO Review',
+        'home.hero.cta2': 'See How We Work',
+        'home.hero.trust1': 'Serving Basel, Zurich & Bern',
+        'home.hero.trust2': 'Google Business Profile Certified',
+        'home.hero.trust3': 'Transparent Monthly Reporting',
+        'home.hero.trust4': 'No Lock-In Contracts',
+        // Homepage - Why Choose Us
+        'home.why.title': 'Why Businesses Choose Datanalytico',
+        'home.why.h1': 'You See Ranking Data Every Month',
+        'home.why.d1': 'Every client receives a monthly report with keyword rankings, Google Business Profile stats, and traffic trends. You know exactly what is working and what changed \u2014 no vague summaries, no guesswork.',
+        'home.why.h2': 'Swiss Market Specialists Only',
+        'home.why.d2': 'Local search in Switzerland operates differently: multi-language queries, Swiss-specific directories, and German-language GBP optimization. Datanalytico works exclusively in the CH market, so your strategy fits the region.',
+        'home.why.h3': 'GBP Management Included in Every Plan',
+        'home.why.d3': 'Google Business Profile drives 60-70% of local leads for most businesses. Datanalytico audits, optimizes, and actively manages your GBP from day one \u2014 at no extra charge.',
+        'home.why.h4': 'Month-to-Month. No Lock-In.',
+        'home.why.d4': 'Datanalytico does not require 12-month contracts. Clients stay because results compound over time, not because they are locked in.',
+        // Homepage - Lead Form
+        'home.form.title': 'Get a Free Local SEO Review',
+        'home.form.desc': 'Tell us about your business and we will show you exactly where you stand in local search \u2014 and what it takes to move up.',
+        'home.form.name': 'Your Name',
+        'home.form.phone': 'Phone Number',
+        'home.form.email': 'Email Address',
+        'home.form.service': 'Select a Service',
+        'home.form.message': 'Tell us about your business',
+        'home.form.submit': 'Send My Free Review',
+        // Homepage - Services
+        'home.services.title': 'What We Do for Local Businesses',
+        'home.services.learnMore': 'Learn more',
+        'home.svc.local-seo': 'Most businesses in Basel and Zurich are invisible in Google Search because their website and Google Business Profile are not structured for local rankings. Datanalytico builds the complete local SEO foundation so your business appears when local buyers are actively searching.',
+        'home.svc.website-design': 'A website that looks good but does not convert visitors into calls or inquiries is a missed opportunity. Datanalytico builds websites specifically structured for local search \u2014 fast-loading, mobile-first, with clear conversion paths.',
+        'home.svc.google-business-profile': 'Google Business Profile is the single highest-ROI channel for most local businesses \u2014 60 to 70% of local leads come through Google Maps. Datanalytico handles full GBP optimization and ongoing management.',
+        'home.svc.content-creation': 'Ranking for local keywords requires content that matches what buyers actually search for. Datanalytico produces service pages, city pages, and FAQ content built around verified search data.',
+        'home.svc.local-social-media': 'Social media activity supports local SEO by building brand signals and driving profile engagement. Datanalytico focuses on LinkedIn and Google Business Profile posts for Swiss B2B businesses.',
+        'home.svc.google-ads': 'Organic local SEO takes time to build. Google Ads places your business in front of buyers immediately \u2014 with full control over budget, geography, and targeting.',
+        // Homepage - Capsule Content
+        'home.cap.h1': 'What Does a Local SEO Agency Do for a Swiss Business?',
+        'home.cap.p1': 'A local SEO agency improves a business\'s visibility in Google Search and Google Maps for searches made in a specific city or region. Datanalytico does this for businesses in Basel, Zurich, and Bern.',
+        'home.cap.h2': 'How Long Does Local SEO Take to Show Results?',
+        'home.cap.p2': 'Local SEO in Switzerland typically produces measurable ranking improvements within 60 to 90 days for low-competition markets and 3 to 6 months for competitive categories.',
+        'home.cap.h3': 'How Much Does Local SEO Cost in Switzerland?',
+        'home.cap.p3': 'Local SEO services in Switzerland typically range from CHF 500 to CHF 2,500 per month depending on the number of target cities, service categories, and competition level.',
+        'home.cap.h4': 'Does a Business Need a Website to Rank Locally in Switzerland?',
+        'home.cap.p4': 'A business can appear in Google Maps without a website, but a website significantly increases ranking potential in competitive Swiss markets.',
+        // Homepage - Areas
+        'home.areas.title': 'Areas We Serve',
+        'home.areas.desc': 'Based in Oberwil, serving businesses across Switzerland\'s major business centers.',
+        'home.areas.residents': 'residents',
+        // Homepage - About
+        'home.about.title': 'Local Search Expertise Built for the Swiss Market',
+        'home.about.content': 'Datanalytico is a local SEO and digital marketing agency based in Oberwil, Basel-Landschaft, serving businesses across Basel, Zurich, and Bern. Every strategy is built on verified search data \u2014 not assumptions borrowed from other markets.',
+        'home.about.link': 'About Datanalytico',
+        // Homepage - FAQ
+        'home.faq.title': 'Frequently Asked Questions',
+        'home.faq.q1': 'How much does local SEO cost for a business in Basel or Zurich?',
+        'home.faq.a1': 'Local SEO pricing in Switzerland ranges from CHF 500 to CHF 2,500 per month based on competition level, number of target locations, and services included.',
+        'home.faq.q2': 'How long before we see results from local SEO?',
+        'home.faq.a2': 'Google Business Profile improvements are often visible within 30 days. Website ranking improvements typically take 60 to 90 days in lower-competition markets.',
+        'home.faq.q3': 'Do you work with businesses that already have a website and Google profile?',
+        'home.faq.a3': 'Yes \u2014 the majority of Datanalytico\'s clients already have a website and a Google Business Profile but are not ranking where they should be.',
+        'home.faq.q4': 'What is included in Google Business Profile management?',
+        'home.faq.a4': 'Datanalytico\'s GBP management covers initial optimization of all profile fields, category selection, service listings, photo strategy, posts, Q&A management, and review response.',
+        'home.faq.q5': 'Do you produce content and GBP posts in German?',
+        'home.faq.a5': 'Yes. Datanalytico serves Swiss businesses in the Basel and Bern regions where the primary search language is German.',
+        'home.faq.q6': 'Is there a long-term contract or minimum commitment?',
+        'home.faq.a6': 'Datanalytico does not require long-term contracts. Engagements run month-to-month, and clients own all assets built during the campaign.',
+        // Homepage - Locations & CTA
+        'home.locations.title': 'Locations We Serve',
+        'home.cta.title': 'Ready to Rank in Basel and Beyond?',
+        'home.cta.desc': 'Datanalytico reviews your current search presence at no cost \u2014 no commitment required.',
+        'home.cta.call': 'Call',
+        'home.cta.message': 'Send a Message',
+        // About page
+        'about.title': 'About',
+        'about.subtitle': 'Local SEO experts based in Oberwil, Switzerland.',
+        'about.who.title': 'Who Is Datanalytico?',
+        'about.who.p1': 'Datanalytico is a local SEO and digital marketing agency based in Oberwil, BL, Switzerland. We help local businesses in Basel, Zurich, and Bern get found on Google.',
+        'about.who.p2': 'We work exclusively with businesses that serve a local market. Every strategy we build is grounded in verified Swiss search data.',
+        'about.diff.title': 'What Makes Datanalytico Different?',
+        'about.diff.p1': 'Most digital marketing agencies run the same playbook for every market. Swiss local search works differently.',
+        'about.diff.p2': 'Datanalytico focuses on building local search visibility for businesses that serve customers in a specific city or region. That focus means better results, faster.',
+        'about.team.title': 'Meet the Team',
+        'about.team.role': 'Founder & Lead Strategist',
+        'about.team.desc': 'Background in data analytics and search engine optimization. Specializes in entity-based local SEO and Google Business Profile strategy for Swiss businesses.',
+        'about.team.coming': 'Full team bios and photos coming soon.',
+        'about.where.title': 'Where Do We Work?',
+        'about.where.p1': 'Datanalytico is based in Oberwil (4104) and serves businesses across Switzerland. Our primary service areas are:',
+        'about.where.p2': 'All work is delivered remotely with virtual meetings. Your location does not affect the quality or speed of our service.',
+        'about.ourServices': 'Our Services',
+        'about.trust.title': 'Why Trust Datanalytico?',
+        'about.trust.h1': 'Transparent Reporting',
+        'about.trust.d1': 'Monthly reports with actual ranking data, traffic numbers, and lead metrics. No vague summaries.',
+        'about.trust.h2': 'No Lock-In Contracts',
+        'about.trust.d2': 'Month-to-month engagements. You stay because results compound, not because you are locked in.',
+        'about.trust.h3': 'Swiss Market Focus',
+        'about.trust.d3': 'We work in the CH market exclusively. Your strategy fits the region.',
+        'about.trust.h4': 'You Own Everything',
+        'about.trust.d4': 'Every asset we build \u2014 website content, GBP optimization, citations \u2014 belongs to you.',
+        'about.ready.title': 'Ready to Talk?',
+        'about.ready.desc': 'Contact Datanalytico for a free review of your local search presence.',
+        'about.ready.call': 'Call',
+        'about.ready.message': 'Send a Message',
+        // Contact page
+        'contact.title': 'Contact',
+        'contact.subtitle': 'Get in touch for a free local SEO consultation.',
+        'contact.phone': 'Phone',
+        'contact.location': 'Location',
+        'contact.serviceAreas': 'Service Areas',
+        'contact.form.title': 'Send Us a Message',
+        'contact.form.desc': 'Tell us about your business and what you need. We respond within one business day.',
+        'contact.form.name': 'Name',
+        'contact.form.namePh': 'Your name',
+        'contact.form.phone': 'Phone',
+        'contact.form.phonePh': 'Your phone number',
+        'contact.form.service': 'Service Needed',
+        'contact.form.other': 'Other',
+        'contact.form.message': 'Message',
+        'contact.form.messagePh': 'Tell us about your business and goals',
+        'contact.form.submit': 'Send Message',
+        'contact.footer1': 'No spam. No sales pressure.',
+        'contact.footer2': 'Free initial consultation.',
+        'contact.footer3': 'Response within 1 business day.',
+        // Services page
+        'services.title': 'Our Services',
+        'services.desc': 'Local SEO and digital marketing services for businesses across Switzerland.',
+        // Areas page
+        'areas.title': 'Areas We Serve \u2014 Local SEO Across Switzerland',
+        'areas.desc': 'Based in Oberwil, serving businesses in Basel, Zurich, and Bern.',
+        // Blog
+        'blog.desc': 'Local SEO insights, guides, and tips for Swiss businesses.',
+        'blog.readMore': 'Read more',
+        // 404
+        '404.title': '404 \u2014 Page Not Found',
+        '404.desc': 'The page you are looking for does not exist.',
+        '404.back': 'Back to Home',
+      };
+
+      function getCurrentLang() {
+        return localStorage.getItem(STORAGE_KEY) || 'de';
+      }
+
+      function setLang(lang) {
+        localStorage.setItem(STORAGE_KEY, lang);
+        applyLang(lang);
+      }
+
+      function applyLang(lang) {
+        // Update html lang attribute
+        document.documentElement.lang = lang;
+
+        // Update toggle button label
+        const label = document.getElementById('lang-label');
+        if (label) {
+          label.textContent = lang === 'de' ? 'DE' : 'EN';
+        }
+
+        // Swap text content for elements with data-i18n
+        document.querySelectorAll('[data-i18n]').forEach(function(el) {
+          const key = el.getAttribute('data-i18n');
+          if (lang === 'en' && en[key]) {
+            if (!el.getAttribute('data-original')) {
+              el.setAttribute('data-original', el.textContent);
+            }
+            el.textContent = en[key];
+          } else if (lang === 'de') {
+            const original = el.getAttribute('data-original');
+            if (original) {
+              el.textContent = original;
+            }
+          }
+        });
+
+        // Swap placeholders for elements with data-i18n-placeholder
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el) {
+          const key = el.getAttribute('data-i18n-placeholder');
+          if (lang === 'en' && en[key]) {
+            if (!el.getAttribute('data-original-placeholder')) {
+              el.setAttribute('data-original-placeholder', el.placeholder);
+            }
+            el.placeholder = en[key];
+          } else if (lang === 'de') {
+            const original = el.getAttribute('data-original-placeholder');
+            if (original) {
+              el.placeholder = original;
+            }
+          }
+        });
+
+        // Show/hide language-specific elements
+        document.querySelectorAll('.lang-de').forEach(function(el) {
+          el.style.display = lang === 'de' ? '' : 'none';
+        });
+        document.querySelectorAll('.lang-en').forEach(function(el) {
+          el.style.display = lang === 'en' ? '' : 'none';
+        });
+      }
+
+      // Initialize on page load
+      var lang = getCurrentLang();
+      applyLang(lang);
+
+      // Toggle button
+      var toggle = document.getElementById('lang-toggle');
+      if (toggle) {
+        toggle.addEventListener('click', function() {
+          var current = getCurrentLang();
+          var next = current === 'de' ? 'en' : 'de';
+          setLang(next);
+        });
+      }
+    })();
+  </script>
 </body>
 </html>

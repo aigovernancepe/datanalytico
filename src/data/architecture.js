@@ -12,11 +12,11 @@ export const business = {
 }
 
 export const navigation = [
-  { label: 'Home', url: '/' },
-  { label: 'Services', url: '/services' },
-  { label: 'Areas We Serve', url: '/areas' },
-  { label: 'About', url: '/about' },
-  { label: 'Contact', url: '/contact' }
+  { label: 'Startseite', labelEn: 'Home', url: '/' },
+  { label: 'Dienstleistungen', labelEn: 'Services', url: '/services' },
+  { label: 'Einzugsgebiete', labelEn: 'Areas We Serve', url: '/areas' },
+  { label: 'Über uns', labelEn: 'About', url: '/about' },
+  { label: 'Kontakt', labelEn: 'Contact', url: '/contact' }
 ]
 
 export const coreServices = [
