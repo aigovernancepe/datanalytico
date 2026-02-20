@@ -303,7 +303,7 @@
       }
     }
   },
-  "serviceAreas": ["Basel", "Zurich", "Bern"],
+  "serviceAreas": ["Basel", "Zürich", "Bern"],
   "serviceAreaPages": {
     "hubUrl": "/areas",
     "cities": [
@@ -332,20 +332,20 @@
         ]
       },
       {
-        "name": "Zurich",
+        "name": "Zürich",
         "slug": "zurich",
         "url": "/areas/zurich",
         "lat": 47.3828,
         "lng": 8.5307,
-        "canton": "Zurich",
-        "county": "Zurich",
+        "canton": "Zürich",
+        "county": "Zürich",
         "population": 434335,
         "zipCodes": ["8000", "8001", "8002", "8003", "8004", "8005", "8006", "8008", "8032", "8037", "8038", "8041", "8044", "8045", "8046", "8047", "8048", "8049", "8050", "8051", "8052", "8053", "8055", "8057", "8063", "8064"],
         "responseTime": "Same day — virtual consultation within hours",
         "priority": "secondary",
         "nearby": ["basel", "bern"],
-        "description": "Zurich is Switzerland's largest city and its financial capital. With over 116,000 registered companies in the canton, competition for local search visibility is intense — and most businesses are underinvesting in local SEO.",
-        "localContext": "Europe's fintech hub with Google, UBS, and Zurich Insurance headquartered here. Zurich-West (District 5) is the tech and startup epicenter. Bahnhofstrasse and District 1 host premium professional services. Over 434,000 residents and a metro area of 1.4 million make Zurich the most competitive Swiss market for local search.",
+        "description": "Zürich ist die grösste Stadt der Schweiz und ihre Finanzhauptstadt. Mit über 116'000 registrierten Unternehmen im Kanton ist der Wettbewerb um lokale Suchsichtbarkeit intensiv — und die meisten Unternehmen investieren zu wenig in Local SEO.",
+        "localContext": "Europas Fintech-Zentrum mit Google, UBS und Zurich Insurance als Hauptsitz. Zürich-West (Kreis 5) ist das Tech- und Startup-Epizentrum. Bahnhofstrasse und Kreis 1 beherbergen Premium-Dienstleistungen. Über 434'000 Einwohner und ein Metropolgebiet von 1,4 Millionen machen Zürich zum wettbewerbsintensivsten Schweizer Markt für lokale Suche.",
         "services": [
           { "name": "Local SEO Services", "slug": "local-seo", "url": "/areas/zurich/local-seo" },
           { "name": "Website Design & Development", "slug": "website-design", "url": "/areas/zurich/website-design" },
