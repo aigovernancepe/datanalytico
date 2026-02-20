@@ -1,0 +1,497 @@
+{
+  "business": {
+    "name": "Datanalytico",
+    "phone": "+41 76 757 64 23",
+    "email": "info@datanalytico.com",
+    "city": "Oberwil",
+    "state": "Basel-Landschaft",
+    "stateAbbrev": "BL",
+    "zip": "4104",
+    "country": "CH",
+    "domain": "datanalytico.com",
+    "lat": 47.5141,
+    "lng": 7.5579
+  },
+  "industry": "Digital Marketing Agency",
+  "primaryCategory": "Local SEO",
+  "vertical": "local-seo-agency",
+  "navigation": [
+    { "label": "Home", "url": "/" },
+    { "label": "Services", "url": "/services" },
+    { "label": "Areas We Serve", "url": "/areas" },
+    { "label": "About", "url": "/about" },
+    { "label": "Contact", "url": "/contact" }
+  ],
+  "serviceHierarchy": {
+    "secondaryCategories": [],
+    "coreServices": [
+      {
+        "name": "Local SEO Services",
+        "slug": "local-seo",
+        "url": "/local-seo",
+        "description": "Data-driven local SEO that puts your business on the map. We build your online visibility so local customers find you first.",
+        "children": [
+          { "name": "Citation Building & Management", "slug": "citation-building", "url": "/local-seo/citation-building" },
+          { "name": "On-Page SEO", "slug": "on-page-seo", "url": "/local-seo/on-page-seo" },
+          { "name": "Link Building for Local Businesses", "slug": "link-building", "url": "/local-seo/link-building" }
+        ]
+      },
+      {
+        "name": "Website Design & Development",
+        "slug": "website-design",
+        "url": "/website-design",
+        "description": "SEO-optimized websites built to convert local searchers into customers. Fast, mobile-first, and designed around how people actually search.",
+        "children": [
+          { "name": "Service Area Website Design", "slug": "service-area-websites", "url": "/website-design/service-area-websites" },
+          { "name": "Website Redesign", "slug": "website-redesign", "url": "/website-design/website-redesign" },
+          { "name": "Landing Page Design", "slug": "landing-pages", "url": "/website-design/landing-pages" }
+        ]
+      },
+      {
+        "name": "Google Business Profile Management",
+        "slug": "google-business-profile",
+        "url": "/google-business-profile",
+        "description": "Your Google Business Profile drives 60-70% of local leads. We optimize, manage, and grow your GBP so you show up in the map pack.",
+        "children": [
+          { "name": "GBP Optimization", "slug": "gbp-optimization", "url": "/google-business-profile/gbp-optimization" },
+          { "name": "Review Management", "slug": "review-management", "url": "/google-business-profile/review-management" },
+          { "name": "Google Maps SEO", "slug": "google-maps-seo", "url": "/google-business-profile/google-maps-seo" }
+        ]
+      },
+      {
+        "name": "Content Creation",
+        "slug": "content-creation",
+        "url": "/content-creation",
+        "description": "Strategic content that ranks and converts. Service pages, blog posts, and city pages built on keyword research and local search intent.",
+        "children": [
+          { "name": "Blog Writing Services", "slug": "blog-writing", "url": "/content-creation/blog-writing" },
+          { "name": "Service Page Content", "slug": "service-page-content", "url": "/content-creation/service-page-content" }
+        ]
+      },
+      {
+        "name": "Local Social Media",
+        "slug": "local-social-media",
+        "url": "/local-social-media",
+        "description": "Social media strategy that amplifies your local search visibility. We turn social signals into search signals.",
+        "children": [
+          { "name": "Social Media Setup & Optimization", "slug": "social-media-setup", "url": "/local-social-media/social-media-setup" },
+          { "name": "Social Content Calendar", "slug": "content-calendar", "url": "/local-social-media/content-calendar" }
+        ]
+      },
+      {
+        "name": "PPC & Google Ads",
+        "slug": "ppc-google-ads",
+        "url": "/ppc-google-ads",
+        "description": "Targeted paid search campaigns that deliver leads while your organic rankings grow. Google Ads and Local Service Ads managed for ROI.",
+        "children": [
+          { "name": "Google Search Ads", "slug": "google-search-ads", "url": "/ppc-google-ads/google-search-ads" },
+          { "name": "Local Service Ads", "slug": "local-service-ads", "url": "/ppc-google-ads/local-service-ads" }
+        ]
+      }
+    ],
+    "generalServices": [],
+    "serviceData": {
+      "local-seo": {
+        "priceRange": { "min": 1500, "max": 5000, "currency": "CHF", "period": "month" },
+        "emergency": false,
+        "processSteps": [
+          { "title": "Discovery & Audit", "description": "We audit your current local search presence — GBP, citations, website, reviews, and rankings — to identify gaps and opportunities." },
+          { "title": "Strategy & Roadmap", "description": "We build a 90-day action plan prioritizing the changes that will move your rankings fastest." },
+          { "title": "Implementation", "description": "We execute — optimizing your GBP, fixing citations, building links, and creating content that targets your highest-value keywords." },
+          { "title": "Tracking & Optimization", "description": "Monthly rank tracking, reporting, and strategy adjustments based on what the data shows is working." }
+        ]
+      },
+      "citation-building": {
+        "priceRange": { "min": 500, "max": 1500, "currency": "CHF", "period": "project" },
+        "emergency": false,
+        "processSteps": [
+          { "title": "Citation Audit", "description": "We scan 60+ directories and data aggregators to find where your business is listed, missing, or inconsistent." },
+          { "title": "NAP Cleanup", "description": "We correct every inconsistency — wrong phone numbers, old addresses, duplicate listings — across all sources." },
+          { "title": "New Submissions", "description": "We submit your business to every relevant directory with consistent, accurate information." },
+          { "title": "Monitoring", "description": "Ongoing monitoring to catch new inconsistencies and maintain citation health." }
+        ]
+      },
+      "on-page-seo": {
+        "priceRange": { "min": 1000, "max": 3000, "currency": "CHF", "period": "project" },
+        "emergency": false,
+        "processSteps": [
+          { "title": "Technical Audit", "description": "We crawl your site to identify title tag issues, missing schema, slow pages, and indexation problems." },
+          { "title": "Keyword Mapping", "description": "We map target keywords to each page so every URL has a clear purpose in your search strategy." },
+          { "title": "Optimization", "description": "We update titles, meta descriptions, headings, schema markup, internal links, and content structure." },
+          { "title": "Verification", "description": "We validate all changes with Lighthouse audits and search console monitoring." }
+        ]
+      },
+      "link-building": {
+        "priceRange": { "min": 1000, "max": 3000, "currency": "CHF", "period": "month" },
+        "emergency": false,
+        "processSteps": [
+          { "title": "Backlink Audit", "description": "We analyze your current link profile and your competitors' to find gaps and opportunities." },
+          { "title": "Prospect Research", "description": "We identify high-quality local link opportunities — directories, sponsorships, associations, editorial placements." },
+          { "title": "Outreach & Acquisition", "description": "We reach out and secure real links from relevant, authoritative local websites." },
+          { "title": "Reporting", "description": "Monthly link acquisition report showing new links, domain authority growth, and ranking impact." }
+        ]
+      },
+      "website-design": {
+        "priceRange": { "min": 3000, "max": 15000, "currency": "CHF", "period": "project" },
+        "emergency": false,
+        "processSteps": [
+          { "title": "Discovery & Architecture", "description": "We research your market, plan your site architecture, and define the page hierarchy that search engines reward." },
+          { "title": "Design & Prototyping", "description": "We design mobile-first layouts with conversion-focused structure — CTAs, trust signals, and clear service navigation." },
+          { "title": "Development & SEO", "description": "We build the site with clean code, fast load times, schema markup, and every technical SEO element baked in." },
+          { "title": "Launch & Handoff", "description": "We test across devices, submit sitemaps, and hand over a site that is ready to rank from day one." }
+        ]
+      },
+      "service-area-websites": {
+        "priceRange": { "min": 5000, "max": 15000, "currency": "CHF", "period": "project" },
+        "emergency": false,
+        "processSteps": [
+          { "title": "Service Area Research", "description": "We identify your target cities, map service-to-city combinations, and plan unique content for each area." },
+          { "title": "Architecture Planning", "description": "We build the URL hierarchy — city hubs, city-service pages — with internal linking that distributes authority." },
+          { "title": "Content & Development", "description": "We write genuinely unique city pages with local signals, FAQs, and area-specific data — not thin doorway pages." },
+          { "title": "Technical Optimization", "description": "Schema markup, geo-targeting, sitemap configuration, and staggered launch to avoid Google doorway filters." }
+        ]
+      },
+      "website-redesign": {
+        "priceRange": { "min": 4000, "max": 12000, "currency": "CHF", "period": "project" },
+        "emergency": false,
+        "processSteps": [
+          { "title": "Current Site Audit", "description": "We audit your existing site — what ranks, what converts, what needs to be preserved during the redesign." },
+          { "title": "Redirect Planning", "description": "We map every old URL to its new destination so you keep your existing rankings and link equity." },
+          { "title": "Redesign & Build", "description": "We redesign with SEO architecture baked in — faster, mobile-first, and structured for local search." },
+          { "title": "Migration & Monitoring", "description": "We launch with 301 redirects, monitor Search Console for errors, and ensure zero ranking loss." }
+        ]
+      },
+      "landing-pages": {
+        "priceRange": { "min": 1500, "max": 4000, "currency": "CHF", "period": "project" },
+        "emergency": false,
+        "processSteps": [
+          { "title": "Conversion Research", "description": "We study your target audience, competitors' landing pages, and the keywords driving traffic." },
+          { "title": "Copy & Design", "description": "We write conversion-focused copy and design a layout built around a single clear action." },
+          { "title": "Build & Optimize", "description": "We develop the page with fast load times, schema markup, and A/B testing capability." },
+          { "title": "Performance Tracking", "description": "We track conversions, bounce rate, and form completions to refine the page over time." }
+        ]
+      },
+      "google-business-profile": {
+        "priceRange": { "min": 500, "max": 1500, "currency": "CHF", "period": "month" },
+        "emergency": false,
+        "processSteps": [
+          { "title": "GBP Audit", "description": "We audit every field of your Google Business Profile — categories, attributes, photos, posts, Q&A, and reviews." },
+          { "title": "Full Optimization", "description": "We optimize your listing with the right categories, keyword-rich descriptions, and complete business information." },
+          { "title": "Ongoing Management", "description": "Weekly posts, photo uploads, Q&A monitoring, and review response management to keep your profile active." },
+          { "title": "Performance Reporting", "description": "Monthly reports on search visibility, calls, direction requests, and website clicks from your GBP." }
+        ]
+      },
+      "gbp-optimization": {
+        "priceRange": { "min": 500, "max": 2000, "currency": "CHF", "period": "project" },
+        "emergency": false,
+        "processSteps": [
+          { "title": "Category Analysis", "description": "We research the best primary and secondary categories for your industry and location." },
+          { "title": "Profile Enhancement", "description": "We optimize every field — business description, attributes, services, products, and hours." },
+          { "title": "Visual Content", "description": "We add geotagged photos, service images, and team photos following Google's guidelines." },
+          { "title": "Verification & Launch", "description": "We verify all changes are live, set up tracking, and document the optimized state." }
+        ]
+      },
+      "review-management": {
+        "priceRange": { "min": 300, "max": 1000, "currency": "CHF", "period": "month" },
+        "emergency": false,
+        "processSteps": [
+          { "title": "Review Audit", "description": "We analyze your current review landscape — count, rating, velocity, sentiment, and competitor comparison." },
+          { "title": "Generation Strategy", "description": "We build a review generation system with email/SMS sequences and staff training materials." },
+          { "title": "Response Management", "description": "We respond to every review within 24 hours — positive reviews get gratitude, negatives get professional resolution." },
+          { "title": "Velocity Tracking", "description": "We monitor review velocity and rating trends to ensure consistent growth." }
+        ]
+      },
+      "google-maps-seo": {
+        "priceRange": { "min": 800, "max": 2500, "currency": "CHF", "period": "month" },
+        "emergency": false,
+        "processSteps": [
+          { "title": "Map Pack Analysis", "description": "We run grid-based rank scans to see exactly where you appear — and where you don't — across your service area." },
+          { "title": "Ranking Factor Audit", "description": "We analyze the three pillars — relevance, distance, and prominence — to find what's holding you back." },
+          { "title": "Optimization Campaign", "description": "We execute GBP optimization, citation building, review generation, and local link building to improve map visibility." },
+          { "title": "Progress Tracking", "description": "Bi-weekly rank scans showing map pack coverage changes with visual heat maps." }
+        ]
+      },
+      "content-creation": {
+        "priceRange": { "min": 1000, "max": 3000, "currency": "CHF", "period": "month" },
+        "emergency": false,
+        "processSteps": [
+          { "title": "Keyword Research", "description": "We identify the search terms your target customers use — focusing on bottom-of-funnel, high-intent queries." },
+          { "title": "Content Planning", "description": "We build a content calendar with topics mapped to keywords, search intent, and your sales funnel." },
+          { "title": "Writing & Optimization", "description": "We write clear, engaging content structured for both search engines and AI systems — with capsule answers, schema, and internal links." },
+          { "title": "Publishing & Tracking", "description": "We publish, submit to Search Console, and track rankings and traffic for each piece." }
+        ]
+      },
+      "blog-writing": {
+        "priceRange": { "min": 400, "max": 1600, "currency": "CHF", "period": "post" },
+        "emergency": false,
+        "processSteps": [
+          { "title": "Topic Research", "description": "We identify blog topics based on keyword gaps, customer questions, and seasonal trends in your market." },
+          { "title": "Brief & Outline", "description": "We create a detailed brief with target keyword, headings, internal links, and competitor analysis." },
+          { "title": "Writing & Editing", "description": "We write 800-1,500 word posts at a 5th-grade reading level with clear structure and natural keyword usage." },
+          { "title": "SEO Optimization", "description": "We add meta tags, schema markup, internal links to service pages, and optimized images before publishing." }
+        ]
+      },
+      "service-page-content": {
+        "priceRange": { "min": 500, "max": 1500, "currency": "CHF", "period": "page" },
+        "emergency": false,
+        "processSteps": [
+          { "title": "Competitor Analysis", "description": "We analyze what's ranking for your target service keyword and identify the content gaps." },
+          { "title": "Content Framework", "description": "We structure the page with goal completion hierarchy — problem, solution, proof, call to action." },
+          { "title": "Writing", "description": "We write conversion-focused content that answers the searcher's questions and builds trust." },
+          { "title": "Schema & Publishing", "description": "We add Service schema, FAQ schema, and proper internal linking before publishing." }
+        ]
+      },
+      "local-social-media": {
+        "priceRange": { "min": 1000, "max": 3000, "currency": "CHF", "period": "month" },
+        "emergency": false,
+        "processSteps": [
+          { "title": "Profile Audit", "description": "We audit all social profiles for NAP consistency, completeness, and alignment with your search presence." },
+          { "title": "Strategy Development", "description": "We build a social strategy focused on local entity signals — not vanity metrics." },
+          { "title": "Content Execution", "description": "We create and schedule posts using the 40/25/20/15 pillar mix — local trust, engagement, educational, promotional." },
+          { "title": "Performance Review", "description": "Monthly reports on engagement, reach, and the impact on local search visibility." }
+        ]
+      },
+      "social-media-setup": {
+        "priceRange": { "min": 500, "max": 1500, "currency": "CHF", "period": "project" },
+        "emergency": false,
+        "processSteps": [
+          { "title": "Platform Selection", "description": "We identify which platforms matter for your industry and local market — not every platform, the right ones." },
+          { "title": "Profile Creation", "description": "We set up profiles with consistent NAP, keyword-optimized bios, and branded visuals." },
+          { "title": "Integration", "description": "We link social profiles to your GBP, website, and citation network for entity consistency." },
+          { "title": "Training & Handoff", "description": "We train your team on posting best practices and provide templates for ongoing content." }
+        ]
+      },
+      "content-calendar": {
+        "priceRange": { "min": 500, "max": 1500, "currency": "CHF", "period": "month" },
+        "emergency": false,
+        "processSteps": [
+          { "title": "Content Audit", "description": "We review existing content and identify repurposing opportunities from blog posts, reviews, and service pages." },
+          { "title": "Calendar Planning", "description": "We build a monthly calendar with post topics, formats, and optimal posting times for your audience." },
+          { "title": "Content Creation", "description": "We create platform-specific content — carousel posts, short videos, testimonials, local tips." },
+          { "title": "Scheduling & Publishing", "description": "We schedule posts and monitor engagement to refine timing and content types." }
+        ]
+      },
+      "ppc-google-ads": {
+        "priceRange": { "min": 1500, "max": 5000, "currency": "CHF", "period": "month" },
+        "emergency": false,
+        "processSteps": [
+          { "title": "Account Audit", "description": "We audit your existing campaigns — or research your market from scratch — to find the highest-ROI opportunities." },
+          { "title": "Campaign Architecture", "description": "We build campaigns structured around service lines and locations with tight keyword targeting and negative keyword lists." },
+          { "title": "Launch & Optimize", "description": "We launch campaigns, monitor performance daily, and adjust bids, ads, and targeting based on conversion data." },
+          { "title": "Reporting & Scaling", "description": "Monthly ROI reports with clear cost-per-lead data. We scale what works and cut what doesn't." }
+        ]
+      },
+      "google-search-ads": {
+        "priceRange": { "min": 1000, "max": 4000, "currency": "CHF", "period": "month" },
+        "emergency": false,
+        "processSteps": [
+          { "title": "Keyword Research", "description": "We identify high-intent search terms with commercial value — the queries that lead to phone calls and form fills." },
+          { "title": "Ad Copy & Extensions", "description": "We write compelling ad copy with location extensions, call extensions, and structured snippets." },
+          { "title": "Landing Page Alignment", "description": "We ensure every ad points to a relevant, conversion-optimized landing page — not your homepage." },
+          { "title": "Bid Management", "description": "We manage bids to maximize conversions within your budget, using dayparting and geo-targeting." }
+        ]
+      },
+      "local-service-ads": {
+        "priceRange": { "min": 500, "max": 2000, "currency": "CHF", "period": "month" },
+        "emergency": false,
+        "processSteps": [
+          { "title": "Eligibility Check", "description": "We verify your business qualifies for Local Service Ads and gather required documentation." },
+          { "title": "Profile Setup", "description": "We set up your LSA profile with service areas, business hours, and verified credentials." },
+          { "title": "Budget & Bidding", "description": "We configure your weekly budget and lead preferences to match your capacity." },
+          { "title": "Lead Management", "description": "We monitor lead quality, dispute invalid leads, and optimize your profile for the Google Guaranteed badge." }
+        ]
+      }
+    }
+  },
+  "serviceAreas": ["Basel", "Zurich", "Bern"],
+  "serviceAreaPages": {
+    "hubUrl": "/areas",
+    "cities": [
+      {
+        "name": "Basel",
+        "slug": "basel",
+        "url": "/areas/basel",
+        "lat": 47.5577,
+        "lng": 7.5936,
+        "canton": "Basel-Stadt",
+        "county": "Basel-Stadt",
+        "population": 180000,
+        "zipCodes": ["4000", "4001", "4010", "4020", "4030", "4051", "4052", "4053", "4054", "4055", "4056", "4057", "4058", "4059"],
+        "responseTime": "Same day — 15 minutes from our office",
+        "priority": "primary",
+        "nearby": ["zurich", "bern"],
+        "description": "Basel is Switzerland's third-largest city and a global hub for life sciences and pharma. Hundreds of SMEs in the Basel area need local visibility to compete with industry giants for talent, clients, and attention.",
+        "localContext": "Home to Novartis and Roche campuses, the Messe Basel convention center, and a thriving startup scene in Dreispitz. The trinational metro area (CH/DE/FR) means businesses often need multi-language SEO. Key business districts include St. Johann, Gundeldingen, and Kleinbasel.",
+        "services": [
+          { "name": "Local SEO Services", "slug": "local-seo", "url": "/areas/basel/local-seo" },
+          { "name": "Website Design & Development", "slug": "website-design", "url": "/areas/basel/website-design" },
+          { "name": "Google Business Profile Management", "slug": "google-business-profile", "url": "/areas/basel/google-business-profile" },
+          { "name": "Content Creation", "slug": "content-creation", "url": "/areas/basel/content-creation" },
+          { "name": "Local Social Media", "slug": "local-social-media", "url": "/areas/basel/local-social-media" },
+          { "name": "PPC & Google Ads", "slug": "ppc-google-ads", "url": "/areas/basel/ppc-google-ads" }
+        ]
+      },
+      {
+        "name": "Zurich",
+        "slug": "zurich",
+        "url": "/areas/zurich",
+        "lat": 47.3828,
+        "lng": 8.5307,
+        "canton": "Zurich",
+        "county": "Zurich",
+        "population": 434335,
+        "zipCodes": ["8000", "8001", "8002", "8003", "8004", "8005", "8006", "8008", "8032", "8037", "8038", "8041", "8044", "8045", "8046", "8047", "8048", "8049", "8050", "8051", "8052", "8053", "8055", "8057", "8063", "8064"],
+        "responseTime": "Same day — virtual consultation within hours",
+        "priority": "secondary",
+        "nearby": ["basel", "bern"],
+        "description": "Zurich is Switzerland's largest city and its financial capital. With over 116,000 registered companies in the canton, competition for local search visibility is intense — and most businesses are underinvesting in local SEO.",
+        "localContext": "Europe's fintech hub with Google, UBS, and Zurich Insurance headquartered here. Zurich-West (District 5) is the tech and startup epicenter. Bahnhofstrasse and District 1 host premium professional services. Over 434,000 residents and a metro area of 1.4 million make Zurich the most competitive Swiss market for local search.",
+        "services": [
+          { "name": "Local SEO Services", "slug": "local-seo", "url": "/areas/zurich/local-seo" },
+          { "name": "Website Design & Development", "slug": "website-design", "url": "/areas/zurich/website-design" },
+          { "name": "Google Business Profile Management", "slug": "google-business-profile", "url": "/areas/zurich/google-business-profile" },
+          { "name": "Content Creation", "slug": "content-creation", "url": "/areas/zurich/content-creation" },
+          { "name": "Local Social Media", "slug": "local-social-media", "url": "/areas/zurich/local-social-media" },
+          { "name": "PPC & Google Ads", "slug": "ppc-google-ads", "url": "/areas/zurich/ppc-google-ads" }
+        ]
+      },
+      {
+        "name": "Bern",
+        "slug": "bern",
+        "url": "/areas/bern",
+        "lat": 46.9476,
+        "lng": 7.4065,
+        "canton": "Bern",
+        "county": "Bern",
+        "population": 146000,
+        "zipCodes": ["3000", "3001", "3004", "3005", "3006", "3007", "3008", "3010", "3011", "3012", "3013", "3014", "3015", "3018", "3019", "3020", "3024", "3027", "3030"],
+        "responseTime": "Same day — virtual consultation within hours",
+        "priority": "tertiary",
+        "nearby": ["basel", "zurich"],
+        "description": "Bern is Switzerland's federal capital and a hub for SMEs — 67% of jobs are in businesses with fewer than 250 employees. These small and medium businesses are exactly who benefits most from local SEO.",
+        "localContext": "The UNESCO World Heritage Altstadt is the political center, but Bern's economy runs on SMEs in precision manufacturing, medtech, and professional services. The Biel/Bienne innovation park nearby drives tech growth. Key neighborhoods: Kirchenfeld, Mattenhof, Breitenrain, Bümpliz. The call center industry employs 25% of Switzerland's total — a huge B2B opportunity.",
+        "services": [
+          { "name": "Local SEO Services", "slug": "local-seo", "url": "/areas/bern/local-seo" },
+          { "name": "Website Design & Development", "slug": "website-design", "url": "/areas/bern/website-design" },
+          { "name": "Google Business Profile Management", "slug": "google-business-profile", "url": "/areas/bern/google-business-profile" },
+          { "name": "Content Creation", "slug": "content-creation", "url": "/areas/bern/content-creation" },
+          { "name": "Local Social Media", "slug": "local-social-media", "url": "/areas/bern/local-social-media" },
+          { "name": "PPC & Google Ads", "slug": "ppc-google-ads", "url": "/areas/bern/ppc-google-ads" }
+        ]
+      }
+    ]
+  },
+  "trustSignals": [
+    "Google Partner",
+    "Data-Driven Results",
+    "Transparent Reporting",
+    "No Long-Term Contracts",
+    "Swiss-Based Team",
+    "90-Day Action Plans"
+  ],
+  "localIssues": [
+    "Trinational market (CH/DE/FR) requires multi-language SEO awareness",
+    "Swiss businesses pay premium rates but expect measurable ROI",
+    "High competition in Zurich and Basel for digital marketing keywords",
+    "Many Swiss SMEs still underinvest in local search presence",
+    "Google.ch and local search behavior differs from US/UK markets",
+    "Swiss privacy regulations affect tracking and analytics setup"
+  ],
+  "homepageAnchorTextOptions": [
+    "local SEO agency in Switzerland",
+    "your Swiss local SEO partner",
+    "Basel-based digital marketing experts",
+    "Datanalytico — local SEO that delivers results"
+  ],
+  "targetKeywords": {
+    "primary": "local SEO Switzerland",
+    "secondary": [
+      "local SEO agency Basel",
+      "local SEO Zurich",
+      "local SEO Bern",
+      "website design Basel",
+      "Google Business Profile management Switzerland",
+      "SEO agency Switzerland",
+      "local search optimization",
+      "Google Maps SEO Switzerland",
+      "PPC management Basel",
+      "content creation for local businesses",
+      "digital marketing agency Basel",
+      "local SEO services near me"
+    ]
+  },
+  "pageCount": {
+    "total": 51,
+    "homepage": 1,
+    "services": 1,
+    "secondaryCategories": 0,
+    "coreServices": 6,
+    "childServices": 15,
+    "about": 1,
+    "contact": 1,
+    "areasHub": 1,
+    "cityHubs": 3,
+    "cityServicePages": 18,
+    "blogIndex": 1,
+    "blogPosts": 3
+  },
+  "imageNaming": {
+    "pattern": "[service-slug]-[descriptor].webp",
+    "heroPattern": "hero-[page-slug].webp",
+    "cityPattern": "[service-slug]-[city-slug]-[descriptor].webp",
+    "teamPattern": "[name-slug]-[role].webp",
+    "altTextFormula": "[Service Name] [descriptor] in [City], Switzerland - Datanalytico",
+    "rules": ["lowercase", "hyphenated", "keyword-rich", "webp-format", "no-generic-names"]
+  },
+  "designConfig": {
+    "primaryColor": "#048caa",
+    "accentColor": "#ff9933",
+    "backgroundColor": "#F8F7F4",
+    "darkColor": "#0E1A2D",
+    "textColor": "#1F2937",
+    "fonts": {
+      "display": "Inter",
+      "body": "Inter",
+      "labels": "Inter"
+    },
+    "fontWeights": {
+      "displayBlack": 900,
+      "displayBold": 700,
+      "bodyRegular": 400,
+      "bodyMedium": 500,
+      "labelSemibold": 600
+    }
+  },
+  "internalLinking": {
+    "homepage": {
+      "linksTo": [
+        "/local-seo",
+        "/website-design",
+        "/google-business-profile",
+        "/content-creation",
+        "/local-social-media",
+        "/ppc-google-ads",
+        "/services",
+        "/areas",
+        "/about",
+        "/contact"
+      ]
+    },
+    "coreServicePages": {
+      "linksTo": ["all child service URLs", "homepage via natural anchor text", "contact page CTA"],
+      "linksFrom": ["homepage", "services hub", "related city×service pages"]
+    },
+    "childServicePages": {
+      "linksTo": ["parent core service page", "contact page CTA"],
+      "linksFrom": ["parent core service page", "services hub"]
+    },
+    "cityHubs": {
+      "linksTo": ["all city×service URLs for that city", "/areas hub"],
+      "linksFrom": ["/areas hub", "related city×service pages"]
+    },
+    "cityServicePages": {
+      "linksTo": ["city hub", "main service page", "same service in nearby cities", "other services in same city"],
+      "linksFrom": ["city hub", "main service page (optional)"]
+    }
+  }
+}
