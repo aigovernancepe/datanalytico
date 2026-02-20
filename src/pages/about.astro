@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import { business, serviceAreas, coreServices } from '../data/architecture';
+
+const crumbs = [
+  { label: 'Home', url: '/' },
+  { label: 'About Us', url: '/about' }
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  '@id': `https://${business.domain}/#business`,
+  name: business.name,
+  telephone: business.phone,
+  email: business.email,
+  url: `https://${business.domain}/`,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: business.city,
+    addressRegion: business.state,
+    postalCode: business.zip,
+    addressCountry: business.country
+  }
+};
+---
+
+<BaseLayout title={`About ${business.name} — Local SEO Experts`} description={`Learn about Datanalytico, a local SEO and digital marketing agency based in ${business.city}, Switzerland.`} schema={schema}>
+  <Breadcrumb crumbs={crumbs} />
+
+  <section class="bg-brand-dark text-white py-16 text-center">
+    <div class="container">
+      <h1 class="text-white mb-4">About {business.name}</h1>
+      <p class="text-white/75 text-lg">Local SEO experts based in {business.city}, Switzerland.</p>
+    </div>
+  </section>
+
+  <div class="py-16">
+    <div class="container max-w-[900px] mx-auto">
+      <section class="mb-12 pb-12 border-b border-gray-200">
+        <h2 class="mb-4">Who Is Datanalytico?</h2>
+        <p class="leading-relaxed text-brand-text-light">Datanalytico is a local SEO and digital marketing agency based in {business.city}, {business.stateAbbrev}, Switzerland. We help local businesses in Basel, Zurich, and Bern get found on Google — in Maps, in organic search, and in AI-generated answers.</p>
+        <p class="leading-relaxed text-brand-text-light">We work exclusively with businesses that serve a local market. Every strategy we build is grounded in verified Swiss search data: real keyword volumes, actual competitor rankings, and Google Business Profile performance benchmarks from the CH market.</p>
+      </section>
+
+      <section class="mb-12 pb-12 border-b border-gray-200">
+        <h2 class="mb-4">What Makes Datanalytico Different?</h2>
+        <p class="leading-relaxed text-brand-text-light">Most digital marketing agencies run the same playbook for every market. Swiss local search works differently — multi-language queries, Swiss-specific directories, and a Google algorithm that treats the CH market with unique regional signals.</p>
+        <p class="leading-relaxed text-brand-text-light">Datanalytico focuses on this. We do not offer social media management for global brands or run e-commerce SEO campaigns. We build local search visibility for businesses that serve customers in a specific city or region. That focus means better results, faster.</p>
+      </section>
+
+      <section class="mb-12 pb-12 border-b border-gray-200">
+        <h2 class="mb-4">Meet the Team</h2>
+        <div class="mt-6">
+          <div class="p-8 bg-brand-bg border border-gray-200 rounded-xl max-w-[400px]">
+            <div class="w-20 h-20 bg-gray-200 rounded-full mb-4"></div>
+            <h3 class="mb-2">Founder &amp; Lead Strategist</h3>
+            <p class="text-[0.9375rem] text-brand-text-light mb-0">Background in data analytics and search engine optimization. Specializes in entity-based local SEO and Google Business Profile strategy for Swiss businesses.</p>
+          </div>
+        </div>
+        <p class="text-sm text-brand-text-light mt-4">Full team bios and photos coming soon.</p>
+      </section>
+
+      <section class="mb-12 pb-12 border-b border-gray-200">
+        <h2 class="mb-4">Where Do We Work?</h2>
+        <p class="leading-relaxed text-brand-text-light">Datanalytico is based in {business.city} ({business.zip}) and serves businesses across Switzerland. Our primary service areas are:</p>
+        <ul class="my-4 pl-6">
+          {serviceAreas.map(area => (
+            <li class="list-disc mb-2">
+              <a href={`${import.meta.env.BASE_URL}areas/${area.toLowerCase()}`}>{area}</a>
+            </li>
+          ))}
+        </ul>
+        <p class="leading-relaxed text-brand-text-light">All work is delivered remotely with virtual meetings. Your location does not affect the quality or speed of our service.</p>
+      </section>
+
+      <section class="mb-12 pb-12 border-b border-gray-200">
+        <h2 class="mb-4">Our Services</h2>
+        <ul class="my-4 pl-6">
+          {coreServices.map(svc => (
+            <li class="list-disc mb-2">
+              <a href={`${import.meta.env.BASE_URL}${svc.url.slice(1)}`}>{svc.name}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section class="mb-12 pb-12 border-b border-gray-200">
+        <h2 class="mb-4">Why Trust Datanalytico?</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+          <div class="p-6 bg-brand-bg rounded-lg">
+            <h3 class="text-base mb-1">Transparent Reporting</h3>
+            <p class="text-[0.9375rem] text-brand-text-light mb-0">Monthly reports with actual ranking data, traffic numbers, and lead metrics. No vague summaries.</p>
+          </div>
+          <div class="p-6 bg-brand-bg rounded-lg">
+            <h3 class="text-base mb-1">No Lock-In Contracts</h3>
+            <p class="text-[0.9375rem] text-brand-text-light mb-0">Month-to-month engagements. You stay because results compound, not because you are locked in.</p>
+          </div>
+          <div class="p-6 bg-brand-bg rounded-lg">
+            <h3 class="text-base mb-1">Swiss Market Focus</h3>
+            <p class="text-[0.9375rem] text-brand-text-light mb-0">We work in the CH market exclusively. Your strategy fits the region.</p>
+          </div>
+          <div class="p-6 bg-brand-bg rounded-lg">
+            <h3 class="text-base mb-1">You Own Everything</h3>
+            <p class="text-[0.9375rem] text-brand-text-light mb-0">Every asset we build — website content, GBP optimization, citations — belongs to you.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-center p-12 bg-brand-bg rounded-xl my-12">
+        <h2 class="mb-2">Ready to Talk?</h2>
+        <p class="text-brand-text-light mb-6">Contact Datanalytico for a free review of your local search presence.</p>
+        <div class="flex gap-4 justify-center flex-wrap">
+          <a href={business.phoneTel} class="btn btn--accent">Call {business.phone}</a>
+          <a href={`${import.meta.env.BASE_URL}contact`} class="btn btn--primary">Send a Message</a>
+        </div>
+      </section>
+    </div>
+  </div>
+</BaseLayout>

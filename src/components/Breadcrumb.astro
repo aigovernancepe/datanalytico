@@ -1,0 +1,52 @@
+---
+import { business } from '../data/architecture';
+
+interface Crumb {
+  label: string;
+  url: string;
+}
+
+interface Props {
+  crumbs: Crumb[];
+}
+
+const { crumbs } = Astro.props;
+
+const schemaItems = crumbs.map((crumb, i) => {
+  const item: Record<string, any> = {
+    '@type': 'ListItem',
+    position: i + 1,
+    name: crumb.label
+  };
+  if (i < crumbs.length - 1) {
+    item.item = `https://${business.domain}${crumb.url}`;
+  }
+  return item;
+});
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: schemaItems
+};
+---
+
+<nav class="py-4 text-[0.8125rem] text-brand-text-light" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="flex flex-wrap items-center gap-1">
+      {crumbs.map((crumb, i) => (
+        <li class="flex items-center gap-1">
+          {i < crumbs.length - 1 ? (
+            <>
+              <a href={`${import.meta.env.BASE_URL}${crumb.url.slice(1)}`} class="text-primary font-normal hover:underline no-underline">{crumb.label}</a>
+              <span class="text-brand-text-light ml-1">&gt;</span>
+            </>
+          ) : (
+            <span class="text-brand-text font-medium" aria-current="page">{crumb.label}</span>
+          )}
+        </li>
+      ))}
+    </ol>
+  </div>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+</nav>

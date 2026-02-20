@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import { cities, business } from '../../../data/architecture';
+import architecture from '../../../../architecture.json';
+
+const cityData = architecture.serviceAreaPages.cities;
+
+export function getStaticPaths() {
+  return cities.map(c => ({ params: { citySlug: c.slug } }));
+}
+
+const { citySlug } = Astro.params;
+const city = cities.find(c => c.slug === citySlug);
+
+if (!city) return Astro.redirect('/404');
+
+const fullCity = cityData.find((c: any) => c.slug === citySlug) as any;
+const nearbyCities = cities.filter(c => c.slug !== citySlug);
+
+const crumbs = [
+  { label: 'Home', url: '/' },
+  { label: 'Areas We Serve', url: '/areas' },
+  { label: city.name, url: city.url }
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Local SEO Services',
+  provider: { '@id': `https://${business.domain}/#business` },
+  areaServed: { '@type': 'City', name: city.name, '@id': `https://en.wikipedia.org/wiki/${city.name}` }
+};
+---
+
+<BaseLayout title={`Local SEO Services in ${city.name}, Switzerland — Datanalytico`} description={city.description} schema={schema}>
+  <Breadcrumb crumbs={crumbs} />
+
+  <section class="bg-brand-dark text-white py-16 text-center">
+    <div class="container">
+      <h1 class="text-white mb-4">Local SEO Services in {city.name}, Switzerland</h1>
+      <p class="text-white/75 text-lg">{city.description}</p>
+    </div>
+  </section>
+
+  <div class="py-16">
+    <div class="container max-w-[900px] mx-auto">
+      <section class="mb-12 pb-12 border-b border-gray-200">
+        <h2 class="mb-4">Why Do {city.name} Businesses Need Local SEO?</h2>
+        <p class="leading-relaxed text-brand-text-light">{fullCity?.localContext || city.description}</p>
+        <p class="leading-relaxed text-brand-text-light">Datanalytico serves businesses in {city.name} from our base in {business.city}. {fullCity?.responseTime ? `Response: ${fullCity.responseTime}.` : ''} We work with {city.name}-based businesses across every service vertical — from professional services to retail, healthcare to hospitality.</p>
+      </section>
+
+      <section class="mb-12 pb-12 border-b border-gray-200">
+        <h2 class="mb-4">Our Services in {city.name}</h2>
+        <p class="leading-relaxed text-brand-text-light">Datanalytico provides the full range of local SEO and digital marketing services to businesses in {city.name}, {city.canton}.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
+          {city.services.map(svc => (
+            <a href={`${import.meta.env.BASE_URL}areas/${city.slug}/${svc.slug}`} class="block p-6 bg-white border border-gray-200 rounded-lg hover:border-primary hover:shadow-sm no-underline transition-all">
+              <h3 class="text-base mb-1 text-brand-dark">{svc.name}</h3>
+              <span class="text-sm text-primary font-medium">{svc.name} in {city.name} &rarr;</span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="mb-12 pb-12 border-b border-gray-200">
+        <h2 class="mb-4">About {city.name}</h2>
+        <p class="leading-relaxed text-brand-text-light">{city.name} is located in canton {city.canton} with a population of approximately {city.population.toLocaleString()} residents. {fullCity?.localContext || ''}</p>
+      </section>
+
+      {nearbyCities.length > 0 && (
+        <section class="mb-12 pb-12 border-b border-gray-200">
+          <h2 class="mb-4">We Also Serve</h2>
+          <div class="flex flex-col gap-2 mt-4">
+            {nearbyCities.map(nc => (
+              <a href={`${import.meta.env.BASE_URL}areas/${nc.slug}`} class="inline-block py-2 px-4 bg-brand-bg border border-gray-200 rounded-lg font-medium text-[0.9375rem] hover:border-primary hover:bg-white no-underline transition-all">
+                Local SEO in {nc.name} &rarr;
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <section class="text-center p-12 bg-brand-bg rounded-xl my-12">
+        <h2 class="mb-2">Grow Your {city.name} Business Online</h2>
+        <p class="text-brand-text-light mb-6">Datanalytico helps {city.name} businesses rank higher in local search. Contact us for a free review.</p>
+        <div class="flex gap-4 justify-center flex-wrap">
+          <a href={business.phoneTel} class="btn btn--accent">Call {business.phone}</a>
+          <a href={`${import.meta.env.BASE_URL}contact`} class="btn btn--primary">Get a Free Review</a>
+        </div>
+      </section>
+
+      <p><a href={`${import.meta.env.BASE_URL}areas`}>&larr; Back to Areas We Serve</a></p>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import { coreServices, findChildService, business, cities } from '../../data/architecture';
+import architecture from '../../../architecture.json';
+
+const serviceData = architecture.serviceHierarchy.serviceData;
+
+export function getStaticPaths() {
+  const paths: { params: { serviceSlug: string; childSlug: string } }[] = [];
+  for (const service of coreServices) {
+    for (const child of service.children) {
+      paths.push({ params: { serviceSlug: service.slug, childSlug: child.slug } });
+    }
+  }
+  return paths;
+}
+
+const { serviceSlug, childSlug } = Astro.params;
+const result = findChildService(serviceSlug!, childSlug!);
+
+if (!result) return Astro.redirect('/404');
+
+const data = serviceData[childSlug as keyof typeof serviceData] as any;
+
+const crumbs = [
+  { label: 'Home', url: '/' },
+  { label: result.parent.name, url: result.parent.url },
+  { label: result.name, url: result.url }
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: result.name,
+  provider: { '@id': `https://${business.domain}/#business` },
+  areaServed: cities.map(c => ({ '@type': 'City', name: c.name }))
+};
+---
+
+<BaseLayout title={`${result.name} in ${business.city}, ${business.stateAbbrev} — Datanalytico`} description={`${result.name} for local businesses across Switzerland.`} schema={schema}>
+  <Breadcrumb crumbs={crumbs} />
+
+  <section class="bg-brand-dark text-white py-16 text-center">
+    <div class="container">
+      <h1 class="text-white mb-4">{result.name} in {business.city}, {business.stateAbbrev}</h1>
+      <p class="text-white/75 text-lg">{result.name} for local businesses across Switzerland.</p>
+    </div>
+  </section>
+
+  <div class="py-16">
+    <div class="container max-w-[900px] mx-auto">
+      <section class="mb-12 pb-12 border-b border-gray-200">
+        <h2 class="mb-4">What Is {result.name}?</h2>
+        <p class="leading-relaxed text-brand-text-light">{result.name} is a specialized service under <a href={`${import.meta.env.BASE_URL}${result.parent.url.slice(1)}`}>{result.parent.name}</a>. Datanalytico delivers this for businesses in Basel, Zurich, and Bern who need focused attention on this part of their local search strategy.</p>
+      </section>
+
+      {data?.processSteps && (
+        <section class="mb-12 pb-12 border-b border-gray-200">
+          <h2 class="mb-4">Our {result.name} Process</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+            {data.processSteps.map((step: any, i: number) => (
+              <div class="p-8 bg-brand-bg rounded-xl border border-gray-200">
+                <div class="inline-flex items-center justify-center w-9 h-9 bg-primary text-white rounded-full font-bold text-sm mb-4">{i + 1}</div>
+                <h3 class="text-[1.0625rem] mb-2">{step.title}</h3>
+                <p class="text-[0.9375rem] text-brand-text-light mb-0">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {data?.priceRange && (
+        <section class="mb-12 pb-12 border-b border-gray-200">
+          <h2 class="mb-4">How Much Does {result.name} Cost?</h2>
+          <p class="leading-relaxed text-brand-text-light">
+            {result.name} from Datanalytico costs between CHF {data.priceRange.min.toLocaleString()} and CHF {data.priceRange.max.toLocaleString()} per {data.priceRange.period}.
+            Call <a href={business.phoneTel}>{business.phone}</a> to discuss your needs.
+          </p>
+        </section>
+      )}
+
+      <section class="mb-12 pb-12 border-b border-gray-200">
+        <p><a href={`${import.meta.env.BASE_URL}${result.parent.url.slice(1)}`}>&larr; Back to {result.parent.name}</a></p>
+      </section>
+
+      <section class="text-center p-12 bg-brand-bg rounded-xl my-12">
+        <h2 class="mb-2">Get Started with {result.name}</h2>
+        <p class="text-brand-text-light mb-6">Contact Datanalytico for a consultation.</p>
+        <div class="flex gap-4 justify-center flex-wrap">
+          <a href={business.phoneTel} class="btn btn--accent">Call {business.phone}</a>
+          <a href={`${import.meta.env.BASE_URL}contact`} class="btn btn--primary">Send a Message</a>
+        </div>
+      </section>
+    </div>
+  </div>
+</BaseLayout>
