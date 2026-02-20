@@ -2,8 +2,7 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
-  site: 'https://aigovernancepe.github.io',
-  base: '/datanalytico',
+  site: 'https://datanalytico.com',
   integrations: [tailwind()],
   build: {
     format: 'directory'
