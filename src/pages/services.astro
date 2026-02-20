@@ -4,18 +4,18 @@ import Breadcrumb from '../components/Breadcrumb.astro';
 import { coreServices } from '../data/architecture';
 
 const crumbs = [
-  { label: 'Home', url: '/' },
-  { label: 'Services', url: '/services' }
+  { label: 'Startseite', url: '/' },
+  { label: 'Dienstleistungen', url: '/services' }
 ];
 ---
 
-<BaseLayout title="Our Services — Datanalytico" description="Local SEO and digital marketing services for businesses across Switzerland.">
+<BaseLayout title="Unsere Dienstleistungen — Datanalytico" description="Local SEO und Digital Marketing Dienstleistungen für Unternehmen in der Schweiz.">
   <Breadcrumb crumbs={crumbs} />
 
   <section class="bg-brand-dark text-white py-16 text-center">
     <div class="container">
-      <h1 class="text-white mb-4">Our Services</h1>
-      <p class="text-white/75 text-lg">Local SEO and digital marketing services for businesses across Switzerland.</p>
+      <h1 class="text-white mb-4" data-i18n="services.title">Unsere Dienstleistungen</h1>
+      <p class="text-white/75 text-lg" data-i18n="services.desc">Local SEO und Digital Marketing Dienstleistungen für Unternehmen in der Schweiz.</p>
     </div>
   </section>
 

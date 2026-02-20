@@ -19,8 +19,8 @@ const fullCity = cityData.find((c: any) => c.slug === citySlug) as any;
 const nearbyCities = cities.filter(c => c.slug !== citySlug);
 
 const crumbs = [
-  { label: 'Home', url: '/' },
-  { label: 'Areas We Serve', url: '/areas' },
+  { label: 'Startseite', url: '/' },
+  { label: 'Einzugsgebiete', url: '/areas' },
   { label: city.name, url: city.url }
 ];
 
@@ -33,12 +33,12 @@ const schema = {
 };
 ---
 
-<BaseLayout title={`Local SEO Services in ${city.name}, Switzerland — Datanalytico`} description={city.description} schema={schema}>
+<BaseLayout title={`Local SEO Dienstleistungen in ${city.name}, Schweiz — Datanalytico`} description={city.description} schema={schema}>
   <Breadcrumb crumbs={crumbs} />
 
   <section class="bg-brand-dark text-white py-16 text-center">
     <div class="container">
-      <h1 class="text-white mb-4">Local SEO Services in {city.name}, Switzerland</h1>
+      <h1 class="text-white mb-4">Local SEO Dienstleistungen in {city.name}, Schweiz</h1>
       <p class="text-white/75 text-lg">{city.description}</p>
     </div>
   </section>
@@ -46,14 +46,14 @@ const schema = {
   <div class="py-16">
     <div class="container max-w-[900px] mx-auto">
       <section class="mb-12 pb-12 border-b border-gray-200">
-        <h2 class="mb-4">Why Do {city.name} Businesses Need Local SEO?</h2>
+        <h2 class="mb-4">Warum brauchen Unternehmen in {city.name} Local SEO?</h2>
         <p class="leading-relaxed text-brand-text-light">{fullCity?.localContext || city.description}</p>
-        <p class="leading-relaxed text-brand-text-light">Datanalytico serves businesses in {city.name} from our base in {business.city}. {fullCity?.responseTime ? `Response: ${fullCity.responseTime}.` : ''} We work with {city.name}-based businesses across every service vertical — from professional services to retail, healthcare to hospitality.</p>
+        <p class="leading-relaxed text-brand-text-light">Datanalytico betreut Unternehmen in {city.name} von unserem Standort in {business.city} aus. {fullCity?.responseTime ? `Reaktionszeit: ${fullCity.responseTime}.` : ''} Wir arbeiten mit Unternehmen in {city.name} über alle Dienstleistungsbereiche hinweg — von professionellen Dienstleistungen bis Einzelhandel, Gesundheitswesen bis Gastronomie.</p>
       </section>
 
       <section class="mb-12 pb-12 border-b border-gray-200">
-        <h2 class="mb-4">Our Services in {city.name}</h2>
-        <p class="leading-relaxed text-brand-text-light">Datanalytico provides the full range of local SEO and digital marketing services to businesses in {city.name}, {city.canton}.</p>
+        <h2 class="mb-4">Unsere Dienstleistungen in {city.name}</h2>
+        <p class="leading-relaxed text-brand-text-light">Datanalytico bietet das gesamte Spektrum an Local SEO und Digital Marketing Dienstleistungen für Unternehmen in {city.name}, {city.canton}.</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
           {city.services.map(svc => (
             <a href={`${import.meta.env.BASE_URL}areas/${city.slug}/${svc.slug}`} class="block p-6 bg-white border border-gray-200 rounded-lg hover:border-primary hover:shadow-sm no-underline transition-all">
@@ -65,13 +65,13 @@ const schema = {
       </section>
 
       <section class="mb-12 pb-12 border-b border-gray-200">
-        <h2 class="mb-4">About {city.name}</h2>
-        <p class="leading-relaxed text-brand-text-light">{city.name} is located in canton {city.canton} with a population of approximately {city.population.toLocaleString()} residents. {fullCity?.localContext || ''}</p>
+        <h2 class="mb-4">Über {city.name}</h2>
+        <p class="leading-relaxed text-brand-text-light">{city.name} liegt im Kanton {city.canton} und hat ungefähr {city.population.toLocaleString()} Einwohner. {fullCity?.localContext || ''}</p>
       </section>
 
       {nearbyCities.length > 0 && (
         <section class="mb-12 pb-12 border-b border-gray-200">
-          <h2 class="mb-4">We Also Serve</h2>
+          <h2 class="mb-4">Wir betreuen auch</h2>
           <div class="flex flex-col gap-2 mt-4">
             {nearbyCities.map(nc => (
               <a href={`${import.meta.env.BASE_URL}areas/${nc.slug}`} class="inline-block py-2 px-4 bg-brand-bg border border-gray-200 rounded-lg font-medium text-[0.9375rem] hover:border-primary hover:bg-white no-underline transition-all">
@@ -83,15 +83,15 @@ const schema = {
       )}
 
       <section class="text-center p-12 bg-brand-bg rounded-xl my-12">
-        <h2 class="mb-2">Grow Your {city.name} Business Online</h2>
-        <p class="text-brand-text-light mb-6">Datanalytico helps {city.name} businesses rank higher in local search. Contact us for a free review.</p>
+        <h2 class="mb-2">Ihr {city.name} Unternehmen online wachsen lassen</h2>
+        <p class="text-brand-text-light mb-6">Datanalytico hilft Unternehmen in {city.name}, in der lokalen Suche höher zu ranken. Kontaktieren Sie uns für eine kostenlose Analyse.</p>
         <div class="flex gap-4 justify-center flex-wrap">
-          <a href={business.phoneTel} class="btn btn--accent">Call {business.phone}</a>
-          <a href={`${import.meta.env.BASE_URL}contact`} class="btn btn--primary">Get a Free Review</a>
+          <a href={business.phoneTel} class="btn btn--accent">Anrufen {business.phone}</a>
+          <a href={`${import.meta.env.BASE_URL}contact`} class="btn btn--primary">Kostenlose Analyse</a>
         </div>
       </section>
 
-      <p><a href={`${import.meta.env.BASE_URL}areas`}>&larr; Back to Areas We Serve</a></p>
+      <p><a href={`${import.meta.env.BASE_URL}areas`}>&larr; Zurück zu Einzugsgebiete</a></p>
     </div>
   </div>
 </BaseLayout>

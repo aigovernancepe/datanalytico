@@ -4,18 +4,18 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
 import { cities, business } from '../../data/architecture';
 
 const crumbs = [
-  { label: 'Home', url: '/' },
-  { label: 'Areas We Serve', url: '/areas' }
+  { label: 'Startseite', url: '/' },
+  { label: 'Einzugsgebiete', url: '/areas' }
 ];
 ---
 
-<BaseLayout title="Areas We Serve — Local SEO Across Switzerland" description={`Based in ${business.city}, serving businesses in Basel, Zurich, and Bern.`}>
+<BaseLayout title="Einzugsgebiete — Local SEO in der Schweiz" description={`Mit Sitz in ${business.city}, betreuen wir Unternehmen in Basel, Zürich und Bern.`}>
   <Breadcrumb crumbs={crumbs} />
 
   <section class="bg-brand-dark text-white py-16 text-center">
     <div class="container">
-      <h1 class="text-white mb-4">Areas We Serve — Local SEO Across Switzerland</h1>
-      <p class="text-white/75 text-lg">Based in {business.city}, serving businesses in Basel, Zurich, and Bern.</p>
+      <h1 class="text-white mb-4" data-i18n="areas.title">Einzugsgebiete — Local SEO in der Schweiz</h1>
+      <p class="text-white/75 text-lg" data-i18n="areas.desc">Mit Sitz in {business.city}, betreuen wir Unternehmen in Basel, Zürich und Bern.</p>
     </div>
   </section>
 

@@ -4,8 +4,8 @@ import Breadcrumb from '../components/Breadcrumb.astro';
 import { business, coreServices, serviceAreas } from '../data/architecture';
 
 const crumbs = [
-  { label: 'Home', url: '/' },
-  { label: 'Contact', url: '/contact' }
+  { label: 'Startseite', url: '/' },
+  { label: 'Kontakt', url: '/contact' }
 ];
 
 const schema = {
@@ -15,13 +15,13 @@ const schema = {
 };
 ---
 
-<BaseLayout title={`Contact ${business.name} — Free SEO Consultation`} description="Get in touch with Datanalytico for a free local SEO consultation." schema={schema}>
+<BaseLayout title={`Kontakt ${business.name} — Kostenlose SEO Beratung`} description="Kontaktieren Sie Datanalytico für eine kostenlose Local SEO Beratung." schema={schema}>
   <Breadcrumb crumbs={crumbs} />
 
   <section class="bg-brand-dark text-white py-16 text-center">
     <div class="container">
-      <h1 class="text-white mb-4">Contact {business.name}</h1>
-      <p class="text-white/75 text-lg">Get in touch for a free local SEO consultation.</p>
+      <h1 class="text-white mb-4" data-i18n="contact.title">Kontakt {business.name}</h1>
+      <p class="text-white/75 text-lg" data-i18n="contact.subtitle">Kontaktieren Sie uns für eine kostenlose Local SEO Beratung.</p>
     </div>
   </section>
 
@@ -31,19 +31,19 @@ const schema = {
         <!-- Contact Info -->
         <div>
           <div class="mb-8">
-            <h3 class="text-[0.8125rem] uppercase tracking-wider text-brand-text-light mb-2">Phone</h3>
+            <h3 class="text-[0.8125rem] uppercase tracking-wider text-brand-text-light mb-2" data-i18n="contact.phone">Telefon</h3>
             <a href={business.phoneTel} class="text-[1.375rem] font-bold text-primary no-underline">{business.phone}</a>
           </div>
           <div class="mb-8">
-            <h3 class="text-[0.8125rem] uppercase tracking-wider text-brand-text-light mb-2">Email</h3>
+            <h3 class="text-[0.8125rem] uppercase tracking-wider text-brand-text-light mb-2">E-Mail</h3>
             <a href={`mailto:${business.email}`}>{business.email}</a>
           </div>
           <div class="mb-8">
-            <h3 class="text-[0.8125rem] uppercase tracking-wider text-brand-text-light mb-2">Location</h3>
-            <p>{business.city}, {business.stateAbbrev} {business.zip}<br />Switzerland</p>
+            <h3 class="text-[0.8125rem] uppercase tracking-wider text-brand-text-light mb-2" data-i18n="contact.location">Standort</h3>
+            <p>{business.city}, {business.stateAbbrev} {business.zip}<br />Schweiz</p>
           </div>
           <div class="mb-8">
-            <h3 class="text-[0.8125rem] uppercase tracking-wider text-brand-text-light mb-2">Service Areas</h3>
+            <h3 class="text-[0.8125rem] uppercase tracking-wider text-brand-text-light mb-2" data-i18n="contact.serviceAreas">Einzugsgebiete</h3>
             <div class="flex gap-2 flex-wrap">
               {serviceAreas.map(area => (
                 <a href={`${import.meta.env.BASE_URL}areas/${area.toLowerCase()}`} class="px-3 py-1 border border-gray-200 rounded-full text-sm font-medium no-underline">{area}</a>
@@ -54,46 +54,46 @@ const schema = {
 
         <!-- Form -->
         <div>
-          <h2 class="mb-2">Send Us a Message</h2>
-          <p class="text-brand-text-light mb-8">Tell us about your business and what you need. We respond within one business day.</p>
+          <h2 class="mb-2" data-i18n="contact.form.title">Schreiben Sie uns</h2>
+          <p class="text-brand-text-light mb-8" data-i18n="contact.form.desc">Erzählen Sie uns von Ihrem Unternehmen und Ihren Bedürfnissen. Wir antworten innerhalb eines Werktags.</p>
           <form class="flex flex-col gap-4">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label for="name" class="block text-sm font-semibold mb-1 text-brand-text">Name</label>
-                <input type="text" id="name" placeholder="Your name" required class="w-full py-3 px-4 border border-gray-200 rounded-lg font-sans text-[0.9375rem] text-brand-text bg-white focus:outline-none focus:border-primary" />
+                <label for="name" class="block text-sm font-semibold mb-1 text-brand-text" data-i18n="contact.form.name">Name</label>
+                <input type="text" id="name" placeholder="Ihr Name" data-i18n-placeholder="contact.form.namePh" required class="w-full py-3 px-4 border border-gray-200 rounded-lg font-sans text-[0.9375rem] text-brand-text bg-white focus:outline-none focus:border-primary" />
               </div>
               <div>
-                <label for="phone" class="block text-sm font-semibold mb-1 text-brand-text">Phone</label>
-                <input type="tel" id="phone" placeholder="Your phone number" required class="w-full py-3 px-4 border border-gray-200 rounded-lg font-sans text-[0.9375rem] text-brand-text bg-white focus:outline-none focus:border-primary" />
+                <label for="phone" class="block text-sm font-semibold mb-1 text-brand-text" data-i18n="contact.form.phone">Telefon</label>
+                <input type="tel" id="phone" placeholder="Ihre Telefonnummer" data-i18n-placeholder="contact.form.phonePh" required class="w-full py-3 px-4 border border-gray-200 rounded-lg font-sans text-[0.9375rem] text-brand-text bg-white focus:outline-none focus:border-primary" />
               </div>
             </div>
             <div>
-              <label for="email" class="block text-sm font-semibold mb-1 text-brand-text">Email</label>
-              <input type="email" id="email" placeholder="your@email.com" required class="w-full py-3 px-4 border border-gray-200 rounded-lg font-sans text-[0.9375rem] text-brand-text bg-white focus:outline-none focus:border-primary" />
+              <label for="email" class="block text-sm font-semibold mb-1 text-brand-text">E-Mail</label>
+              <input type="email" id="email" placeholder="ihre@email.com" required class="w-full py-3 px-4 border border-gray-200 rounded-lg font-sans text-[0.9375rem] text-brand-text bg-white focus:outline-none focus:border-primary" />
             </div>
             <div>
-              <label for="service" class="block text-sm font-semibold mb-1 text-brand-text">Service Needed</label>
+              <label for="service" class="block text-sm font-semibold mb-1 text-brand-text" data-i18n="contact.form.service">Gewünschte Dienstleistung</label>
               <select id="service" required class="w-full py-3 px-4 border border-gray-200 rounded-lg font-sans text-[0.9375rem] text-brand-text bg-white focus:outline-none focus:border-primary">
-                <option value="" disabled selected>Select a service</option>
+                <option value="" disabled selected>Dienstleistung auswählen</option>
                 {coreServices.map(s => (
                   <option value={s.slug}>{s.name}</option>
                 ))}
-                <option value="other">Other</option>
+                <option value="other" data-i18n="contact.form.other">Andere</option>
               </select>
             </div>
             <div>
-              <label for="message" class="block text-sm font-semibold mb-1 text-brand-text">Message</label>
-              <textarea id="message" placeholder="Tell us about your business and goals" rows="4" class="w-full py-3 px-4 border border-gray-200 rounded-lg font-sans text-[0.9375rem] text-brand-text bg-white focus:outline-none focus:border-primary resize-y"></textarea>
+              <label for="message" class="block text-sm font-semibold mb-1 text-brand-text" data-i18n="contact.form.message">Nachricht</label>
+              <textarea id="message" placeholder="Erzählen Sie uns von Ihrem Unternehmen und Ihren Zielen" data-i18n-placeholder="contact.form.messagePh" rows="4" class="w-full py-3 px-4 border border-gray-200 rounded-lg font-sans text-[0.9375rem] text-brand-text bg-white focus:outline-none focus:border-primary resize-y"></textarea>
             </div>
-            <button type="submit" class="btn btn--accent btn--full">Send Message</button>
+            <button type="submit" class="btn btn--accent btn--full" data-i18n="contact.form.submit">Nachricht senden</button>
           </form>
         </div>
       </div>
 
       <div class="flex justify-center gap-8 flex-wrap mt-12 pt-8 border-t border-gray-200 text-[0.8125rem] text-brand-text-light">
-        <span>No spam. No sales pressure.</span>
-        <span>Free initial consultation.</span>
-        <span>Response within 1 business day.</span>
+        <span data-i18n="contact.footer1">Kein Spam. Kein Verkaufsdruck.</span>
+        <span data-i18n="contact.footer2">Kostenlose Erstberatung.</span>
+        <span data-i18n="contact.footer3">Antwort innerhalb eines Werktags.</span>
       </div>
     </div>
   </div>
