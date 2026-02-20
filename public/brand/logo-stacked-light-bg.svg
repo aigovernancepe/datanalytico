@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" fill="none">
+  <!-- Datanalytico stacked logo for light backgrounds -->
+  <!-- Icon bars - centered -->
+  <polygon points="72,96 88,96 91.3,76 75.3,76" fill="#048caa"/>
+  <polygon points="85,96 101,96 106,64 90,64" fill="#ff9933"/>
+  <polygon points="98,96 114,96 121,50 105,50" fill="#048caa"/>
+  <polygon points="111,96 127,96 136.2,34 120.2,34" fill="#ff9933"/>
+  <!-- Text: "data" in teal, "nalytico" in orange -->
+  <text x="120" y="132" text-anchor="middle" font-family="'Comfortaa', 'Nunito', 'Inter', sans-serif" font-size="32" font-weight="700" letter-spacing="-0.5">
+    <tspan fill="#048caa">data</tspan><tspan fill="#ff9933">nalytico</tspan>
+  </text>
+</svg>
