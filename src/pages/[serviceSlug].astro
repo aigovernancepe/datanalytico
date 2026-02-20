@@ -48,8 +48,23 @@ const schema = {
     <div class="container max-w-[900px] mx-auto">
       <section class="mb-12 pb-12 border-b border-gray-200">
         <h2 class="mb-4">Wie hilft {service.name} Ihrem Unternehmen?</h2>
-        <p class="leading-relaxed text-brand-text-light">{service.name} ist eine der effektivsten Methoden für lokale Unternehmen in der Schweiz, um Sichtbarkeit auf Google zu gewinnen. Wenn Kunden in Basel, Zürich oder Bern nach Ihrem Angebot suchen, muss Ihr Unternehmen in Google Maps, in den organischen Ergebnissen und in AI-generierten Antworten erscheinen.</p>
-        <p class="leading-relaxed text-brand-text-light">Datanalytico liefert {service.name.toLowerCase()} basierend auf verifizierten Schweizer Suchdaten. Wir recherchieren, was Ihre Kunden tatsächlich bei Google eingeben, identifizieren Lücken, die Ihre Wettbewerber übersehen, und erstellen einen Plan, der Ihre Rankings Monat für Monat verbessert.</p>
+        <div class="flex flex-col md:flex-row gap-6 items-start">
+          {serviceSlug === 'google-business-profile' && (
+            <img
+              src={`${import.meta.env.BASE_URL}brand/google-business-profile-management-lokales-unternehmen-basel.webp`}
+              alt="Google Business Profile Management für lokale Unternehmen in Basel – Geschäftsprofil-Optimierung mit Google-Logo"
+              width="180"
+              height="180"
+              loading="eager"
+              decoding="async"
+              class="rounded-xl shrink-0 self-center md:self-start"
+            />
+          )}
+          <div>
+            <p class="leading-relaxed text-brand-text-light">{service.name} ist eine der effektivsten Methoden für lokale Unternehmen in der Schweiz, um Sichtbarkeit auf Google zu gewinnen. Wenn Kunden in Basel, Zürich oder Bern nach Ihrem Angebot suchen, muss Ihr Unternehmen in Google Maps, in den organischen Ergebnissen und in AI-generierten Antworten erscheinen.</p>
+            <p class="leading-relaxed text-brand-text-light">Datanalytico liefert {service.name.toLowerCase()} basierend auf verifizierten Schweizer Suchdaten. Wir recherchieren, was Ihre Kunden tatsächlich bei Google eingeben, identifizieren Lücken, die Ihre Wettbewerber übersehen, und erstellen einen Plan, der Ihre Rankings Monat für Monat verbessert.</p>
+          </div>
+        </div>
       </section>
 
       {data?.processSteps && (
