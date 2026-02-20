@@ -86,16 +86,16 @@ export const cities = [
     url: '/areas/basel',
     canton: 'Basel-Stadt',
     population: 180000,
-    description: 'Basel is Switzerland\'s third-largest city and a global hub for life sciences and pharma. Hundreds of SMEs in the Basel area need local visibility to compete.',
+    description: 'Basel ist die drittgrösste Stadt der Schweiz und ein globales Zentrum für Life Sciences und Pharma. Hunderte von KMU im Raum Basel brauchen lokale Sichtbarkeit, um wettbewerbsfähig zu bleiben.',
     services: coreServices.map(s => ({ name: s.name, slug: s.slug, url: `/areas/basel/${s.slug}` }))
   },
   {
-    name: 'Zurich',
+    name: 'Zürich',
     slug: 'zurich',
     url: '/areas/zurich',
-    canton: 'Zurich',
+    canton: 'Zürich',
     population: 434335,
-    description: 'Zurich is Switzerland\'s largest city and financial capital. With 116,000+ companies, competition for local search visibility is intense.',
+    description: 'Zürich ist die grösste Stadt der Schweiz und Finanzhauptstadt. Mit über 116\'000 Unternehmen ist der Wettbewerb um lokale Suchsichtbarkeit intensiv.',
     services: coreServices.map(s => ({ name: s.name, slug: s.slug, url: `/areas/zurich/${s.slug}` }))
   },
   {
@@ -104,12 +104,12 @@ export const cities = [
     url: '/areas/bern',
     canton: 'Bern',
     population: 146000,
-    description: 'Bern is Switzerland\'s federal capital and an SME hub — 67% of jobs are in businesses with fewer than 250 employees.',
+    description: 'Bern ist die Bundeshauptstadt der Schweiz und ein KMU-Zentrum — 67 % der Arbeitsplätze sind in Unternehmen mit weniger als 250 Mitarbeitern.',
     services: coreServices.map(s => ({ name: s.name, slug: s.slug, url: `/areas/bern/${s.slug}` }))
   }
 ]
 
-export const serviceAreas = ['Basel', 'Zurich', 'Bern']
+export const serviceAreas = ['Basel', 'Zürich', 'Bern']
 
 export function findCoreService(slug) {
   return coreServices.find(s => s.slug === slug)
