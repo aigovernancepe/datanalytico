@@ -77,7 +77,6 @@ const { steps } = Astro.props;
     height: 100%;
     position: relative;
     overflow: hidden;
-    overflow-wrap: break-word;
     display: flex;
     flex-direction: column;
   }
@@ -140,6 +139,7 @@ const { steps } = Astro.props;
     margin-bottom: 0.5rem;
     color: #0E1A2D;
     line-height: 1.35;
+    hyphens: auto;
   }
 
   .process-desc {
@@ -148,5 +148,6 @@ const { steps } = Astro.props;
     color: #6B7280;
     margin-bottom: 0;
     flex: 1;
+    hyphens: auto;
   }
 </style>
