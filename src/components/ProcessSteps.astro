@@ -75,6 +75,8 @@ const { steps } = Astro.props;
     height: 100%;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
   }
 
   .process-card::before {
@@ -142,5 +144,6 @@ const { steps } = Astro.props;
     line-height: 1.65;
     color: #6B7280;
     margin-bottom: 0;
+    flex: 1;
   }
 </style>
