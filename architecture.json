@@ -203,6 +203,10 @@
       "google-maps-seo": {
         "priceRange": { "min": 800, "max": 2500, "currency": "CHF", "period": "month" },
         "emergency": false,
+        "image": {
+          "src": "/brand/google-maps-seo-lokale-suche-bewertungen-basel.webp",
+          "alt": "Google Maps SEO – Smartphone mit lokaler Kartensuche, Standort-Pin und 5-Sterne-Bewertungen für lokale Unternehmen in Basel"
+        },
         "processSteps": [
           { "title": "Map-Pack-Analyse", "description": "Wir führen rasterbasierte Rank-Scans durch, um genau zu sehen, wo Sie erscheinen — und wo nicht — in Ihrem Einzugsgebiet." },
           { "title": "Ranking-Faktor-Audit", "description": "Wir analysieren die drei Säulen — Relevanz, Entfernung und Bekanntheit — um herauszufinden, was Sie zurückhält." },

@@ -56,6 +56,20 @@ const schema = {
         <p class="leading-relaxed text-brand-text-light">{result.name} ist eine spezialisierte Dienstleistung unter <a href={`${import.meta.env.BASE_URL}${result.parent.url.slice(1)}`}>{result.parent.name}</a>. Datanalytico bietet dies für Unternehmen in Basel, Zürich und Bern an, die fokussierte Aufmerksamkeit auf diesen Teil ihrer lokalen Suchstrategie benötigen.</p>
       </section>
 
+      {data?.image && (
+        <section class="mb-12 pb-12 border-b border-gray-200">
+          <img
+            src={`${import.meta.env.BASE_URL}${data.image.src.slice(1)}`}
+            alt={data.image.alt}
+            width="900"
+            height="900"
+            loading="lazy"
+            decoding="async"
+            class="rounded-xl mx-auto max-w-sm w-full h-auto"
+          />
+        </section>
+      )}
+
       {data?.processSteps && (
         <section class="mb-12 pb-12 border-b border-gray-200">
           <h2 class="mb-4">Unser {result.name} Prozess</h2>
