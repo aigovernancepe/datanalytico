@@ -73,6 +73,15 @@ const schema = {
       {data?.processSteps && (
         <section class="mb-12 pb-12 border-b border-gray-200">
           <h2 class="mb-4">Unser {result.name} Prozess</h2>
+          <img
+            src={`${import.meta.env.BASE_URL}brand/local-seo-agentur-google-unternehmensprofil-prozess.webp`}
+            alt={`Datanalytico Google Unternehmensprofil mit 5-Sterne-Bewertung in Basel – ${result.name} Prozess`}
+            width="900"
+            height="900"
+            loading="lazy"
+            decoding="async"
+            class="rounded-xl mx-auto max-w-sm w-full h-auto mb-8"
+          />
           <ProcessSteps steps={data.processSteps} />
         </section>
       )}
