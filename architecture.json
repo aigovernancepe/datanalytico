@@ -94,210 +94,210 @@
         "priceRange": { "min": 1500, "max": 5000, "currency": "CHF", "period": "month" },
         "emergency": false,
         "processSteps": [
-          { "title": "Discovery & Audit", "description": "We audit your current local search presence — GBP, citations, website, reviews, and rankings — to identify gaps and opportunities." },
-          { "title": "Strategy & Roadmap", "description": "We build a 90-day action plan prioritizing the changes that will move your rankings fastest." },
-          { "title": "Implementation", "description": "We execute — optimizing your GBP, fixing citations, building links, and creating content that targets your highest-value keywords." },
-          { "title": "Tracking & Optimization", "description": "Monthly rank tracking, reporting, and strategy adjustments based on what the data shows is working." }
+          { "title": "Analyse & Audit", "description": "Wir prüfen Ihre aktuelle lokale Suchpräsenz — GBP, Einträge, Website, Bewertungen und Rankings — um Lücken und Chancen zu identifizieren." },
+          { "title": "Strategie & Fahrplan", "description": "Wir erstellen einen 90-Tage-Aktionsplan, der die Massnahmen priorisiert, die Ihre Rankings am schnellsten verbessern." },
+          { "title": "Umsetzung", "description": "Wir setzen um — GBP-Optimierung, Einträge korrigieren, Links aufbauen und Inhalte erstellen, die auf Ihre wertvollsten Keywords abzielen." },
+          { "title": "Tracking & Optimierung", "description": "Monatliches Ranking-Tracking, Reporting und Strategieanpassungen basierend auf den Daten, die zeigen, was funktioniert." }
         ]
       },
       "citation-building": {
         "priceRange": { "min": 500, "max": 1500, "currency": "CHF", "period": "project" },
         "emergency": false,
         "processSteps": [
-          { "title": "Citation Audit", "description": "We scan 60+ directories and data aggregators to find where your business is listed, missing, or inconsistent." },
-          { "title": "NAP Cleanup", "description": "We correct every inconsistency — wrong phone numbers, old addresses, duplicate listings — across all sources." },
-          { "title": "New Submissions", "description": "We submit your business to every relevant directory with consistent, accurate information." },
-          { "title": "Monitoring", "description": "Ongoing monitoring to catch new inconsistencies and maintain citation health." }
+          { "title": "Eintrags-Audit", "description": "Wir scannen über 60 Verzeichnisse und Datenaggregratoren, um herauszufinden, wo Ihr Unternehmen gelistet, fehlend oder inkonsistent ist." },
+          { "title": "NAP-Bereinigung", "description": "Wir korrigieren jede Inkonsistenz — falsche Telefonnummern, alte Adressen, doppelte Einträge — über alle Quellen hinweg." },
+          { "title": "Neue Einträge", "description": "Wir melden Ihr Unternehmen bei jedem relevanten Verzeichnis mit konsistenten, korrekten Informationen an." },
+          { "title": "Überwachung", "description": "Laufende Überwachung, um neue Inkonsistenzen zu erkennen und die Qualität der Einträge aufrechtzuerhalten." }
         ]
       },
       "on-page-seo": {
         "priceRange": { "min": 1000, "max": 3000, "currency": "CHF", "period": "project" },
         "emergency": false,
         "processSteps": [
-          { "title": "Technical Audit", "description": "We crawl your site to identify title tag issues, missing schema, slow pages, and indexation problems." },
-          { "title": "Keyword Mapping", "description": "We map target keywords to each page so every URL has a clear purpose in your search strategy." },
-          { "title": "Optimization", "description": "We update titles, meta descriptions, headings, schema markup, internal links, and content structure." },
-          { "title": "Verification", "description": "We validate all changes with Lighthouse audits and search console monitoring." }
+          { "title": "Technisches Audit", "description": "Wir crawlen Ihre Website, um Title-Tag-Probleme, fehlende Schema-Markups, langsame Seiten und Indexierungsprobleme zu identifizieren." },
+          { "title": "Keyword-Zuordnung", "description": "Wir ordnen Ziel-Keywords jeder Seite zu, damit jede URL einen klaren Zweck in Ihrer Suchstrategie hat." },
+          { "title": "Optimierung", "description": "Wir aktualisieren Titles, Meta-Beschreibungen, Überschriften, Schema-Markup, interne Verlinkung und Content-Struktur." },
+          { "title": "Überprüfung", "description": "Wir validieren alle Änderungen mit Lighthouse-Audits und Search-Console-Überwachung." }
         ]
       },
       "link-building": {
         "priceRange": { "min": 1000, "max": 3000, "currency": "CHF", "period": "month" },
         "emergency": false,
         "processSteps": [
-          { "title": "Backlink Audit", "description": "We analyze your current link profile and your competitors' to find gaps and opportunities." },
-          { "title": "Prospect Research", "description": "We identify high-quality local link opportunities — directories, sponsorships, associations, editorial placements." },
-          { "title": "Outreach & Acquisition", "description": "We reach out and secure real links from relevant, authoritative local websites." },
-          { "title": "Reporting", "description": "Monthly link acquisition report showing new links, domain authority growth, and ranking impact." }
+          { "title": "Backlink-Audit", "description": "Wir analysieren Ihr aktuelles Linkprofil und das Ihrer Wettbewerber, um Lücken und Chancen zu finden." },
+          { "title": "Recherche", "description": "Wir identifizieren hochwertige lokale Link-Möglichkeiten — Verzeichnisse, Sponsoring, Verbände, redaktionelle Platzierungen." },
+          { "title": "Outreach & Akquise", "description": "Wir nehmen Kontakt auf und sichern echte Links von relevanten, autoritativen lokalen Websites." },
+          { "title": "Berichterstattung", "description": "Monatlicher Link-Akquise-Bericht mit neuen Links, Domain-Authority-Wachstum und Ranking-Auswirkungen." }
         ]
       },
       "website-design": {
         "priceRange": { "min": 3000, "max": 15000, "currency": "CHF", "period": "project" },
         "emergency": false,
         "processSteps": [
-          { "title": "Discovery & Architecture", "description": "We research your market, plan your site architecture, and define the page hierarchy that search engines reward." },
-          { "title": "Design & Prototyping", "description": "We design mobile-first layouts with conversion-focused structure — CTAs, trust signals, and clear service navigation." },
-          { "title": "Development & SEO", "description": "We build the site with clean code, fast load times, schema markup, and every technical SEO element baked in." },
-          { "title": "Launch & Handoff", "description": "We test across devices, submit sitemaps, and hand over a site that is ready to rank from day one." }
+          { "title": "Analyse & Architektur", "description": "Wir recherchieren Ihren Markt, planen die Website-Architektur und definieren die Seitenhierarchie, die Suchmaschinen belohnen." },
+          { "title": "Design & Prototyping", "description": "Wir gestalten Mobile-First-Layouts mit conversionorientierter Struktur — CTAs, Vertrauenssignale und klare Service-Navigation." },
+          { "title": "Entwicklung & SEO", "description": "Wir entwickeln die Website mit sauberem Code, schnellen Ladezeiten, Schema-Markup und allen technischen SEO-Elementen." },
+          { "title": "Launch & Übergabe", "description": "Wir testen auf allen Geräten, reichen Sitemaps ein und übergeben eine Website, die vom ersten Tag an ranken kann." }
         ]
       },
       "service-area-websites": {
         "priceRange": { "min": 5000, "max": 15000, "currency": "CHF", "period": "project" },
         "emergency": false,
         "processSteps": [
-          { "title": "Service Area Research", "description": "We identify your target cities, map service-to-city combinations, and plan unique content for each area." },
-          { "title": "Architecture Planning", "description": "We build the URL hierarchy — city hubs, city-service pages — with internal linking that distributes authority." },
-          { "title": "Content & Development", "description": "We write genuinely unique city pages with local signals, FAQs, and area-specific data — not thin doorway pages." },
-          { "title": "Technical Optimization", "description": "Schema markup, geo-targeting, sitemap configuration, and staggered launch to avoid Google doorway filters." }
+          { "title": "Einzugsgebiet-Recherche", "description": "Wir identifizieren Ihre Zielstädte, ordnen Service-Stadt-Kombinationen zu und planen einzigartige Inhalte für jedes Gebiet." },
+          { "title": "Architekturplanung", "description": "Wir erstellen die URL-Hierarchie — Stadt-Hubs, Stadt-Service-Seiten — mit interner Verlinkung, die Autorität verteilt." },
+          { "title": "Inhalte & Entwicklung", "description": "Wir schreiben wirklich einzigartige Stadtseiten mit lokalen Signalen, FAQs und gebietsspezifischen Daten — keine dünnen Doorway-Seiten." },
+          { "title": "Technische Optimierung", "description": "Schema-Markup, Geo-Targeting, Sitemap-Konfiguration und gestaffelter Launch, um Google-Doorway-Filter zu vermeiden." }
         ]
       },
       "website-redesign": {
         "priceRange": { "min": 4000, "max": 12000, "currency": "CHF", "period": "project" },
         "emergency": false,
         "processSteps": [
-          { "title": "Current Site Audit", "description": "We audit your existing site — what ranks, what converts, what needs to be preserved during the redesign." },
-          { "title": "Redirect Planning", "description": "We map every old URL to its new destination so you keep your existing rankings and link equity." },
-          { "title": "Redesign & Build", "description": "We redesign with SEO architecture baked in — faster, mobile-first, and structured for local search." },
-          { "title": "Migration & Monitoring", "description": "We launch with 301 redirects, monitor Search Console for errors, and ensure zero ranking loss." }
+          { "title": "Audit der bestehenden Website", "description": "Wir prüfen Ihre bestehende Website — was rankt, was konvertiert, was beim Redesign erhalten bleiben muss." },
+          { "title": "Redirect-Planung", "description": "Wir ordnen jede alte URL ihrem neuen Ziel zu, damit Sie Ihre bestehenden Rankings und Link-Equity behalten." },
+          { "title": "Redesign & Aufbau", "description": "Wir redesignen mit integrierter SEO-Architektur — schneller, Mobile-First und für lokale Suche strukturiert." },
+          { "title": "Migration & Überwachung", "description": "Wir launchen mit 301-Redirects, überwachen die Search Console auf Fehler und stellen sicher, dass keine Rankings verloren gehen." }
         ]
       },
       "landing-pages": {
         "priceRange": { "min": 1500, "max": 4000, "currency": "CHF", "period": "project" },
         "emergency": false,
         "processSteps": [
-          { "title": "Conversion Research", "description": "We study your target audience, competitors' landing pages, and the keywords driving traffic." },
-          { "title": "Copy & Design", "description": "We write conversion-focused copy and design a layout built around a single clear action." },
-          { "title": "Build & Optimize", "description": "We develop the page with fast load times, schema markup, and A/B testing capability." },
-          { "title": "Performance Tracking", "description": "We track conversions, bounce rate, and form completions to refine the page over time." }
+          { "title": "Conversion-Recherche", "description": "Wir analysieren Ihre Zielgruppe, Landing Pages der Wettbewerber und die Keywords, die Traffic bringen." },
+          { "title": "Text & Design", "description": "Wir schreiben conversionorientierten Text und gestalten ein Layout, das auf eine einzige klare Handlung ausgerichtet ist." },
+          { "title": "Entwicklung & Optimierung", "description": "Wir entwickeln die Seite mit schnellen Ladezeiten, Schema-Markup und A/B-Testing-Möglichkeiten." },
+          { "title": "Performance-Tracking", "description": "Wir verfolgen Conversions, Absprungraten und Formularabschlüsse, um die Seite laufend zu verbessern." }
         ]
       },
       "google-business-profile": {
         "priceRange": { "min": 500, "max": 1500, "currency": "CHF", "period": "month" },
         "emergency": false,
         "processSteps": [
-          { "title": "GBP Audit", "description": "We audit every field of your Google Business Profile — categories, attributes, photos, posts, Q&A, and reviews." },
-          { "title": "Full Optimization", "description": "We optimize your listing with the right categories, keyword-rich descriptions, and complete business information." },
-          { "title": "Ongoing Management", "description": "Weekly posts, photo uploads, Q&A monitoring, and review response management to keep your profile active." },
-          { "title": "Performance Reporting", "description": "Monthly reports on search visibility, calls, direction requests, and website clicks from your GBP." }
+          { "title": "GBP-Audit", "description": "Wir prüfen jedes Feld Ihres Google Business Profils — Kategorien, Attribute, Fotos, Beiträge, Fragen & Antworten und Bewertungen." },
+          { "title": "Vollständige Optimierung", "description": "Wir optimieren Ihren Eintrag mit den richtigen Kategorien, keyword-reichen Beschreibungen und vollständigen Geschäftsinformationen." },
+          { "title": "Laufende Betreuung", "description": "Wöchentliche Beiträge, Foto-Uploads, Q&A-Überwachung und Bewertungsmanagement, um Ihr Profil aktiv zu halten." },
+          { "title": "Performance-Berichte", "description": "Monatliche Berichte über Suchsichtbarkeit, Anrufe, Routenanfragen und Website-Klicks aus Ihrem GBP." }
         ]
       },
       "gbp-optimization": {
         "priceRange": { "min": 500, "max": 2000, "currency": "CHF", "period": "project" },
         "emergency": false,
         "processSteps": [
-          { "title": "Category Analysis", "description": "We research the best primary and secondary categories for your industry and location." },
-          { "title": "Profile Enhancement", "description": "We optimize every field — business description, attributes, services, products, and hours." },
-          { "title": "Visual Content", "description": "We add geotagged photos, service images, and team photos following Google's guidelines." },
-          { "title": "Verification & Launch", "description": "We verify all changes are live, set up tracking, and document the optimized state." }
+          { "title": "Kategorie-Analyse", "description": "Wir recherchieren die besten Haupt- und Nebenkategorien für Ihre Branche und Ihren Standort." },
+          { "title": "Profil-Optimierung", "description": "Wir optimieren jedes Feld — Unternehmensbeschreibung, Attribute, Dienstleistungen, Produkte und Öffnungszeiten." },
+          { "title": "Visueller Content", "description": "Wir fügen geogetaggte Fotos, Service-Bilder und Teamfotos gemäss den Google-Richtlinien hinzu." },
+          { "title": "Überprüfung & Freigabe", "description": "Wir überprüfen, ob alle Änderungen live sind, richten Tracking ein und dokumentieren den optimierten Zustand." }
         ]
       },
       "review-management": {
         "priceRange": { "min": 300, "max": 1000, "currency": "CHF", "period": "month" },
         "emergency": false,
         "processSteps": [
-          { "title": "Review Audit", "description": "We analyze your current review landscape — count, rating, velocity, sentiment, and competitor comparison." },
-          { "title": "Generation Strategy", "description": "We build a review generation system with email/SMS sequences and staff training materials." },
-          { "title": "Response Management", "description": "We respond to every review within 24 hours — positive reviews get gratitude, negatives get professional resolution." },
-          { "title": "Velocity Tracking", "description": "We monitor review velocity and rating trends to ensure consistent growth." }
+          { "title": "Bewertungs-Audit", "description": "Wir analysieren Ihre aktuelle Bewertungslandschaft — Anzahl, Bewertung, Geschwindigkeit, Stimmung und Wettbewerbsvergleich." },
+          { "title": "Generierungsstrategie", "description": "Wir bauen ein System zur Bewertungsgenerierung mit E-Mail-/SMS-Sequenzen und Schulungsmaterialien für Ihr Team." },
+          { "title": "Antwort-Management", "description": "Wir antworten auf jede Bewertung innerhalb von 24 Stunden — positive Bewertungen erhalten Dankbarkeit, negative eine professionelle Lösung." },
+          { "title": "Geschwindigkeits-Tracking", "description": "Wir überwachen die Bewertungsgeschwindigkeit und Bewertungstrends, um ein konstantes Wachstum sicherzustellen." }
         ]
       },
       "google-maps-seo": {
         "priceRange": { "min": 800, "max": 2500, "currency": "CHF", "period": "month" },
         "emergency": false,
         "processSteps": [
-          { "title": "Map Pack Analysis", "description": "We run grid-based rank scans to see exactly where you appear — and where you don't — across your service area." },
-          { "title": "Ranking Factor Audit", "description": "We analyze the three pillars — relevance, distance, and prominence — to find what's holding you back." },
-          { "title": "Optimization Campaign", "description": "We execute GBP optimization, citation building, review generation, and local link building to improve map visibility." },
-          { "title": "Progress Tracking", "description": "Bi-weekly rank scans showing map pack coverage changes with visual heat maps." }
+          { "title": "Map-Pack-Analyse", "description": "Wir führen rasterbasierte Rank-Scans durch, um genau zu sehen, wo Sie erscheinen — und wo nicht — in Ihrem Einzugsgebiet." },
+          { "title": "Ranking-Faktor-Audit", "description": "Wir analysieren die drei Säulen — Relevanz, Entfernung und Bekanntheit — um herauszufinden, was Sie zurückhält." },
+          { "title": "Optimierungskampagne", "description": "Wir führen GBP-Optimierung, Eintragsaufbau, Bewertungsgenerierung und lokalen Linkaufbau durch, um die Map-Sichtbarkeit zu verbessern." },
+          { "title": "Fortschrittsverfolgung", "description": "Zweiwöchentliche Rank-Scans, die Map-Pack-Abdeckungsänderungen mit visuellen Heatmaps zeigen." }
         ]
       },
       "content-creation": {
         "priceRange": { "min": 1000, "max": 3000, "currency": "CHF", "period": "month" },
         "emergency": false,
         "processSteps": [
-          { "title": "Keyword Research", "description": "We identify the search terms your target customers use — focusing on bottom-of-funnel, high-intent queries." },
-          { "title": "Content Planning", "description": "We build a content calendar with topics mapped to keywords, search intent, and your sales funnel." },
-          { "title": "Writing & Optimization", "description": "We write clear, engaging content structured for both search engines and AI systems — with capsule answers, schema, and internal links." },
-          { "title": "Publishing & Tracking", "description": "We publish, submit to Search Console, and track rankings and traffic for each piece." }
+          { "title": "Keyword-Recherche", "description": "Wir identifizieren die Suchbegriffe, die Ihre Zielkunden verwenden — mit Fokus auf Bottom-of-Funnel, hochintentionale Suchanfragen." },
+          { "title": "Content-Planung", "description": "Wir erstellen einen Content-Kalender mit Themen, die auf Keywords, Suchintention und Ihren Sales Funnel abgestimmt sind." },
+          { "title": "Texterstellung & Optimierung", "description": "Wir schreiben klare, ansprechende Inhalte, die für Suchmaschinen und KI-Systeme strukturiert sind — mit Capsule-Antworten, Schema und internen Links." },
+          { "title": "Veröffentlichung & Tracking", "description": "Wir veröffentlichen, reichen bei der Search Console ein und verfolgen Rankings und Traffic für jeden Beitrag." }
         ]
       },
       "blog-writing": {
         "priceRange": { "min": 400, "max": 1600, "currency": "CHF", "period": "post" },
         "emergency": false,
         "processSteps": [
-          { "title": "Topic Research", "description": "We identify blog topics based on keyword gaps, customer questions, and seasonal trends in your market." },
-          { "title": "Brief & Outline", "description": "We create a detailed brief with target keyword, headings, internal links, and competitor analysis." },
-          { "title": "Writing & Editing", "description": "We write 800-1,500 word posts at a 5th-grade reading level with clear structure and natural keyword usage." },
-          { "title": "SEO Optimization", "description": "We add meta tags, schema markup, internal links to service pages, and optimized images before publishing." }
+          { "title": "Themenrecherche", "description": "Wir identifizieren Blog-Themen basierend auf Keyword-Lücken, Kundenfragen und saisonalen Trends in Ihrem Markt." },
+          { "title": "Briefing & Gliederung", "description": "Wir erstellen ein detailliertes Briefing mit Ziel-Keyword, Überschriften, internen Links und Wettbewerbsanalyse." },
+          { "title": "Texterstellung & Lektorat", "description": "Wir schreiben Beiträge mit 800–1'500 Wörtern auf einem leicht verständlichen Niveau mit klarer Struktur und natürlicher Keyword-Verwendung." },
+          { "title": "SEO-Optimierung", "description": "Wir fügen Meta-Tags, Schema-Markup, interne Links zu Serviceseiten und optimierte Bilder vor der Veröffentlichung hinzu." }
         ]
       },
       "service-page-content": {
         "priceRange": { "min": 500, "max": 1500, "currency": "CHF", "period": "page" },
         "emergency": false,
         "processSteps": [
-          { "title": "Competitor Analysis", "description": "We analyze what's ranking for your target service keyword and identify the content gaps." },
-          { "title": "Content Framework", "description": "We structure the page with goal completion hierarchy — problem, solution, proof, call to action." },
-          { "title": "Writing", "description": "We write conversion-focused content that answers the searcher's questions and builds trust." },
-          { "title": "Schema & Publishing", "description": "We add Service schema, FAQ schema, and proper internal linking before publishing." }
+          { "title": "Wettbewerbsanalyse", "description": "Wir analysieren, was für Ihr Ziel-Service-Keyword rankt, und identifizieren die Content-Lücken." },
+          { "title": "Content-Struktur", "description": "Wir strukturieren die Seite mit einer Zielerreichungshierarchie — Problem, Lösung, Beweis, Handlungsaufforderung." },
+          { "title": "Texterstellung", "description": "Wir schreiben conversionorientierten Content, der die Fragen der Suchenden beantwortet und Vertrauen aufbaut." },
+          { "title": "Schema & Veröffentlichung", "description": "Wir fügen Service-Schema, FAQ-Schema und korrekte interne Verlinkung vor der Veröffentlichung hinzu." }
         ]
       },
       "local-social-media": {
         "priceRange": { "min": 1000, "max": 3000, "currency": "CHF", "period": "month" },
         "emergency": false,
         "processSteps": [
-          { "title": "Profile Audit", "description": "We audit all social profiles for NAP consistency, completeness, and alignment with your search presence." },
-          { "title": "Strategy Development", "description": "We build a social strategy focused on local entity signals — not vanity metrics." },
-          { "title": "Content Execution", "description": "We create and schedule posts using the 40/25/20/15 pillar mix — local trust, engagement, educational, promotional." },
-          { "title": "Performance Review", "description": "Monthly reports on engagement, reach, and the impact on local search visibility." }
+          { "title": "Profil-Audit", "description": "Wir prüfen alle Social-Media-Profile auf NAP-Konsistenz, Vollständigkeit und Übereinstimmung mit Ihrer Suchpräsenz." },
+          { "title": "Strategieentwicklung", "description": "Wir erstellen eine Social-Media-Strategie mit Fokus auf lokale Entity-Signale — keine Eitelkeitsmetriken." },
+          { "title": "Content-Umsetzung", "description": "Wir erstellen und planen Beiträge mit dem 40/25/20/15-Säulen-Mix — lokales Vertrauen, Engagement, Bildung, Werbung." },
+          { "title": "Performance-Auswertung", "description": "Monatliche Berichte über Engagement, Reichweite und die Auswirkungen auf die lokale Suchsichtbarkeit." }
         ]
       },
       "social-media-setup": {
         "priceRange": { "min": 500, "max": 1500, "currency": "CHF", "period": "project" },
         "emergency": false,
         "processSteps": [
-          { "title": "Platform Selection", "description": "We identify which platforms matter for your industry and local market — not every platform, the right ones." },
-          { "title": "Profile Creation", "description": "We set up profiles with consistent NAP, keyword-optimized bios, and branded visuals." },
-          { "title": "Integration", "description": "We link social profiles to your GBP, website, and citation network for entity consistency." },
-          { "title": "Training & Handoff", "description": "We train your team on posting best practices and provide templates for ongoing content." }
+          { "title": "Plattform-Auswahl", "description": "Wir identifizieren, welche Plattformen für Ihre Branche und Ihren lokalen Markt relevant sind — nicht jede Plattform, die richtigen." },
+          { "title": "Profil-Erstellung", "description": "Wir erstellen Profile mit konsistentem NAP, keyword-optimierten Bios und gebrandeten Visuals." },
+          { "title": "Integration", "description": "Wir verknüpfen Social-Media-Profile mit Ihrem GBP, Ihrer Website und Ihrem Eintragsnetzwerk für Entity-Konsistenz." },
+          { "title": "Schulung & Übergabe", "description": "Wir schulen Ihr Team in Best Practices für Beiträge und stellen Vorlagen für laufenden Content bereit." }
         ]
       },
       "content-calendar": {
         "priceRange": { "min": 500, "max": 1500, "currency": "CHF", "period": "month" },
         "emergency": false,
         "processSteps": [
-          { "title": "Content Audit", "description": "We review existing content and identify repurposing opportunities from blog posts, reviews, and service pages." },
-          { "title": "Calendar Planning", "description": "We build a monthly calendar with post topics, formats, and optimal posting times for your audience." },
-          { "title": "Content Creation", "description": "We create platform-specific content — carousel posts, short videos, testimonials, local tips." },
-          { "title": "Scheduling & Publishing", "description": "We schedule posts and monitor engagement to refine timing and content types." }
+          { "title": "Content-Audit", "description": "Wir prüfen bestehende Inhalte und identifizieren Wiederverwendungsmöglichkeiten aus Blogbeiträgen, Bewertungen und Serviceseiten." },
+          { "title": "Kalenderplanung", "description": "Wir erstellen einen monatlichen Kalender mit Beitragsthemen, Formaten und optimalen Veröffentlichungszeiten für Ihre Zielgruppe." },
+          { "title": "Content-Erstellung", "description": "Wir erstellen plattformspezifische Inhalte — Karussell-Posts, Kurzvideos, Testimonials, lokale Tipps." },
+          { "title": "Planung & Veröffentlichung", "description": "Wir planen Beiträge und überwachen das Engagement, um Timing und Content-Typen zu verfeinern." }
         ]
       },
       "ppc-google-ads": {
         "priceRange": { "min": 1500, "max": 5000, "currency": "CHF", "period": "month" },
         "emergency": false,
         "processSteps": [
-          { "title": "Account Audit", "description": "We audit your existing campaigns — or research your market from scratch — to find the highest-ROI opportunities." },
-          { "title": "Campaign Architecture", "description": "We build campaigns structured around service lines and locations with tight keyword targeting and negative keyword lists." },
-          { "title": "Launch & Optimize", "description": "We launch campaigns, monitor performance daily, and adjust bids, ads, and targeting based on conversion data." },
-          { "title": "Reporting & Scaling", "description": "Monthly ROI reports with clear cost-per-lead data. We scale what works and cut what doesn't." }
+          { "title": "Konto-Audit", "description": "Wir prüfen Ihre bestehenden Kampagnen — oder recherchieren Ihren Markt von Grund auf — um die Chancen mit dem höchsten ROI zu finden." },
+          { "title": "Kampagnenarchitektur", "description": "Wir erstellen Kampagnen, die nach Dienstleistungen und Standorten strukturiert sind, mit präzisem Keyword-Targeting und negativen Keyword-Listen." },
+          { "title": "Launch & Optimierung", "description": "Wir starten Kampagnen, überwachen die Performance täglich und passen Gebote, Anzeigen und Targeting basierend auf Conversion-Daten an." },
+          { "title": "Reporting & Skalierung", "description": "Monatliche ROI-Berichte mit klaren Kosten-pro-Lead-Daten. Wir skalieren, was funktioniert, und stoppen, was nicht funktioniert." }
         ]
       },
       "google-search-ads": {
         "priceRange": { "min": 1000, "max": 4000, "currency": "CHF", "period": "month" },
         "emergency": false,
         "processSteps": [
-          { "title": "Keyword Research", "description": "We identify high-intent search terms with commercial value — the queries that lead to phone calls and form fills." },
-          { "title": "Ad Copy & Extensions", "description": "We write compelling ad copy with location extensions, call extensions, and structured snippets." },
-          { "title": "Landing Page Alignment", "description": "We ensure every ad points to a relevant, conversion-optimized landing page — not your homepage." },
-          { "title": "Bid Management", "description": "We manage bids to maximize conversions within your budget, using dayparting and geo-targeting." }
+          { "title": "Keyword-Recherche", "description": "Wir identifizieren hochintentionale Suchbegriffe mit kommerziellem Wert — die Anfragen, die zu Anrufen und Formularabschlüssen führen." },
+          { "title": "Anzeigentext & Erweiterungen", "description": "Wir schreiben überzeugende Anzeigentexte mit Standorterweiterungen, Anruferweiterungen und strukturierten Snippets." },
+          { "title": "Landing-Page-Abstimmung", "description": "Wir stellen sicher, dass jede Anzeige auf eine relevante, conversionoptimierte Landing Page verweist — nicht auf Ihre Startseite." },
+          { "title": "Gebotsmanagement", "description": "Wir verwalten Gebote, um Conversions innerhalb Ihres Budgets zu maximieren, mit Dayparting und Geo-Targeting." }
         ]
       },
       "local-service-ads": {
         "priceRange": { "min": 500, "max": 2000, "currency": "CHF", "period": "month" },
         "emergency": false,
         "processSteps": [
-          { "title": "Eligibility Check", "description": "We verify your business qualifies for Local Service Ads and gather required documentation." },
-          { "title": "Profile Setup", "description": "We set up your LSA profile with service areas, business hours, and verified credentials." },
-          { "title": "Budget & Bidding", "description": "We configure your weekly budget and lead preferences to match your capacity." },
-          { "title": "Lead Management", "description": "We monitor lead quality, dispute invalid leads, and optimize your profile for the Google Guaranteed badge." }
+          { "title": "Eignungsprüfung", "description": "Wir prüfen, ob Ihr Unternehmen für Local Service Ads qualifiziert ist, und sammeln die erforderlichen Dokumente." },
+          { "title": "Profil-Einrichtung", "description": "Wir richten Ihr LSA-Profil mit Einzugsgebieten, Geschäftszeiten und verifizierten Referenzen ein." },
+          { "title": "Budget & Gebotsstrategie", "description": "Wir konfigurieren Ihr Wochenbudget und Ihre Lead-Präferenzen passend zu Ihrer Kapazität." },
+          { "title": "Lead-Management", "description": "Wir überwachen die Lead-Qualität, bestreiten ungültige Leads und optimieren Ihr Profil für das Google-Garantie-Badge." }
         ]
       }
     }
