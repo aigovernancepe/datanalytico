@@ -38,12 +38,12 @@ const schema = {
 };
 ---
 
-<BaseLayout title={`${result.name} in ${business.city}, ${business.stateAbbrev} — Datanalytico`} description={`${result.name} für lokale Unternehmen in der Schweiz.`} schema={schema}>
+<BaseLayout title={`${result.name} in ${business.city} — Datanalytico`} description={`${result.name} für lokale Unternehmen in der Schweiz.`} schema={schema}>
   <Breadcrumb crumbs={crumbs} />
 
   <section class="bg-brand-dark text-white py-16 text-center">
     <div class="container">
-      <h1 class="text-white mb-4">{result.name} in {business.city}, {business.stateAbbrev}</h1>
+      <h1 class="text-white mb-4">{result.name} in {business.city}</h1>
       <p class="text-white/75 text-lg">{result.name} für lokale Unternehmen in der Schweiz.</p>
     </div>
   </section>

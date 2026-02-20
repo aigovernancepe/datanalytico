@@ -20,7 +20,6 @@ const schema = {
     '@type': 'PostalAddress',
     addressLocality: business.city,
     addressRegion: business.state,
-    postalCode: business.zip,
     addressCountry: business.country
   }
 };
@@ -40,7 +39,7 @@ const schema = {
     <div class="container max-w-[900px] mx-auto">
       <section class="mb-12 pb-12 border-b border-gray-200">
         <h2 class="mb-4" data-i18n="about.who.title">Wer ist Datanalytico?</h2>
-        <p class="leading-relaxed text-brand-text-light" data-i18n="about.who.p1">Datanalytico ist eine Local SEO und Digital Marketing Agentur mit Sitz in {business.city}, {business.stateAbbrev}, Schweiz. Wir helfen lokalen Unternehmen in Basel, Zürich und Bern, auf Google gefunden zu werden — in Maps, in der organischen Suche und in AI-generierten Antworten.</p>
+        <p class="leading-relaxed text-brand-text-light" data-i18n="about.who.p1">Datanalytico ist eine Local SEO und Digital Marketing Agentur mit Sitz in {business.city}, Schweiz. Wir helfen lokalen Unternehmen in Basel, Zürich und Bern, auf Google gefunden zu werden — in Maps, in der organischen Suche und in AI-generierten Antworten.</p>
         <p class="leading-relaxed text-brand-text-light" data-i18n="about.who.p2">Wir arbeiten ausschliesslich mit Unternehmen, die einen lokalen Markt bedienen. Jede Strategie, die wir erstellen, basiert auf verifizierten Schweizer Suchdaten: echte Suchvolumen, tatsächliche Wettbewerber-Rankings und Google Business Profile Leistungsbenchmarks aus dem CH-Markt.</p>
       </section>
 
@@ -64,7 +63,7 @@ const schema = {
 
       <section class="mb-12 pb-12 border-b border-gray-200">
         <h2 class="mb-4" data-i18n="about.where.title">Wo arbeiten wir?</h2>
-        <p class="leading-relaxed text-brand-text-light" data-i18n="about.where.p1">Datanalytico hat seinen Sitz in {business.city} ({business.zip}) und betreut Unternehmen in der ganzen Schweiz. Unsere primären Einzugsgebiete sind:</p>
+        <p class="leading-relaxed text-brand-text-light" data-i18n="about.where.p1">Datanalytico hat seinen Sitz in {business.city} und betreut Unternehmen in der ganzen Schweiz. Unsere primären Einzugsgebiete sind:</p>
         <ul class="my-4 pl-6">
           {serviceAreas.map(area => (
             <li class="list-disc mb-2">

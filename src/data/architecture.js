@@ -3,10 +3,9 @@ export const business = {
   phone: '+41 76 757 64 23',
   phoneTel: 'tel:+41767576423',
   email: 'info@datanalytico.com',
-  city: 'Oberwil',
-  state: 'Basel-Landschaft',
-  stateAbbrev: 'BL',
-  zip: '4104',
+  city: 'Basel',
+  state: 'Basel-Stadt',
+  stateAbbrev: 'BS',
   country: 'CH',
   domain: 'datanalytico.com'
 }

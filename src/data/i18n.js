@@ -14,7 +14,7 @@ export const translations = {
     'nav.contact': 'Contact',
 
     // Header top bar
-    'header.serving': 'Serving Oberwil, BL & Surrounding Areas',
+    'header.serving': 'Serving Basel, Zurich & Bern',
     'header.call': 'Call',
 
     // Footer
@@ -83,12 +83,12 @@ export const translations = {
 
     // Homepage - Areas
     'home.areas.title': 'Areas We Serve',
-    'home.areas.desc': 'Based in Oberwil, serving businesses across Switzerland\'s major business centers.',
+    'home.areas.desc': 'Based in Basel, serving businesses across Switzerland\'s major business centers.',
     'home.areas.residents': 'residents',
 
     // Homepage - About
     'home.about.title': 'Local Search Expertise Built for the Swiss Market',
-    'home.about.content': 'Datanalytico is a local SEO and digital marketing agency based in Oberwil, Basel-Landschaft, serving businesses across Basel, Zurich, and Bern. Swiss businesses face a specific challenge: a multi-language search landscape, country-specific directories, and Google algorithms that treat the CH market differently from larger English-language markets. Every strategy Datanalytico delivers is built on verified search data — keyword volumes, competitor ranking analysis, and GBP performance benchmarks — not assumptions borrowed from other markets. We work with a focused client roster so every business gets direct attention and measurable outcomes, reported each month with full transparency.',
+    'home.about.content': 'Datanalytico is a local SEO and digital marketing agency based in Basel, serving businesses across Basel, Zurich, and Bern. Swiss businesses face a specific challenge: a multi-language search landscape, country-specific directories, and Google algorithms that treat the CH market differently from larger English-language markets. Every strategy Datanalytico delivers is built on verified search data — keyword volumes, competitor ranking analysis, and GBP performance benchmarks — not assumptions borrowed from other markets. We work with a focused client roster so every business gets direct attention and measurable outcomes, reported each month with full transparency.',
     'home.about.link': 'About Datanalytico',
 
     // Homepage - FAQ
@@ -117,9 +117,9 @@ export const translations = {
 
     // About page
     'about.title': 'About',
-    'about.subtitle': 'Local SEO experts based in Oberwil, Switzerland.',
+    'about.subtitle': 'Local SEO experts based in Basel, Switzerland.',
     'about.who.title': 'Who Is Datanalytico?',
-    'about.who.p1': 'Datanalytico is a local SEO and digital marketing agency based in Oberwil, BL, Switzerland. We help local businesses in Basel, Zurich, and Bern get found on Google — in Maps, in organic search, and in AI-generated answers.',
+    'about.who.p1': 'Datanalytico is a local SEO and digital marketing agency based in Basel, Switzerland. We help local businesses in Basel, Zurich, and Bern get found on Google — in Maps, in organic search, and in AI-generated answers.',
     'about.who.p2': 'We work exclusively with businesses that serve a local market. Every strategy we build is grounded in verified Swiss search data: real keyword volumes, actual competitor rankings, and Google Business Profile performance benchmarks from the CH market.',
     'about.diff.title': 'What Makes Datanalytico Different?',
     'about.diff.p1': 'Most digital marketing agencies run the same playbook for every market. Swiss local search works differently — multi-language queries, Swiss-specific directories, and a Google algorithm that treats the CH market with unique regional signals.',
@@ -129,7 +129,7 @@ export const translations = {
     'about.team.desc': 'Background in data analytics and search engine optimization. Specializes in entity-based local SEO and Google Business Profile strategy for Swiss businesses.',
     'about.team.coming': 'Full team bios and photos coming soon.',
     'about.where.title': 'Where Do We Work?',
-    'about.where.p1': 'Datanalytico is based in Oberwil (4104) and serves businesses across Switzerland. Our primary service areas are:',
+    'about.where.p1': 'Datanalytico is based in Basel and serves businesses across Switzerland. Our primary service areas are:',
     'about.where.p2': 'All work is delivered remotely with virtual meetings. Your location does not affect the quality or speed of our service.',
     'about.ourServices': 'Our Services',
     'about.trust.title': 'Why Trust Datanalytico?',
@@ -177,7 +177,7 @@ export const translations = {
 
     // Areas page
     'areas.title': 'Areas We Serve — Local SEO Across Switzerland',
-    'areas.desc': 'Based in Oberwil, serving businesses in Basel, Zurich, and Bern.',
+    'areas.desc': 'Based in Basel, serving businesses in Basel, Zurich, and Bern.',
 
     // Blog page
     'blog.title': 'Blog',
