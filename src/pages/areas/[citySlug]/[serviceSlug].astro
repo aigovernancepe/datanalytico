@@ -81,13 +81,13 @@ const schema = [
 ];
 ---
 
-<BaseLayout title={`${service.name} in ${city.name}, Schweiz — Datanalytico`} description={`Datanalytico liefert ${service.name.toLowerCase()} für Unternehmen in ${city.name}, ${city.canton}.`} schema={schema}>
+<BaseLayout title={`${service.name} in ${city.name} — Datanalytico`} description={`Datanalytico liefert ${service.name.toLowerCase()} für Unternehmen ${city.regionPhrase}.`} schema={schema}>
   <Breadcrumb crumbs={crumbs} />
 
   <section class="bg-brand-dark text-white py-16 text-center">
     <div class="container">
-      <h1 class="text-white mb-4">{service.name} in {city.name}, Schweiz</h1>
-      <p class="text-white/75 text-lg">Datanalytico liefert {service.name.toLowerCase()} für Unternehmen in {city.name}, {city.canton}.</p>
+      <h1 class="text-white mb-4">{service.name} in {city.name}</h1>
+      <p class="text-white/75 text-lg">Datanalytico liefert {service.name.toLowerCase()} für Unternehmen {city.regionPhrase}.</p>
     </div>
   </section>
 
