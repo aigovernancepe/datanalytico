@@ -19,6 +19,8 @@ const fullCity = cityData.find((c: any) => c.slug === citySlug) as any;
 const nearbyCities = cities.filter(c => c.slug !== citySlug);
 const cityAdj: Record<string, string> = { basel: 'Basler', zurich: 'Zürcher', bern: 'Berner' };
 const adj = cityAdj[citySlug!] || city.name;
+const cityH1: Record<string, string> = { basel: 'Local SEO Beratung für Basel und Umgebung', zurich: 'Local SEO Beratung für Zürich', bern: `Local SEO Beratung in ${city.name}, Schweiz` };
+const h1 = cityH1[citySlug!] || `Local SEO Beratung in ${city.name}, Schweiz`;
 
 const crumbs = [
   { label: 'Startseite', url: '/', i18nKey: 'breadcrumb.home' },
@@ -43,7 +45,7 @@ const schema = {
       <div class="container">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
-            <h1 class="text-white mb-4">Local SEO Beratung für Basel und Umgebung</h1>
+            <h1 class="text-white mb-4">{h1}</h1>
             <p class="text-white/75 text-lg">{city.description}</p>
           </div>
           <div>
@@ -62,7 +64,7 @@ const schema = {
   ) : (
     <section class="bg-brand-dark text-white py-16 text-center">
       <div class="container">
-        <h1 class="text-white mb-4">Local SEO Beratung in {city.name}, Schweiz</h1>
+        <h1 class="text-white mb-4">{h1}</h1>
         <p class="text-white/75 text-lg">{city.description}</p>
       </div>
     </section>
