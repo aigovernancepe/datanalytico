@@ -19,8 +19,8 @@ const fullCity = cityData.find((c: any) => c.slug === citySlug) as any;
 const nearbyCities = cities.filter(c => c.slug !== citySlug);
 
 const crumbs = [
-  { label: 'Startseite', url: '/' },
-  { label: 'Einzugsgebiete', url: '/areas' },
+  { label: 'Startseite', url: '/', i18nKey: 'breadcrumb.home' },
+  { label: 'Einzugsgebiete', url: '/areas', i18nKey: 'breadcrumb.areas' },
   { label: city.name, url: city.url }
 ];
 

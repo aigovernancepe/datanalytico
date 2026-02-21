@@ -67,7 +67,7 @@ const schema = [
   <section class="py-20 bg-brand-bg">
     <div class="container">
       <div class="text-center mb-14">
-        <span class="inline-block text-accent font-semibold text-xs uppercase tracking-[0.15em] mb-3">Warum Datanalytico</span>
+        <span class="inline-block text-accent font-semibold text-xs uppercase tracking-[0.15em] mb-3" data-i18n="home.why.label">Warum Datanalytico</span>
         <h2 data-i18n="home.why.title">Warum Unternehmen Datanalytico wählen</h2>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -98,7 +98,7 @@ const schema = [
           <input type="tel" placeholder="Telefonnummer" data-i18n-placeholder="home.form.phone" class="w-full py-3 px-4 border border-white/30 rounded-lg bg-white/10 text-white font-sans text-[0.9375rem] placeholder:text-white/50 focus:outline-none focus:border-accent" required />
           <input type="email" placeholder="E-Mail-Adresse" data-i18n-placeholder="home.form.email" class="w-full py-3 px-4 border border-white/30 rounded-lg bg-white/10 text-white font-sans text-[0.9375rem] placeholder:text-white/50 focus:outline-none focus:border-accent" required />
           <select class="w-full py-3 px-4 border border-white/30 rounded-lg bg-white/10 text-white font-sans text-[0.9375rem] focus:outline-none focus:border-accent" required>
-            <option value="" disabled selected>Dienstleistung auswählen</option>
+            <option value="" disabled selected data-i18n="home.form.service">Dienstleistung auswählen</option>
             {coreServices.map(s => (
               <option value={s.slug} class="text-brand-dark">{s.name}</option>
             ))}
@@ -151,7 +151,7 @@ const schema = [
           <a href={`${import.meta.env.BASE_URL}areas/${city.slug}`} class="block p-8 bg-white border border-gray-200 rounded-xl hover:border-primary hover:shadow-md transition-all no-underline" data-track-area={city.name}>
             <h3 class="mb-1">{city.name}</h3>
             <p class="text-[0.8125rem] text-primary mb-2">{city.canton} &middot; {city.population.toLocaleString('de-CH')} <span data-i18n="home.areas.residents">Einwohner</span></p>
-            <p class="text-[0.9375rem] text-brand-text-light mb-0">{city.description}</p>
+            <p class="text-[0.9375rem] text-brand-text-light mb-0" data-i18n={`home.areas.${city.slug}.desc`}>{city.description}</p>
           </a>
         ))}
       </div>

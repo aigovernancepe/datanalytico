@@ -4,6 +4,7 @@ import { business } from '../data/architecture';
 interface Crumb {
   label: string;
   url: string;
+  i18nKey?: string;
 }
 
 interface Props {
@@ -38,11 +39,11 @@ const schema = {
         <li class="flex items-center gap-1">
           {i < crumbs.length - 1 ? (
             <>
-              <a href={`${import.meta.env.BASE_URL}${crumb.url.slice(1)}`} class="text-primary font-normal hover:underline no-underline">{crumb.label}</a>
+              <a href={`${import.meta.env.BASE_URL}${crumb.url.slice(1)}`} class="text-primary font-normal hover:underline no-underline" data-i18n={crumb.i18nKey}>{crumb.label}</a>
               <span class="text-brand-text-light ml-1">&gt;</span>
             </>
           ) : (
-            <span class="text-brand-text font-medium" aria-current="page">{crumb.label}</span>
+            <span class="text-brand-text font-medium" aria-current="page" data-i18n={crumb.i18nKey}>{crumb.label}</span>
           )}
         </li>
       ))}

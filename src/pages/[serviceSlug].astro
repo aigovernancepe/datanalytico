@@ -19,8 +19,8 @@ if (!service) return Astro.redirect('/404');
 const data = serviceData[serviceSlug as keyof typeof serviceData] as any;
 
 const crumbs = [
-  { label: 'Startseite', url: '/' },
-  { label: 'Dienstleistungen', url: '/services' },
+  { label: 'Startseite', url: '/', i18nKey: 'breadcrumb.home' },
+  { label: 'Dienstleistungen', url: '/services', i18nKey: 'breadcrumb.services' },
   { label: service.name, url: service.url }
 ];
 

@@ -4,8 +4,8 @@ import Breadcrumb from '../components/Breadcrumb.astro';
 import { business, serviceAreas, coreServices } from '../data/architecture';
 
 const crumbs = [
-  { label: 'Startseite', url: '/' },
-  { label: 'Über uns', url: '/about' }
+  { label: 'Startseite', url: '/', i18nKey: 'breadcrumb.home' },
+  { label: 'Über uns', url: '/about', i18nKey: 'breadcrumb.about' }
 ];
 
 const schema = {
