@@ -38,25 +38,25 @@ const crumbs = [
 
 const faqItems = [
   {
-    q: `Was kostet ${service.name.toLowerCase()} in ${city.name}?`,
+    q: `Was kostet ${service.name} in ${city.name}?`,
     a: data?.priceRange
       ? `${service.name} in ${city.name} kostet typischerweise zwischen ${data.priceRange.min.toLocaleString('de-CH')} CHF und ${data.priceRange.max.toLocaleString('de-CH')} CHF pro ${data.priceRange.period === 'month' ? 'Monat' : data.priceRange.period}. Kontaktieren Sie Datanalytico unter ${business.phone} für ein Angebot, das auf Ihr Unternehmen und Ihren Markt zugeschnitten ist.`
-      : `Kontaktieren Sie Datanalytico unter ${business.phone} für ${service.name.toLowerCase()} Preise in ${city.name}. Jedes Angebot basiert auf Ihrem spezifischen Markt, Wettbewerbsniveau und Ihren Zielen.`
+      : `Kontaktieren Sie Datanalytico unter ${business.phone} für ${service.name} Preise in ${city.name}. Jedes Angebot basiert auf Ihrem spezifischen Markt, Wettbewerbsniveau und Ihren Zielen.`
   },
   {
     q: `Wie schnell kann Datanalytico mit einem Unternehmen in ${city.name} zusammenarbeiten?`,
-    a: `Datanalytico kann eine ${service.name.toLowerCase()} Zusammenarbeit für ein Unternehmen in ${city.name} innerhalb einer Woche nach Vertragsunterzeichnung beginnen. ${fullCity?.responseTime || 'Wir treffen uns virtuell für ein schnelles Onboarding.'} Das erste Ergebnis — typischerweise ein Audit oder Strategiedokument — ist innerhalb von 7 bis 10 Werktagen fertig.`
+    a: `Datanalytico kann eine ${service.name} Zusammenarbeit für ein Unternehmen in ${city.name} innerhalb einer Woche nach Vertragsunterzeichnung beginnen. ${fullCity?.responseTime || 'Wir treffen uns virtuell für ein schnelles Onboarding.'} Das erste Ergebnis — typischerweise ein Audit oder Strategiedokument — ist innerhalb von 7 bis 10 Werktagen fertig.`
   },
   {
     q: `Hat Datanalytico seinen Sitz in ${city.name}?`,
     a: `Datanalytico hat seinen Sitz in ${business.city} und betreut Unternehmen in ${city.name} und der grösseren Region ${city.canton}. Alle Arbeiten werden remote mit virtuellen Meetings durchgeführt, so dass Ihr Standort weder die Qualität noch die Geschwindigkeit des Services beeinflusst.`
   },
   {
-    q: `Bieten Sie ${service.name.toLowerCase()} auch für andere Städte in der Nähe von ${city.name} an?`,
-    a: `Ja. Datanalytico bietet ${service.name.toLowerCase()} in der ganzen Schweiz an, einschliesslich ${nearbyCities.map(c => c.name).join(' und ')}. Jede Zusammenarbeit wird auf den lokalen Markt und das Wettbewerbsniveau der Zielstadt zugeschnitten.`
+    q: `Bieten Sie ${service.name} auch für andere Städte in der Nähe von ${city.name} an?`,
+    a: `Ja. Datanalytico bietet ${service.name} in der ganzen Schweiz an, einschliesslich ${nearbyCities.map(c => c.name).join(' und ')}. Jede Zusammenarbeit wird auf den lokalen Markt und das Wettbewerbsniveau der Zielstadt zugeschnitten.`
   },
   {
-    q: `Welche Ergebnisse kann ein Unternehmen in ${city.name} von ${service.name.toLowerCase()} erwarten?`,
+    q: `Welche Ergebnisse kann ein Unternehmen in ${city.name} von ${service.name} erwarten?`,
     a: `Die meisten Unternehmen in ${city.name} sehen messbare Verbesserungen der lokalen Suchsichtbarkeit innerhalb von 60 bis 90 Tagen. Die Ergebnisse hängen vom Wettbewerbsniveau und der Ausgangsposition ab. Datanalytico liefert monatliche Berichte mit Ranking-Daten, Traffic-Trends und Lead-Metriken, damit Sie den Fortschritt klar verfolgen können.`
   }
 ];
@@ -81,13 +81,13 @@ const schema = [
 ];
 ---
 
-<BaseLayout title={`${service.name} in ${city.name} — Datanalytico`} description={`Datanalytico liefert ${service.name.toLowerCase()} für Unternehmen ${city.regionPhrase}.`} schema={schema}>
+<BaseLayout title={`${service.name} in ${city.name} — Datanalytico`} description={`Datanalytico liefert ${service.name} für Unternehmen ${city.regionPhrase}.`} schema={schema}>
   <Breadcrumb crumbs={crumbs} />
 
   <section class="bg-brand-dark text-white py-16 text-center">
     <div class="container">
       <h1 class="text-white mb-4">{service.name} in {city.name}</h1>
-      <p class="text-white/75 text-lg">Datanalytico liefert {service.name.toLowerCase()} für Unternehmen {city.regionPhrase}.</p>
+      <p class="text-white/75 text-lg">Datanalytico liefert {service.name} für Unternehmen {city.regionPhrase}.</p>
     </div>
   </section>
 
@@ -96,7 +96,7 @@ const schema = [
       <section class="mb-12 pb-12 border-b border-gray-200">
         <h2 class="mb-4">{service.name} für Unternehmen in {city.name}</h2>
         <p class="leading-relaxed text-brand-text-light">{city.name} beherbergt {city.population.toLocaleString('de-CH')} Einwohner und Tausende von Unternehmen, die um lokale Suchsichtbarkeit konkurrieren. {fullCity?.localContext || ''}</p>
-        <p class="leading-relaxed text-brand-text-light">Datanalytico bietet {service.name.toLowerCase()} speziell zugeschnitten auf den Markt in {city.name} — unter Berücksichtigung des lokalen Wettbewerbs, des Suchverhaltens und der Branchen, die die Wirtschaft im Kanton {city.canton} antreiben.</p>
+        <p class="leading-relaxed text-brand-text-light">Datanalytico bietet {service.name} speziell zugeschnitten auf den Markt in {city.name} — unter Berücksichtigung des lokalen Wettbewerbs, des Suchverhaltens und der Branchen, die die Wirtschaft im Kanton {city.canton} antreiben.</p>
       </section>
 
       {data?.processSteps && (
@@ -109,7 +109,7 @@ const schema = [
       {data?.priceRange && (
         <section class="mb-12 pb-12 border-b border-gray-200 bg-brand-bg p-8 rounded-xl border-l-4 border-l-accent">
           <p class="text-[1.0625rem] mb-0">
-            Die meisten {service.name.toLowerCase()} Vereinbarungen in {city.name} kosten zwischen <strong>{data.priceRange.min.toLocaleString('de-CH')} CHF</strong> und <strong>{data.priceRange.max.toLocaleString('de-CH')} CHF</strong> pro {data.priceRange.period === 'month' ? 'Monat' : data.priceRange.period}.
+            Die meisten {service.name} Vereinbarungen in {city.name} kosten zwischen <strong>{data.priceRange.min.toLocaleString('de-CH')} CHF</strong> und <strong>{data.priceRange.max.toLocaleString('de-CH')} CHF</strong> pro {data.priceRange.period === 'month' ? 'Monat' : data.priceRange.period}.
             Rufen Sie <a href={business.phoneTel} data-track-location="city_service_pricing">{business.phone}</a> an für eine kostenlose Einschätzung.
           </p>
         </section>
