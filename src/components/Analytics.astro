@@ -1,20 +1,11 @@
 ---
 // Google Analytics 4 (GA4) integration
-// Replace GA_MEASUREMENT_ID with your actual GA4 measurement ID (e.g., G-XXXXXXXXXX)
+// GA4 scripts are loaded dynamically by CookieBanner.astro after user consent.
+// This component is kept as a reference for the measurement ID.
 const GA_MEASUREMENT_ID = 'G-TDKCGD4C7L';
 ---
 
-<!-- Google Analytics 4 -->
+<!-- GA4 measurement ID (scripts loaded after cookie consent via CookieBanner) -->
 <script is:inline define:vars={{ GA_MEASUREMENT_ID }}>
   window.GA_MEASUREMENT_ID = GA_MEASUREMENT_ID;
-</script>
-<script is:inline src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} async></script>
-<script is:inline>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', window.GA_MEASUREMENT_ID, {
-    send_page_view: true,
-    cookie_flags: 'SameSite=None;Secure'
-  });
 </script>

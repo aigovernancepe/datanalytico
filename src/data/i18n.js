@@ -264,5 +264,13 @@ export const translations = {
 
     // Language toggle
     'lang.toggle': 'EN',
+
+    // Cookie Banner
+    'cookie.text': 'This website uses cookies for analytics with Google Analytics. Your data helps us improve our website.',
+    'cookie.accept': 'Accept',
+    'cookie.decline': 'Decline',
+
+    // Footer - Cookie Settings
+    'footer.cookieSettings': 'Cookie Settings',
   }
 }

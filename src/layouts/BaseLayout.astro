@@ -3,6 +3,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FloatingCallButton from '../components/FloatingCallButton.astro';
 import Analytics from '../components/Analytics.astro';
+import CookieBanner from '../components/CookieBanner.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -44,6 +45,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   </main>
   <Footer />
   <FloatingCallButton />
+  <CookieBanner />
 
   <script>
     // Language toggle system
@@ -232,6 +234,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         'breadcrumb.contact': 'Contact',
         'breadcrumb.blog': 'Blog',
         'breadcrumb.404': '404 \u2014 Page Not Found',
+        // Cookie Banner
+        'cookie.text': 'This website uses cookies for analytics with Google Analytics. Your data helps us improve our website.',
+        'cookie.accept': 'Accept',
+        'cookie.decline': 'Decline',
+        // Footer
+        'footer.cookieSettings': 'Cookie Settings',
       };
 
       function getCurrentLang() {

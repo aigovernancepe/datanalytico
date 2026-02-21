@@ -1,0 +1,106 @@
+---
+const GA_MEASUREMENT_ID = 'G-TDKCGD4C7L';
+---
+
+<!-- Cookie Consent Banner -->
+<div
+  id="cookie-banner"
+  class="fixed bottom-0 left-0 right-0 z-50 translate-y-full transition-transform duration-300"
+  role="dialog"
+  aria-label="Cookie-Einstellungen"
+  aria-modal="false"
+>
+  <div class="bg-brand-dark/95 backdrop-blur-sm border-t border-white/10 shadow-lg">
+    <div class="container py-4 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+      <p class="text-white/80 text-sm leading-relaxed flex-1">
+        <span data-i18n="cookie.text">
+          Diese Website verwendet Cookies zur Analyse des Nutzerverhaltens mit Google Analytics.
+          Ihre Daten helfen uns, unsere Website zu verbessern.
+        </span>
+      </p>
+      <div class="flex items-center gap-3 shrink-0">
+        <button
+          id="cookie-decline"
+          class="px-5 py-2 rounded-lg text-sm font-semibold text-white/70 border border-white/20 hover:border-white/50 hover:text-white transition-all cursor-pointer bg-transparent"
+          data-i18n="cookie.decline"
+        >
+          Ablehnen
+        </button>
+        <button
+          id="cookie-accept"
+          class="px-5 py-2 rounded-lg text-sm font-semibold text-white bg-primary hover:bg-primary-dark transition-all cursor-pointer border-2 border-transparent"
+          data-i18n="cookie.accept"
+        >
+          Akzeptieren
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline define:vars={{ GA_MEASUREMENT_ID }}>
+(function() {
+  var CONSENT_KEY = 'datanalytico-consent';
+  var banner = document.getElementById('cookie-banner');
+  var acceptBtn = document.getElementById('cookie-accept');
+  var declineBtn = document.getElementById('cookie-decline');
+
+  function loadGA4() {
+    if (window._analyticsLoaded) return;
+    window._analyticsLoaded = true;
+
+    // Load gtag.js script
+    var script = document.createElement('script');
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
+    script.async = true;
+    document.head.appendChild(script);
+
+    // Initialize gtag
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA_MEASUREMENT_ID, {
+      send_page_view: true,
+      cookie_flags: 'SameSite=None;Secure'
+    });
+  }
+
+  // Expose globally so the footer "Cookie Settings" link can re-open the banner
+  window.openCookieBanner = function() {
+    localStorage.removeItem(CONSENT_KEY);
+    banner.classList.remove('translate-y-full');
+  };
+
+  function showBanner() {
+    // Small delay so the entrance animation is visible
+    requestAnimationFrame(function() {
+      banner.classList.remove('translate-y-full');
+    });
+  }
+
+  function hideBanner() {
+    banner.classList.add('translate-y-full');
+  }
+
+  function handleConsent(accepted) {
+    localStorage.setItem(CONSENT_KEY, accepted ? 'accepted' : 'declined');
+    hideBanner();
+    if (accepted) {
+      loadGA4();
+    }
+  }
+
+  // Check existing consent
+  var consent = localStorage.getItem(CONSENT_KEY);
+  if (consent === 'accepted') {
+    loadGA4();
+  } else if (!consent) {
+    showBanner();
+  }
+  // If 'declined', do nothing — no banner, no analytics
+
+  acceptBtn.addEventListener('click', function() { handleConsent(true); });
+  declineBtn.addEventListener('click', function() { handleConsent(false); });
+})();
+</script>
