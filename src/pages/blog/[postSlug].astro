@@ -58,8 +58,8 @@ const schema = {
         <h2 class="mb-2">Brauchen Sie Hilfe mit Local SEO?</h2>
         <p class="text-brand-text-light mb-6">Datanalytico hilft Schweizer Unternehmen, in der lokalen Suche höher zu ranken. Kontaktieren Sie uns für eine kostenlose Analyse.</p>
         <div class="flex gap-4 justify-center flex-wrap">
-          <a href={business.phoneTel} class="btn btn--accent">Anrufen {business.phone}</a>
-          <a href={`${import.meta.env.BASE_URL}contact`} class="btn btn--primary">Kostenlose Analyse</a>
+          <a href={business.phoneTel} class="btn btn--accent" data-track-cta="blog_post_call" data-track-location="blog_post_cta">Anrufen {business.phone}</a>
+          <a href={`${import.meta.env.BASE_URL}contact`} class="btn btn--primary" data-track-cta="blog_post_free_analysis">Kostenlose Analyse</a>
         </div>
       </section>
 

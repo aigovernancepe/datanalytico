@@ -111,8 +111,8 @@ const schema = {
         <h2 class="mb-2" data-i18n="about.ready.title">Bereit zum Gespräch?</h2>
         <p class="text-brand-text-light mb-6" data-i18n="about.ready.desc">Kontaktieren Sie Datanalytico für eine kostenlose Überprüfung Ihrer lokalen Suchpräsenz.</p>
         <div class="flex gap-4 justify-center flex-wrap">
-          <a href={business.phoneTel} class="btn btn--accent"><span data-i18n="about.ready.call">Anrufen</span> {business.phone}</a>
-          <a href={`${import.meta.env.BASE_URL}contact`} class="btn btn--primary" data-i18n="about.ready.message">Nachricht senden</a>
+          <a href={business.phoneTel} class="btn btn--accent" data-track-cta="about_page_call" data-track-location="about_page_cta"><span data-i18n="about.ready.call">Anrufen</span> {business.phone}</a>
+          <a href={`${import.meta.env.BASE_URL}contact`} class="btn btn--primary" data-i18n="about.ready.message" data-track-cta="about_page_message">Nachricht senden</a>
         </div>
       </section>
     </div>

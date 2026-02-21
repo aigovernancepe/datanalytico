@@ -110,7 +110,7 @@ const schema = [
         <section class="mb-12 pb-12 border-b border-gray-200 bg-brand-bg p-8 rounded-xl border-l-4 border-l-accent">
           <p class="text-[1.0625rem] mb-0">
             Die meisten {service.name.toLowerCase()} Vereinbarungen in {city.name} kosten zwischen <strong>CHF {data.priceRange.min.toLocaleString()}</strong> und <strong>CHF {data.priceRange.max.toLocaleString()}</strong> pro {data.priceRange.period === 'month' ? 'Monat' : data.priceRange.period}.
-            Rufen Sie <a href={business.phoneTel}>{business.phone}</a> an für eine kostenlose Einschätzung.
+            Rufen Sie <a href={business.phoneTel} data-track-location="city_service_pricing">{business.phone}</a> an für eine kostenlose Einschätzung.
           </p>
         </section>
       )}
@@ -125,7 +125,7 @@ const schema = [
           <h2 class="mb-4">Weitere Dienstleistungen in {city.name}</h2>
           <div class="flex flex-col gap-2 mt-4">
             {otherServices.map(svc => (
-              <a href={`${import.meta.env.BASE_URL}areas/${city.slug}/${svc.slug}`} class="inline-block py-2 px-4 bg-brand-bg border border-gray-200 rounded-lg font-medium text-[0.9375rem] hover:border-primary hover:bg-white no-underline transition-all">
+              <a href={`${import.meta.env.BASE_URL}areas/${city.slug}/${svc.slug}`} class="inline-block py-2 px-4 bg-brand-bg border border-gray-200 rounded-lg font-medium text-[0.9375rem] hover:border-primary hover:bg-white no-underline transition-all" data-track-service={svc.name}>
                 {svc.name} in {city.name} &rarr;
               </a>
             ))}
@@ -138,7 +138,7 @@ const schema = [
           <h2 class="mb-4">{service.name} in umliegenden Städten</h2>
           <div class="flex flex-col gap-2 mt-4">
             {nearbyCities.map(nc => (
-              <a href={`${import.meta.env.BASE_URL}areas/${nc.slug}/${serviceSlug}`} class="inline-block py-2 px-4 bg-brand-bg border border-gray-200 rounded-lg font-medium text-[0.9375rem] hover:border-primary hover:bg-white no-underline transition-all">
+              <a href={`${import.meta.env.BASE_URL}areas/${nc.slug}/${serviceSlug}`} class="inline-block py-2 px-4 bg-brand-bg border border-gray-200 rounded-lg font-medium text-[0.9375rem] hover:border-primary hover:bg-white no-underline transition-all" data-track-area={nc.name}>
                 {service.name} in {nc.name} &rarr;
               </a>
             ))}
@@ -162,8 +162,8 @@ const schema = [
         <h2 class="mb-2">{service.name} in {city.name} erhalten</h2>
         <p class="text-brand-text-light mb-6">Kontaktieren Sie Datanalytico noch heute für eine kostenlose Überprüfung Ihrer lokalen Suchpräsenz in {city.name}.</p>
         <div class="flex gap-4 justify-center flex-wrap">
-          <a href={business.phoneTel} class="btn btn--accent">Anrufen {business.phone}</a>
-          <a href={`${import.meta.env.BASE_URL}contact`} class="btn btn--primary">Nachricht senden</a>
+          <a href={business.phoneTel} class="btn btn--accent" data-track-cta="city_service_call" data-track-location="city_service_cta">Anrufen {business.phone}</a>
+          <a href={`${import.meta.env.BASE_URL}contact`} class="btn btn--primary" data-track-cta="city_service_message">Nachricht senden</a>
         </div>
       </section>
 

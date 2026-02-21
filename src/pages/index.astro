@@ -42,8 +42,8 @@ const schema = [
       <h1 class="text-white text-[2.25rem] md:text-[2.75rem] mb-4" data-i18n="home.hero.h1">{hero.h1}</h1>
       <p class="text-white/80 text-lg max-w-[600px] mx-auto mb-8" data-i18n="home.hero.sub">{hero.subheadline}</p>
       <div class="flex gap-4 justify-center flex-wrap mb-8">
-        <a href={hero.primaryCta.action} class="btn btn--accent" data-i18n="home.hero.cta1">{hero.primaryCta.text}</a>
-        <a href={`${import.meta.env.BASE_URL}contact`} class="btn btn--outline" data-i18n="home.hero.cta2">{hero.secondaryCta.text}</a>
+        <a href={hero.primaryCta.action} class="btn btn--accent" data-i18n="home.hero.cta1" data-track-cta="hero_free_seo_review" data-track-location="hero">{hero.primaryCta.text}</a>
+        <a href={`${import.meta.env.BASE_URL}contact`} class="btn btn--outline" data-i18n="home.hero.cta2" data-track-cta="hero_see_how_we_work">{hero.secondaryCta.text}</a>
       </div>
       <div class="flex flex-wrap justify-center gap-x-8 gap-y-4 pt-6 border-t border-white/15">
         {hero.trustStrip.map((signal: string, i: number) => (
@@ -80,7 +80,7 @@ const schema = [
           <h2 class="text-white" data-i18n="home.form.title">Kostenlose Local SEO Analyse erhalten</h2>
           <p class="text-white/85" data-i18n="home.form.desc">Erzählen Sie uns von Ihrem Unternehmen und wir zeigen Ihnen genau, wo Sie in der lokalen Suche stehen — und was nötig ist, um aufzusteigen.</p>
         </div>
-        <form class="flex flex-col gap-4">
+        <form class="flex flex-col gap-4" data-track-form="homepage_lead_form">
           <input type="text" placeholder="Ihr Name" data-i18n-placeholder="home.form.name" class="w-full py-3 px-4 border border-white/30 rounded-lg bg-white/10 text-white font-sans text-[0.9375rem] placeholder:text-white/50 focus:outline-none focus:border-accent" required />
           <input type="tel" placeholder="Telefonnummer" data-i18n-placeholder="home.form.phone" class="w-full py-3 px-4 border border-white/30 rounded-lg bg-white/10 text-white font-sans text-[0.9375rem] placeholder:text-white/50 focus:outline-none focus:border-accent" required />
           <input type="email" placeholder="E-Mail-Adresse" data-i18n-placeholder="home.form.email" class="w-full py-3 px-4 border border-white/30 rounded-lg bg-white/10 text-white font-sans text-[0.9375rem] placeholder:text-white/50 focus:outline-none focus:border-accent" required />
@@ -106,9 +106,9 @@ const schema = [
           const slug = svc.slug === 'google-ads' ? 'ppc-google-ads' : svc.slug;
           return (
             <div class="p-8 bg-white border border-gray-200 rounded-xl hover:border-primary hover:shadow-md transition-all">
-              <h3 class="mb-2"><a href={`${import.meta.env.BASE_URL}${slug}`} class="text-brand-dark hover:text-primary no-underline">{svc.name}</a></h3>
+              <h3 class="mb-2"><a href={`${import.meta.env.BASE_URL}${slug}`} class="text-brand-dark hover:text-primary no-underline" data-track-service={svc.name}>{svc.name}</a></h3>
               <p class="text-brand-text-light text-[0.9375rem] leading-relaxed" data-i18n={`home.svc.${svc.slug}`}>{svc.description}</p>
-              <a href={`${import.meta.env.BASE_URL}${slug}`} class="font-semibold text-sm text-primary"><span data-i18n="home.services.learnMore">Mehr erfahren</span> &rarr;</a>
+              <a href={`${import.meta.env.BASE_URL}${slug}`} class="font-semibold text-sm text-primary" data-track-service={svc.name}><span data-i18n="home.services.learnMore">Mehr erfahren</span> &rarr;</a>
             </div>
           );
         })}
@@ -135,7 +135,7 @@ const schema = [
       <p class="text-center text-brand-text-light max-w-[600px] mx-auto mb-8" data-i18n="home.areas.desc">Mit Sitz in {business.city}, betreuen wir Unternehmen in den wichtigsten Wirtschaftszentren der Schweiz.</p>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
         {cities.map(city => (
-          <a href={`${import.meta.env.BASE_URL}areas/${city.slug}`} class="block p-8 bg-white border border-gray-200 rounded-xl hover:border-primary hover:shadow-md transition-all no-underline">
+          <a href={`${import.meta.env.BASE_URL}areas/${city.slug}`} class="block p-8 bg-white border border-gray-200 rounded-xl hover:border-primary hover:shadow-md transition-all no-underline" data-track-area={city.name}>
             <h3 class="mb-1">{city.name}</h3>
             <p class="text-[0.8125rem] text-primary mb-2">{city.canton} &middot; {city.population.toLocaleString()} <span data-i18n="home.areas.residents">Einwohner</span></p>
             <p class="text-[0.9375rem] text-brand-text-light mb-0">{city.description}</p>
@@ -151,7 +151,7 @@ const schema = [
       <div class="max-w-[800px] mx-auto text-center">
         <h2 data-i18n="home.about.title">{about.heading}</h2>
         <p class="text-brand-text-light leading-relaxed mb-8" data-i18n="home.about.content">{about.content}</p>
-        <a href={`${import.meta.env.BASE_URL}about`} class="btn btn--primary"><span data-i18n="home.about.link">Über Datanalytico</span> &rarr;</a>
+        <a href={`${import.meta.env.BASE_URL}about`} class="btn btn--primary" data-track-cta="homepage_about_link"><span data-i18n="home.about.link">Über Datanalytico</span> &rarr;</a>
       </div>
     </div>
   </section>
@@ -162,7 +162,7 @@ const schema = [
       <h2 class="text-center mb-8" data-i18n="home.faq.title">Häufig gestellte Fragen</h2>
       <div class="max-w-[800px] mx-auto">
         {faqs.map((faq: any, i: number) => (
-          <details class="border-b border-gray-200 group">
+          <details class="border-b border-gray-200 group" data-track-faq={faq.question}>
             <summary class="w-full flex justify-between items-center py-6 text-base font-semibold text-brand-dark cursor-pointer list-none hover:text-primary gap-4">
               <span data-i18n={`home.faq.q${i + 1}`}>{faq.question}</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 transition-transform group-open:rotate-180"><polyline points="6 9 12 15 18 9" /></svg>
@@ -182,7 +182,7 @@ const schema = [
       <h2 class="text-center text-white mb-8" data-i18n="home.locations.title">Standorte, die wir betreuen</h2>
       <div class="flex justify-center gap-6 flex-wrap">
         {serviceAreas.map(area => (
-          <a href={`${import.meta.env.BASE_URL}areas/${area.toLowerCase()}`} class="text-white/70 text-lg font-semibold px-6 py-2 border border-white/20 rounded-lg hover:text-white hover:border-primary hover:bg-primary/20 no-underline transition-all">
+          <a href={`${import.meta.env.BASE_URL}areas/${area.toLowerCase()}`} class="text-white/70 text-lg font-semibold px-6 py-2 border border-white/20 rounded-lg hover:text-white hover:border-primary hover:bg-primary/20 no-underline transition-all" data-track-area={area}>
             {area}
           </a>
         ))}
@@ -196,8 +196,8 @@ const schema = [
       <h2 class="text-3xl mb-4" data-i18n="home.cta.title">{finalCta.headline}</h2>
       <p class="text-[1.0625rem] mb-8" data-i18n="home.cta.desc">{finalCta.subtext}</p>
       <div class="flex gap-4 justify-center flex-wrap">
-        <a href={`tel:${business.phone.replace(/\s/g, '')}`} class="btn btn--dark btn--lg"><span data-i18n="home.cta.call">Anrufen</span> {business.phone}</a>
-        <a href={`${import.meta.env.BASE_URL}contact`} class="btn btn--outline-dark btn--lg" data-i18n="home.cta.message">Nachricht senden</a>
+        <a href={`tel:${business.phone.replace(/\s/g, '')}`} class="btn btn--dark btn--lg" data-track-cta="homepage_final_call" data-track-location="homepage_final_cta"><span data-i18n="home.cta.call">Anrufen</span> {business.phone}</a>
+        <a href={`${import.meta.env.BASE_URL}contact`} class="btn btn--outline-dark btn--lg" data-i18n="home.cta.message" data-track-cta="homepage_final_message">Nachricht senden</a>
       </div>
     </div>
   </section>

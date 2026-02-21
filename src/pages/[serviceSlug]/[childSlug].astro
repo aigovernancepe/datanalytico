@@ -93,7 +93,7 @@ const schema = {
           <h2 class="mb-4">Was kostet {result.name}?</h2>
           <p class="leading-relaxed text-brand-text-light">
             {result.name} von Datanalytico kostet zwischen CHF {data.priceRange.min.toLocaleString()} und CHF {data.priceRange.max.toLocaleString()} pro {data.priceRange.period === 'month' ? 'Monat' : data.priceRange.period}.
-            Rufen Sie <a href={business.phoneTel}>{business.phone}</a> an, um Ihre Bedürfnisse zu besprechen.
+            Rufen Sie <a href={business.phoneTel} data-track-location="child_service_pricing">{business.phone}</a> an, um Ihre Bedürfnisse zu besprechen.
           </p>
         </section>
       )}
@@ -106,8 +106,8 @@ const schema = {
         <h2 class="mb-2">Starten Sie mit {result.name}</h2>
         <p class="text-brand-text-light mb-6">Kontaktieren Sie Datanalytico für eine Beratung.</p>
         <div class="flex gap-4 justify-center flex-wrap">
-          <a href={business.phoneTel} class="btn btn--accent">Anrufen {business.phone}</a>
-          <a href={`${import.meta.env.BASE_URL}contact`} class="btn btn--primary">Nachricht senden</a>
+          <a href={business.phoneTel} class="btn btn--accent" data-track-cta="child_service_call" data-track-location="child_service_cta">Anrufen {business.phone}</a>
+          <a href={`${import.meta.env.BASE_URL}contact`} class="btn btn--primary" data-track-cta="child_service_message">Nachricht senden</a>
         </div>
       </section>
     </div>
