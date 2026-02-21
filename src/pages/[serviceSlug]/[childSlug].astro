@@ -92,7 +92,7 @@ const schema = {
         <section class="mb-12 pb-12 border-b border-gray-200">
           <h2 class="mb-4">Was kostet {result.name}?</h2>
           <p class="leading-relaxed text-brand-text-light">
-            {result.name} von Datanalytico kostet zwischen CHF {data.priceRange.min.toLocaleString()} und CHF {data.priceRange.max.toLocaleString()} pro {data.priceRange.period === 'month' ? 'Monat' : data.priceRange.period}.
+            {result.name} von Datanalytico kostet zwischen {data.priceRange.min.toLocaleString('de-CH')} CHF und {data.priceRange.max.toLocaleString('de-CH')} CHF pro {data.priceRange.period === 'month' ? 'Monat' : data.priceRange.period}.
             Rufen Sie <a href={business.phoneTel}>{business.phone}</a> an, um Ihre Bedürfnisse zu besprechen.
           </p>
         </section>
