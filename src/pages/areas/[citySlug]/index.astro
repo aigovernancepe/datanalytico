@@ -17,6 +17,8 @@ if (!city) return Astro.redirect('/404');
 
 const fullCity = cityData.find((c: any) => c.slug === citySlug) as any;
 const nearbyCities = cities.filter(c => c.slug !== citySlug);
+const cityAdj: Record<string, string> = { basel: 'Baseler', zurich: 'Zürcher', bern: 'Berner' };
+const adj = cityAdj[citySlug!] || city.name;
 
 const crumbs = [
   { label: 'Startseite', url: '/', i18nKey: 'breadcrumb.home' },
@@ -83,7 +85,7 @@ const schema = {
       )}
 
       <section class="text-center p-12 bg-brand-bg rounded-xl my-12">
-        <h2 class="mb-2">Ihr {city.name} Unternehmen online wachsen lassen</h2>
+        <h2 class="mb-2">Ihr {adj} Unternehmen online wachsen lassen</h2>
         <p class="text-brand-text-light mb-6">Datanalytico hilft Unternehmen in {city.name}, in der lokalen Suche höher zu ranken. Kontaktieren Sie uns für eine kostenlose Analyse.</p>
         <div class="flex gap-4 justify-center flex-wrap">
           <a href={business.phoneTel} class="btn btn--accent" data-track-cta="city_page_call" data-track-location="city_page_cta">Anrufen {business.phone}</a>
