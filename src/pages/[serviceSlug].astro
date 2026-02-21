@@ -78,7 +78,7 @@ const schema = {
         <section class="mb-12 pb-12 border-b border-gray-200">
           <h2 class="mb-4">Was kostet {service.name} in der Schweiz?</h2>
           <p class="leading-relaxed text-brand-text-light">
-            {service.name} von Datanalytico kostet typischerweise zwischen CHF {data.priceRange.min.toLocaleString()} und CHF {data.priceRange.max.toLocaleString()} pro {data.priceRange.period === 'month' ? 'Monat' : data.priceRange.period}.
+            {service.name} von Datanalytico kostet typischerweise zwischen {data.priceRange.min.toLocaleString('de-CH')} CHF und {data.priceRange.max.toLocaleString('de-CH')} CHF pro {data.priceRange.period === 'month' ? 'Monat' : data.priceRange.period}.
             Die Preise hängen vom Wettbewerbsniveau, der Anzahl der Zielstädte und dem Umfang ab. Rufen Sie <a href={business.phoneTel} data-track-location="service_page_pricing">{business.phone}</a> an für ein Angebot.
           </p>
         </section>
