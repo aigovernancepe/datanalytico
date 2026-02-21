@@ -24,17 +24,17 @@ export const coreServices = [
     slug: 'local-seo',
     url: '/local-seo',
     children: [
-      { name: 'Citation Building & Management', slug: 'citation-building', url: '/local-seo/citation-building' },
+      { name: 'Eintragsaufbau & Verwaltung', slug: 'citation-building', url: '/local-seo/citation-building' },
       { name: 'On-Page SEO', slug: 'on-page-seo', url: '/local-seo/on-page-seo' },
-      { name: 'Link Building for Local Businesses', slug: 'link-building', url: '/local-seo/link-building' }
+      { name: 'Linkaufbau Für Lokale Unternehmen', slug: 'link-building', url: '/local-seo/link-building' }
     ]
   },
   {
-    name: 'Website Design & Development',
+    name: 'Webdesign & Entwicklung',
     slug: 'website-design',
     url: '/website-design',
     children: [
-      { name: 'Service Area Website Design', slug: 'service-area-websites', url: '/website-design/service-area-websites' },
+      { name: 'Einzugsgebiet Webdesign', slug: 'service-area-websites', url: '/website-design/service-area-websites' },
       { name: 'Website Redesign', slug: 'website-redesign', url: '/website-design/website-redesign' },
       { name: 'Landing Page Design', slug: 'landing-pages', url: '/website-design/landing-pages' }
     ]
@@ -44,27 +44,27 @@ export const coreServices = [
     slug: 'google-business-profile',
     url: '/google-business-profile',
     children: [
-      { name: 'GBP Optimization', slug: 'gbp-optimization', url: '/google-business-profile/gbp-optimization' },
-      { name: 'Review Management', slug: 'review-management', url: '/google-business-profile/review-management' },
+      { name: 'GBP-Optimierung', slug: 'gbp-optimization', url: '/google-business-profile/gbp-optimization' },
+      { name: 'Bewertungsmanagement', slug: 'review-management', url: '/google-business-profile/review-management' },
       { name: 'Google Maps SEO', slug: 'google-maps-seo', url: '/google-business-profile/google-maps-seo' }
     ]
   },
   {
-    name: 'Content Creation',
+    name: 'Content-Erstellung',
     slug: 'content-creation',
     url: '/content-creation',
     children: [
-      { name: 'Blog Writing Services', slug: 'blog-writing', url: '/content-creation/blog-writing' },
-      { name: 'Service Page Content', slug: 'service-page-content', url: '/content-creation/service-page-content' }
+      { name: 'Blog-Texterstellung', slug: 'blog-writing', url: '/content-creation/blog-writing' },
+      { name: 'Serviceseiten-Content', slug: 'service-page-content', url: '/content-creation/service-page-content' }
     ]
   },
   {
-    name: 'Local Social Media',
+    name: 'Lokale Social Media',
     slug: 'local-social-media',
     url: '/local-social-media',
     children: [
-      { name: 'Social Media Setup & Optimization', slug: 'social-media-setup', url: '/local-social-media/social-media-setup' },
-      { name: 'Social Content Calendar', slug: 'content-calendar', url: '/local-social-media/content-calendar' }
+      { name: 'Social Media Einrichtung & Optimierung', slug: 'social-media-setup', url: '/local-social-media/social-media-setup' },
+      { name: 'Social Content Kalender', slug: 'content-calendar', url: '/local-social-media/content-calendar' }
     ]
   },
   {
