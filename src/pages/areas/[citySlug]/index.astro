@@ -19,7 +19,7 @@ const fullCity = cityData.find((c: any) => c.slug === citySlug) as any;
 const nearbyCities = cities.filter(c => c.slug !== citySlug);
 const cityAdj: Record<string, string> = { basel: 'Basler', zurich: 'Zürcher', bern: 'Berner' };
 const adj = cityAdj[citySlug!] || city.name;
-const cityH1: Record<string, string> = { basel: 'Local SEO Beratung für Basel und Umgebung', zurich: 'Local SEO Beratung für Zürich', bern: `Local SEO Beratung in ${city.name}, Schweiz` };
+const cityH1: Record<string, string> = { basel: 'Local SEO Beratung für Basel und Umgebung', zurich: 'Local SEO Beratung für Zürich', bern: 'Local SEO Beratung für Bern' };
 const h1 = cityH1[citySlug!] || `Local SEO Beratung in ${city.name}, Schweiz`;
 
 const crumbs = [
