@@ -84,18 +84,35 @@ const schema = [
 <BaseLayout title={`${service.name} in ${city.name} — Datanalytico`} description={`Datanalytico liefert ${service.name} für Unternehmen ${city.regionPhrase}.`} schema={schema}>
   <Breadcrumb crumbs={crumbs} />
 
-  <section class="bg-brand-dark text-white py-16 text-center">
+  <section class="bg-gradient-to-br from-brand-dark to-[#162a45] text-white py-16 md:py-20 overflow-hidden">
     <div class="container">
-      <h1 class="text-white mb-4"><span data-i18n={`svc.${service.slug}`}>{service.name}</span> in {city.name}</h1>
-      <p class="text-white/75 text-lg lang-de">Datanalytico liefert <span data-i18n={`svc.${service.slug}`}>{service.name}</span> für Unternehmen {city.regionPhrase}.</p>
-      <p class="text-white/75 text-lg lang-en" style="display:none">Datanalytico delivers <span data-i18n={`svc.${service.slug}`}>{service.name}</span> for businesses in {city.name} and the surrounding area.</p>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+        <div class="text-left">
+          <h1 class="mb-6">
+            <span class="block text-white/80 text-lg md:text-xl font-semibold tracking-wide mb-3" data-i18n={`svc.${service.slug}`}>{service.name}</span>
+            <span class="block text-white text-[2.25rem] md:text-[2.75rem] lg:text-[3.25rem] font-black leading-tight tracking-tight"><span class="lang-de">Professionelle Lösungen in</span><span class="lang-en" style="display:none">Professional solutions in</span> <span class="text-accent">{city.name}</span></span>
+          </h1>
+          <h2 class="text-white text-xl md:text-2xl font-semibold mb-4"><span data-i18n={`svc.${service.slug}`}>{service.name}</span> <span class="lang-de">für Unternehmen in</span><span class="lang-en" style="display:none">for businesses in</span> {city.name}</h2>
+          <p class="text-white/80 text-lg max-w-[540px] mb-0 lang-de">Datanalytico liefert {service.name} für Unternehmen {city.regionPhrase}.</p>
+          <p class="text-white/80 text-lg max-w-[540px] mb-0 lang-en" style="display:none">Datanalytico delivers {service.name} for businesses in {city.name} and the surrounding area.</p>
+        </div>
+        <div class="hidden lg:flex justify-center items-center">
+          <img
+            src={`${import.meta.env.BASE_URL}brand/seo-spezialisten-beratung-basel-schweiz.webp`}
+            alt={`SEO-Spezialisten von Datanalytico — ${service.name} für Unternehmen in ${city.name}, Schweiz`}
+            width="540"
+            height="270"
+            loading="eager"
+            class="w-full max-w-[540px] h-auto rounded-2xl shadow-2xl"
+          />
+        </div>
+      </div>
     </div>
   </section>
 
   <div class="py-16">
     <div class="container max-w-[900px] mx-auto">
       <section class="mb-12 pb-12 border-b border-gray-200">
-        <h2 class="mb-4"><span data-i18n={`svc.${service.slug}`}>{service.name}</span> <span class="lang-de">für Unternehmen in</span><span class="lang-en" style="display:none">for businesses in</span> {city.name}</h2>
         <p class="leading-relaxed text-brand-text-light lang-de">{city.name} beherbergt {city.population.toLocaleString('de-CH')} Einwohner und Tausende von Unternehmen, die um lokale Suchsichtbarkeit konkurrieren. {fullCity?.localContext || ''}</p>
         <p class="leading-relaxed text-brand-text-light lang-en" style="display:none">{city.name} is home to {city.population.toLocaleString('en')} residents and thousands of businesses competing for local search visibility. {fullCity?.localContext || ''}</p>
         <p class="leading-relaxed text-brand-text-light lang-de">Datanalytico bietet {service.name} speziell zugeschnitten auf den Markt in {city.name} — unter Berücksichtigung des lokalen Wettbewerbs, des Suchverhaltens und der Branchen, die die Wirtschaft im Kanton {city.canton} antreiben.</p>
@@ -104,7 +121,7 @@ const schema = [
 
       {data?.processSteps && (
         <section class="mb-12 pb-12 border-b border-gray-200">
-          <h2 class="mb-4"><span class="lang-de">Unser <span data-i18n={`svc.${service.slug}`}>{service.name}</span> Prozess in {city.name}</span><span class="lang-en" style="display:none">Our <span data-i18n={`svc.${service.slug}`}>{service.name}</span> process in {city.name}</span></h2>
+          <h2 class="mb-4"><span class="lang-de">Unser {service.compoundPrefix}prozess in {city.name}</span><span class="lang-en" style="display:none">Our <span data-i18n={`svc.${service.slug}`}>{service.name}</span> process in {city.name}</span></h2>
           <ProcessSteps steps={data.processSteps} />
         </section>
       )}
@@ -112,7 +129,7 @@ const schema = [
       {data?.priceRange && (
         <section class="mb-12 pb-12 border-b border-gray-200 bg-brand-bg p-8 rounded-xl border-l-4 border-l-accent">
           <p class="text-[1.0625rem] mb-0 lang-de">
-            Die meisten {service.name} Vereinbarungen in {city.name} kosten zwischen <strong>{data.priceRange.min.toLocaleString('de-CH')} CHF</strong> und <strong>{data.priceRange.max.toLocaleString('de-CH')} CHF</strong> pro {data.priceRange.period === 'month' ? 'Monat' : data.priceRange.period}.
+            Die meisten {service.compoundPrefix}vereinbarungen in {city.name} kosten zwischen <strong>{data.priceRange.min.toLocaleString('de-CH')} CHF</strong> und <strong>{data.priceRange.max.toLocaleString('de-CH')} CHF</strong> pro {data.priceRange.period === 'month' ? 'Monat' : data.priceRange.period}.
             Rufen Sie <a href={business.phoneTel} data-track-location="city_service_pricing">{business.phone}</a> an für eine kostenlose Einschätzung.
           </p>
           <p class="text-[1.0625rem] mb-0 lang-en" style="display:none">

@@ -23,6 +23,7 @@ export const coreServices = [
     name: 'Local SEO Beratung',
     slug: 'local-seo',
     url: '/local-seo',
+    compoundPrefix: 'Local-SEO-Beratungs',
     children: [
       { name: 'Eintragsaufbau & Verwaltung', slug: 'citation-building', url: '/local-seo/citation-building' },
       { name: 'On-Page SEO', slug: 'on-page-seo', url: '/local-seo/on-page-seo' },
@@ -33,6 +34,7 @@ export const coreServices = [
     name: 'Webdesign & Entwicklung',
     slug: 'website-design',
     url: '/website-design',
+    compoundPrefix: 'Webdesign-und-Entwicklungs',
     children: [
       { name: 'Einzugsgebiet Webdesign', slug: 'service-area-websites', url: '/website-design/service-area-websites' },
       { name: 'Website Redesign', slug: 'website-redesign', url: '/website-design/website-redesign' },
@@ -43,6 +45,7 @@ export const coreServices = [
     name: 'Google Business Profile Management',
     slug: 'google-business-profile',
     url: '/google-business-profile',
+    compoundPrefix: 'Google-Business-Profile-Management-',
     children: [
       { name: 'GBP-Optimierung', slug: 'gbp-optimization', url: '/google-business-profile/gbp-optimization' },
       { name: 'Bewertungsmanagement', slug: 'review-management', url: '/google-business-profile/review-management' },
@@ -53,6 +56,7 @@ export const coreServices = [
     name: 'Content-Erstellung',
     slug: 'content-creation',
     url: '/content-creation',
+    compoundPrefix: 'Content-Erstellungs',
     children: [
       { name: 'Blog-Texterstellung', slug: 'blog-writing', url: '/content-creation/blog-writing' },
       { name: 'Serviceseiten-Content', slug: 'service-page-content', url: '/content-creation/service-page-content' }
@@ -62,6 +66,7 @@ export const coreServices = [
     name: 'Lokale Social Media',
     slug: 'local-social-media',
     url: '/local-social-media',
+    compoundPrefix: 'Social-Media-',
     children: [
       { name: 'Social Media Einrichtung & Optimierung', slug: 'social-media-setup', url: '/local-social-media/social-media-setup' },
       { name: 'Social Content Kalender', slug: 'content-calendar', url: '/local-social-media/content-calendar' }
@@ -71,6 +76,7 @@ export const coreServices = [
     name: 'PPC & Google Ads',
     slug: 'ppc-google-ads',
     url: '/ppc-google-ads',
+    compoundPrefix: 'PPC-und-Google-Ads-',
     children: [
       { name: 'Google Search Ads', slug: 'google-search-ads', url: '/ppc-google-ads/google-search-ads' },
       { name: 'Local Service Ads', slug: 'local-service-ads', url: '/ppc-google-ads/local-service-ads' }
