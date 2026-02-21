@@ -35,15 +35,38 @@ const schema = {
 };
 ---
 
-<BaseLayout title={`Local SEO Dienstleistungen in ${city.name}, Schweiz — Datanalytico`} description={city.description} schema={schema}>
+<BaseLayout title={citySlug === 'basel' ? 'Local SEO Beratung in Basel — Datanalytico' : `Local SEO Dienstleistungen in ${city.name}, Schweiz — Datanalytico`} description={city.description} schema={schema}>
   <Breadcrumb crumbs={crumbs} />
 
-  <section class="bg-brand-dark text-white py-16 text-center">
-    <div class="container">
-      <h1 class="text-white mb-4">Local SEO Dienstleistungen in {city.name}, Schweiz</h1>
-      <p class="text-white/75 text-lg">{city.description}</p>
-    </div>
-  </section>
+  {citySlug === 'basel' ? (
+    <section class="bg-brand-dark text-white py-16">
+      <div class="container">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h1 class="text-white mb-4">Local SEO Beratung in Basel</h1>
+            <p class="text-white/75 text-lg">{city.description}</p>
+          </div>
+          <div>
+            <img
+              src="/brand/2024-basler-herbstmesse-kasernenareal-04.webp"
+              alt="Basler Herbstmesse am Kasernenareal — Local SEO Beratung für Unternehmen in Basel"
+              class="rounded-lg w-full"
+              width="640"
+              height="427"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  ) : (
+    <section class="bg-brand-dark text-white py-16 text-center">
+      <div class="container">
+        <h1 class="text-white mb-4">Local SEO Dienstleistungen in {city.name}, Schweiz</h1>
+        <p class="text-white/75 text-lg">{city.description}</p>
+      </div>
+    </section>
+  )}
 
   <div class="py-16">
     <div class="container max-w-[900px] mx-auto">
@@ -55,7 +78,7 @@ const schema = {
 
       <section class="mb-12 pb-12 border-b border-gray-200">
         <h2 class="mb-4">Unsere Dienstleistungen in {city.name}</h2>
-        <p class="leading-relaxed text-brand-text-light">Datanalytico bietet das gesamte Spektrum an Local SEO und Digital Marketing Dienstleistungen für Unternehmen in {city.name}, {city.canton}.</p>
+        <p class="leading-relaxed text-brand-text-light">Datanalytico bietet das gesamte Spektrum an Local SEO und Digital Marketing Dienstleistungen für Unternehmen {city.regionPhrase}.</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
           {city.services.map(svc => (
             <a href={`${import.meta.env.BASE_URL}areas/${city.slug}/${svc.slug}`} class="block p-6 bg-white border border-gray-200 rounded-lg hover:border-primary hover:shadow-sm no-underline transition-all" data-track-service={svc.name}>
@@ -68,7 +91,7 @@ const schema = {
 
       <section class="mb-12 pb-12 border-b border-gray-200">
         <h2 class="mb-4">Über {city.name}</h2>
-        <p class="leading-relaxed text-brand-text-light">{city.name} liegt im Kanton {city.canton} und hat ungefähr {city.population.toLocaleString('de-CH')} Einwohner. {fullCity?.localContext || ''}</p>
+        <p class="leading-relaxed text-brand-text-light">{city.name} hat ungefähr {city.population.toLocaleString('de-CH')} Einwohner. {fullCity?.localContext || ''}</p>
       </section>
 
       {nearbyCities.length > 0 && (
