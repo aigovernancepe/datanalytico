@@ -79,7 +79,7 @@ const schema = {
           <h2 class="mb-4">Was kostet {service.name} in der Schweiz?</h2>
           <p class="leading-relaxed text-brand-text-light">
             {service.name} von Datanalytico kostet typischerweise zwischen {data.priceRange.min.toLocaleString('de-CH')} CHF und {data.priceRange.max.toLocaleString('de-CH')} CHF pro {data.priceRange.period === 'month' ? 'Monat' : data.priceRange.period}.
-            Die Preise hängen vom Wettbewerbsniveau, der Anzahl der Zielstädte und dem Umfang ab. Rufen Sie <a href={business.phoneTel}>{business.phone}</a> an für ein Angebot.
+            Die Preise hängen vom Wettbewerbsniveau, der Anzahl der Zielstädte und dem Umfang ab. Rufen Sie <a href={business.phoneTel} data-track-location="service_page_pricing">{business.phone}</a> an für ein Angebot.
           </p>
         </section>
       )}
@@ -89,7 +89,7 @@ const schema = {
           <h2 class="mb-4">Spezialisierte Dienstleistungen</h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
             {service.children.map(child => (
-              <a href={`${import.meta.env.BASE_URL}${child.url.slice(1)}`} class="block p-6 bg-white border border-gray-200 rounded-lg hover:border-primary hover:shadow-sm no-underline transition-all">
+              <a href={`${import.meta.env.BASE_URL}${child.url.slice(1)}`} class="block p-6 bg-white border border-gray-200 rounded-lg hover:border-primary hover:shadow-sm no-underline transition-all" data-track-service={child.name}>
                 <h3 class="text-base mb-1 text-brand-dark">{child.name}</h3>
                 <span class="text-sm text-primary font-medium">Mehr erfahren &rarr;</span>
               </a>
@@ -102,7 +102,7 @@ const schema = {
         <h2 class="mb-4">{service.name} nach Stadt</h2>
         <div class="flex flex-col gap-2 mt-4">
           {cities.map(city => (
-            <a href={`${import.meta.env.BASE_URL}areas/${city.slug}/${serviceSlug}`} class="inline-block py-2 px-4 bg-brand-bg border border-gray-200 rounded-lg font-medium text-[0.9375rem] hover:border-primary hover:bg-white no-underline transition-all">
+            <a href={`${import.meta.env.BASE_URL}areas/${city.slug}/${serviceSlug}`} class="inline-block py-2 px-4 bg-brand-bg border border-gray-200 rounded-lg font-medium text-[0.9375rem] hover:border-primary hover:bg-white no-underline transition-all" data-track-area={city.name}>
               {service.name} in {city.name} &rarr;
             </a>
           ))}
@@ -113,8 +113,8 @@ const schema = {
         <h2 class="mb-2">Bereit, Ihre lokalen Rankings zu verbessern?</h2>
         <p class="text-brand-text-light mb-6">Datanalytico liefert {service.name.toLowerCase()} mit messbaren Ergebnissen. Keine Langzeitverträge erforderlich.</p>
         <div class="flex gap-4 justify-center flex-wrap">
-          <a href={business.phoneTel} class="btn btn--accent">Anrufen {business.phone}</a>
-          <a href={`${import.meta.env.BASE_URL}contact`} class="btn btn--primary">Kostenlose Analyse</a>
+          <a href={business.phoneTel} class="btn btn--accent" data-track-cta="service_page_call" data-track-location="service_page_cta">Anrufen {business.phone}</a>
+          <a href={`${import.meta.env.BASE_URL}contact`} class="btn btn--primary" data-track-cta="service_page_free_analysis">Kostenlose Analyse</a>
         </div>
       </section>
     </div>
