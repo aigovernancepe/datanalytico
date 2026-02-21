@@ -39,6 +39,7 @@ export const translations = {
     'home.hero.trust4': 'No Lock-In Contracts',
 
     // Homepage - Why Choose Us
+    'home.why.label': 'Why Datanalytico',
     'home.why.title': 'Why Businesses Choose Datanalytico',
     'home.why.h1': 'You See Ranking Data Every Month',
     'home.why.d1': 'Every client receives a monthly report with keyword rankings, Google Business Profile stats, and traffic trends. You know exactly what is working and what changed — no vague summaries, no guesswork.',
@@ -85,6 +86,9 @@ export const translations = {
     'home.areas.title': 'Areas We Serve',
     'home.areas.desc': 'Based in Basel, serving businesses across Switzerland\'s major business centers.',
     'home.areas.residents': 'residents',
+    'home.areas.basel.desc': 'Basel is Switzerland\'s third-largest city and a global hub for life sciences and pharma. Hundreds of SMEs in the Basel area need local visibility to stay competitive.',
+    'home.areas.zurich.desc': 'Zurich is Switzerland\'s largest city and financial capital. With over 116,000 businesses, competition for local search visibility is intense.',
+    'home.areas.bern.desc': 'Bern is Switzerland\'s federal capital and an SME hub — 67% of jobs are in companies with fewer than 250 employees.',
 
     // Homepage - About
     'home.about.title': 'Local Search Expertise Built for the Swiss Market',
@@ -125,7 +129,7 @@ export const translations = {
     'about.diff.p1': 'Most digital marketing agencies run the same playbook for every market. Swiss local search works differently — multi-language queries, Swiss-specific directories, and a Google algorithm that treats the CH market with unique regional signals.',
     'about.diff.p2': 'Datanalytico focuses on this. We do not offer social media management for global brands or run e-commerce SEO campaigns. We build local search visibility for businesses that serve customers in a specific city or region. That focus means better results, faster.',
     'about.team.title': 'Meet the Team',
-    'about.team.role': 'Founder of Datanalytico',
+    'about.team.role': 'Founder & Lead Strategist',
     'about.team.desc': 'Background in data analytics and search engine optimization. Specializes in entity-based local SEO and Google Business Profile strategy for Swiss businesses.',
     'about.team.coming': '',
     'about.where.title': 'Where Do We Work?',
@@ -152,6 +156,7 @@ export const translations = {
     'contact.phone': 'Phone',
     'contact.email': 'Email',
     'contact.location': 'Location',
+    'contact.locationCity': 'Basel, Switzerland',
     'contact.serviceAreas': 'Service Areas',
     'contact.form.title': 'Send Us a Message',
     'contact.form.desc': 'Tell us about your business and what you need. We respond within one business day.',
@@ -250,6 +255,12 @@ export const translations = {
 
     // Breadcrumb
     'breadcrumb.home': 'Home',
+    'breadcrumb.services': 'Services',
+    'breadcrumb.areas': 'Areas We Serve',
+    'breadcrumb.about': 'About',
+    'breadcrumb.contact': 'Contact',
+    'breadcrumb.blog': 'Blog',
+    'breadcrumb.404': '404 — Page Not Found',
 
     // Language toggle
     'lang.toggle': 'EN',

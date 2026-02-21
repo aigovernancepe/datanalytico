@@ -4,8 +4,8 @@ import Breadcrumb from '../components/Breadcrumb.astro';
 import { business, coreServices, serviceAreas } from '../data/architecture';
 
 const crumbs = [
-  { label: 'Startseite', url: '/' },
-  { label: 'Kontakt', url: '/contact' }
+  { label: 'Startseite', url: '/', i18nKey: 'breadcrumb.home' },
+  { label: 'Kontakt', url: '/contact', i18nKey: 'breadcrumb.contact' }
 ];
 
 const schema = {
@@ -35,12 +35,12 @@ const schema = {
             <a href={business.phoneTel} class="text-[1.375rem] font-bold text-primary no-underline" data-track-location="contact_page_sidebar">{business.phone}</a>
           </div>
           <div class="mb-8">
-            <h3 class="text-[0.8125rem] uppercase tracking-wider text-brand-text-light mb-2">E-Mail</h3>
+            <h3 class="text-[0.8125rem] uppercase tracking-wider text-brand-text-light mb-2" data-i18n="contact.email">E-Mail</h3>
             <a href={`mailto:${business.email}`}>{business.email}</a>
           </div>
           <div class="mb-8">
             <h3 class="text-[0.8125rem] uppercase tracking-wider text-brand-text-light mb-2" data-i18n="contact.location">Standort</h3>
-            <p>{business.city}, Schweiz</p>
+            <p data-i18n="contact.locationCity">{business.city}, Schweiz</p>
           </div>
           <div class="mb-8">
             <h3 class="text-[0.8125rem] uppercase tracking-wider text-brand-text-light mb-2" data-i18n="contact.serviceAreas">Einzugsgebiete</h3>
@@ -76,13 +76,13 @@ const schema = {
               </div>
             </div>
             <div>
-              <label for="email" class="block text-sm font-semibold mb-1 text-brand-text">E-Mail</label>
-              <input type="email" id="email" placeholder="ihre@email.com" required class="w-full py-3 px-4 border border-gray-200 rounded-lg font-sans text-[0.9375rem] text-brand-text bg-white focus:outline-none focus:border-primary" />
+              <label for="email" class="block text-sm font-semibold mb-1 text-brand-text" data-i18n="contact.form.email">E-Mail</label>
+              <input type="email" id="email" placeholder="ihre@email.com" data-i18n-placeholder="contact.form.emailPh" required class="w-full py-3 px-4 border border-gray-200 rounded-lg font-sans text-[0.9375rem] text-brand-text bg-white focus:outline-none focus:border-primary" />
             </div>
             <div>
               <label for="service" class="block text-sm font-semibold mb-1 text-brand-text" data-i18n="contact.form.service">Gewünschte Dienstleistung</label>
               <select id="service" required class="w-full py-3 px-4 border border-gray-200 rounded-lg font-sans text-[0.9375rem] text-brand-text bg-white focus:outline-none focus:border-primary">
-                <option value="" disabled selected>Dienstleistung auswählen</option>
+                <option value="" disabled selected data-i18n="contact.form.servicePh">Dienstleistung auswählen</option>
                 {coreServices.map(s => (
                   <option value={s.slug}>{s.name}</option>
                 ))}

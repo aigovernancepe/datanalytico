@@ -30,8 +30,8 @@ const nearbyCities = cities.filter(c => c.slug !== citySlug);
 const otherServices = city.services.filter(s => s.slug !== serviceSlug);
 
 const crumbs = [
-  { label: 'Startseite', url: '/' },
-  { label: 'Einzugsgebiete', url: '/areas' },
+  { label: 'Startseite', url: '/', i18nKey: 'breadcrumb.home' },
+  { label: 'Einzugsgebiete', url: '/areas', i18nKey: 'breadcrumb.areas' },
   { label: city.name, url: city.url },
   { label: service.name, url: `/areas/${city.slug}/${service.slug}` }
 ];

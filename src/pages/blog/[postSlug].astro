@@ -14,8 +14,8 @@ const post = blogPosts.find(p => p.slug === postSlug);
 if (!post) return Astro.redirect('/404');
 
 const crumbs = [
-  { label: 'Startseite', url: '/' },
-  { label: 'Blog', url: '/blog' },
+  { label: 'Startseite', url: '/', i18nKey: 'breadcrumb.home' },
+  { label: 'Blog', url: '/blog', i18nKey: 'breadcrumb.blog' },
   { label: post.title, url: `/blog/${post.slug}` }
 ];
 
