@@ -51,7 +51,7 @@ const schema = [
         <div class="text-left">
           <h1 class="mb-6">
             <span class="block text-white/80 text-lg md:text-xl font-semibold tracking-wide mb-3" data-i18n="home.hero.h1.top">{hero.h1Top}</span>
-            <span class="block text-white text-[2.25rem] md:text-[2.75rem] lg:text-[3.25rem] font-black leading-tight tracking-tight" data-i18n="home.hero.h1.bottom"><span data-i18n="home.hero.h1.rank">{hero.h1Rank}</span> <span class="text-accent" data-i18n="home.hero.h1.leads">{hero.h1Leads}</span></span>
+            <span class="block text-white text-[2.25rem] md:text-[2.75rem] lg:text-[3.25rem] font-black leading-tight tracking-tight"><span data-i18n="home.hero.h1.rank">{hero.h1Rank}</span> <span class="text-accent" data-i18n="home.hero.h1.leads">{hero.h1Leads}</span></span>
           </h1>
           <p class="text-white/80 text-lg max-w-[540px] mb-8" data-i18n="home.hero.sub">{hero.subheadline}</p>
           <div class="flex gap-4 flex-wrap mb-8">
@@ -138,7 +138,7 @@ const schema = [
           const slug = svc.slug === 'google-ads' ? 'ppc-google-ads' : svc.slug;
           return (
             <div class="p-8 bg-white border border-gray-200 rounded-xl hover:border-primary hover:shadow-md transition-all">
-              <h3 class="mb-2"><a href={`${import.meta.env.BASE_URL}${slug}`} class="text-brand-dark hover:text-primary no-underline" data-track-service={svc.name}>{svc.name}</a></h3>
+              <h3 class="mb-2"><a href={`${import.meta.env.BASE_URL}${slug}`} class="text-brand-dark hover:text-primary no-underline" data-track-service={svc.name} data-i18n={`home.svcName.${svc.slug}`}>{svc.name}</a></h3>
               <p class="text-brand-text-light text-[0.9375rem] leading-relaxed" data-i18n={`home.svc.${svc.slug}`}>{svc.description}</p>
               <a href={`${import.meta.env.BASE_URL}${slug}`} class="font-semibold text-sm text-primary" data-track-service={svc.name}><span data-i18n="home.services.learnMore">Mehr erfahren</span> &rarr;</a>
             </div>
