@@ -117,9 +117,9 @@ export const translations = {
 
     // About page
     'about.title': 'About',
-    'about.subtitle': 'Local SEO experts based in Basel, Switzerland.',
+    'about.subtitle': 'Local SEO experts based in Basel.',
     'about.who.title': 'Who Is Datanalytico?',
-    'about.who.p1': 'Datanalytico is a local SEO and digital marketing agency based in Basel, Switzerland. We help local businesses in Basel, Zurich, and Bern get found on Google — in Maps, in organic search, and in AI-generated answers.',
+    'about.who.p1': 'Datanalytico is a local SEO and digital marketing agency based in Basel. We help local businesses in Basel, Zurich, and Bern get found on Google — in Maps, in organic search, and in AI-generated answers.',
     'about.who.p2': 'We work exclusively with businesses that serve a local market. Every strategy we build is grounded in verified Swiss search data: real keyword volumes, actual competitor rankings, and Google Business Profile performance benchmarks from the CH market.',
     'about.diff.title': 'What Makes Datanalytico Different?',
     'about.diff.p1': 'Most digital marketing agencies run the same playbook for every market. Swiss local search works differently — multi-language queries, Swiss-specific directories, and a Google algorithm that treats the CH market with unique regional signals.',
