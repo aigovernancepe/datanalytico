@@ -1,85 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Homepage -->
-  <url><loc>https://datanalytico.com/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://datanalytico.com/</loc><lastmod>2026-02-21</lastmod><priority>1.0</priority><changefreq>weekly</changefreq></url>
 
   <!-- Services Hub -->
-  <url><loc>https://datanalytico.com/services</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/services/</loc><lastmod>2026-02-21</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
 
   <!-- Core Services -->
-  <url><loc>https://datanalytico.com/local-seo</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/website-design</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/google-business-profile</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/content-creation</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/local-social-media</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/ppc-google-ads</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/local-seo/</loc><lastmod>2026-02-21</lastmod><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/website-design/</loc><lastmod>2026-02-21</lastmod><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/google-business-profile/</loc><lastmod>2026-02-21</lastmod><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/content-creation/</loc><lastmod>2026-02-21</lastmod><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/local-social-media/</loc><lastmod>2026-02-21</lastmod><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/ppc-google-ads/</loc><lastmod>2026-02-21</lastmod><priority>0.8</priority><changefreq>monthly</changefreq></url>
 
   <!-- Child Services: Local SEO -->
-  <url><loc>https://datanalytico.com/local-seo/citation-building</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/local-seo/on-page-seo</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/local-seo/link-building</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/local-seo/citation-building/</loc><lastmod>2026-02-21</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/local-seo/on-page-seo/</loc><lastmod>2026-02-21</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/local-seo/link-building/</loc><lastmod>2026-02-21</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
 
   <!-- Child Services: Website Design -->
-  <url><loc>https://datanalytico.com/website-design/service-area-websites</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/website-design/website-redesign</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/website-design/landing-pages</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/website-design/service-area-websites/</loc><lastmod>2026-02-21</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/website-design/website-redesign/</loc><lastmod>2026-02-21</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/website-design/landing-pages/</loc><lastmod>2026-02-21</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
 
   <!-- Child Services: Google Business Profile -->
-  <url><loc>https://datanalytico.com/google-business-profile/gbp-optimization</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/google-business-profile/review-management</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/google-business-profile/google-maps-seo</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/google-business-profile/gbp-optimization/</loc><lastmod>2026-02-21</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/google-business-profile/review-management/</loc><lastmod>2026-02-21</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/google-business-profile/google-maps-seo/</loc><lastmod>2026-02-21</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
 
   <!-- Child Services: Content Creation -->
-  <url><loc>https://datanalytico.com/content-creation/blog-writing</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/content-creation/service-page-content</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/content-creation/blog-writing/</loc><lastmod>2026-02-21</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/content-creation/service-page-content/</loc><lastmod>2026-02-21</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
 
   <!-- Child Services: Local Social Media -->
-  <url><loc>https://datanalytico.com/local-social-media/social-media-setup</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/local-social-media/content-calendar</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/local-social-media/social-media-setup/</loc><lastmod>2026-02-21</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/local-social-media/content-calendar/</loc><lastmod>2026-02-21</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
 
   <!-- Child Services: PPC -->
-  <url><loc>https://datanalytico.com/ppc-google-ads/google-search-ads</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/ppc-google-ads/local-service-ads</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/ppc-google-ads/google-search-ads/</loc><lastmod>2026-02-21</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/ppc-google-ads/local-service-ads/</loc><lastmod>2026-02-21</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
 
   <!-- About & Contact -->
-  <url><loc>https://datanalytico.com/about</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/contact</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/about/</loc><lastmod>2026-02-21</lastmod><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/contact/</loc><lastmod>2026-02-21</lastmod><priority>0.5</priority><changefreq>monthly</changefreq></url>
 
   <!-- Areas Hub -->
-  <url><loc>https://datanalytico.com/areas</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/areas/</loc><lastmod>2026-02-21</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
 
   <!-- City Hubs -->
-  <url><loc>https://datanalytico.com/areas/basel</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/areas/zurich</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/areas/bern</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/areas/basel/</loc><lastmod>2026-02-21</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/areas/zurich/</loc><lastmod>2026-02-21</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/areas/bern/</loc><lastmod>2026-02-21</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
 
   <!-- City x Service: Basel -->
-  <url><loc>https://datanalytico.com/areas/basel/local-seo</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/areas/basel/website-design</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/areas/basel/google-business-profile</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/areas/basel/content-creation</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/areas/basel/local-social-media</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/areas/basel/ppc-google-ads</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/areas/basel/local-seo/</loc><lastmod>2026-02-21</lastmod><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/areas/basel/website-design/</loc><lastmod>2026-02-21</lastmod><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/areas/basel/google-business-profile/</loc><lastmod>2026-02-21</lastmod><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/areas/basel/content-creation/</loc><lastmod>2026-02-21</lastmod><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/areas/basel/local-social-media/</loc><lastmod>2026-02-21</lastmod><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/areas/basel/ppc-google-ads/</loc><lastmod>2026-02-21</lastmod><priority>0.5</priority><changefreq>monthly</changefreq></url>
 
   <!-- City x Service: Zurich -->
-  <url><loc>https://datanalytico.com/areas/zurich/local-seo</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/areas/zurich/website-design</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/areas/zurich/google-business-profile</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/areas/zurich/content-creation</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/areas/zurich/local-social-media</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/areas/zurich/ppc-google-ads</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/areas/zurich/local-seo/</loc><lastmod>2026-02-21</lastmod><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/areas/zurich/website-design/</loc><lastmod>2026-02-21</lastmod><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/areas/zurich/google-business-profile/</loc><lastmod>2026-02-21</lastmod><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/areas/zurich/content-creation/</loc><lastmod>2026-02-21</lastmod><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/areas/zurich/local-social-media/</loc><lastmod>2026-02-21</lastmod><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/areas/zurich/ppc-google-ads/</loc><lastmod>2026-02-21</lastmod><priority>0.5</priority><changefreq>monthly</changefreq></url>
 
   <!-- City x Service: Bern -->
-  <url><loc>https://datanalytico.com/areas/bern/local-seo</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/areas/bern/website-design</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/areas/bern/google-business-profile</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/areas/bern/content-creation</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/areas/bern/local-social-media</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://datanalytico.com/areas/bern/ppc-google-ads</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/areas/bern/local-seo/</loc><lastmod>2026-02-21</lastmod><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/areas/bern/website-design/</loc><lastmod>2026-02-21</lastmod><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/areas/bern/google-business-profile/</loc><lastmod>2026-02-21</lastmod><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/areas/bern/content-creation/</loc><lastmod>2026-02-21</lastmod><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/areas/bern/local-social-media/</loc><lastmod>2026-02-21</lastmod><priority>0.5</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://datanalytico.com/areas/bern/ppc-google-ads/</loc><lastmod>2026-02-21</lastmod><priority>0.5</priority><changefreq>monthly</changefreq></url>
 
   <!-- Blog -->
-  <url><loc>https://datanalytico.com/blog</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://datanalytico.com/blog/why-local-seo-matters</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://datanalytico.com/blog/google-business-profile-guide</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://datanalytico.com/blog/local-seo-vs-traditional-seo</loc><priority>0.5</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://datanalytico.com/blog/</loc><lastmod>2026-02-21</lastmod><priority>0.5</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://datanalytico.com/blog/why-local-seo-matters/</loc><lastmod>2026-02-21</lastmod><priority>0.5</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://datanalytico.com/blog/google-business-profile-guide/</loc><lastmod>2026-02-21</lastmod><priority>0.5</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://datanalytico.com/blog/local-seo-vs-traditional-seo/</loc><lastmod>2026-02-21</lastmod><priority>0.5</priority><changefreq>weekly</changefreq></url>
 </urlset>
