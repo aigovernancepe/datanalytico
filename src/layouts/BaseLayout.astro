@@ -243,11 +243,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         // Update html lang attribute
         document.documentElement.lang = lang;
 
-        // Update toggle button label
-        const label = document.getElementById('lang-label');
-        if (label) {
+        // Update all toggle button labels
+        document.querySelectorAll('[data-lang-label]').forEach(function(label) {
           label.textContent = lang === 'de' ? 'DE' : 'EN';
-        }
+        });
 
         // Swap text content for elements with data-i18n
         document.querySelectorAll('[data-i18n]').forEach(function(el) {
@@ -294,15 +293,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       var lang = getCurrentLang();
       applyLang(lang);
 
-      // Toggle button
-      var toggle = document.getElementById('lang-toggle');
-      if (toggle) {
+      // Toggle buttons (desktop + mobile instances)
+      document.querySelectorAll('[data-lang-toggle]').forEach(function(toggle) {
         toggle.addEventListener('click', function() {
           var current = getCurrentLang();
           var next = current === 'de' ? 'en' : 'de';
           setLang(next);
         });
-      }
+      });
     })();
   </script>
   <script src="../scripts/conversion-tracking.js"></script>

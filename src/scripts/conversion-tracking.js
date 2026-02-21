@@ -178,8 +178,7 @@
   // ------------------------------------------------------------------
   // 9. Language toggle tracking
   // ------------------------------------------------------------------
-  var langToggle = document.getElementById('lang-toggle');
-  if (langToggle) {
+  document.querySelectorAll('[data-lang-toggle]').forEach(function (langToggle) {
     langToggle.addEventListener('click', function () {
       var currentLang = localStorage.getItem('datanalytico-lang') || 'de';
       var newLang = currentLang === 'de' ? 'en' : 'de';
@@ -190,7 +189,7 @@
         page_path: window.location.pathname
       });
     });
-  }
+  });
 
   // ------------------------------------------------------------------
   // 10. Floating call button tracking
