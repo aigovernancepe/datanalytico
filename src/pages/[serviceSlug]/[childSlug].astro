@@ -26,8 +26,8 @@ const data = serviceData[childSlug as keyof typeof serviceData] as any;
 
 const crumbs = [
   { label: 'Startseite', url: '/', i18nKey: 'breadcrumb.home' },
-  { label: result.parent.name, url: result.parent.url },
-  { label: result.name, url: result.url }
+  { label: result.parent.name, url: result.parent.url, i18nKey: `svc.${result.parent.slug}` },
+  { label: result.name, url: result.url, i18nKey: `svc.${result.slug}` }
 ];
 
 const schema = {
@@ -44,16 +44,17 @@ const schema = {
 
   <section class="bg-brand-dark text-white py-16 text-center">
     <div class="container">
-      <h1 class="text-white mb-4">{result.name} in {business.city}</h1>
-      <p class="text-white/75 text-lg">{result.name} für lokale Unternehmen in der Schweiz.</p>
+      <h1 class="text-white mb-4"><span data-i18n={`svc.${result.slug}`}>{result.name}</span> in {business.city}</h1>
+      <p class="text-white/75 text-lg"><span data-i18n={`svc.${result.slug}`}>{result.name}</span> <span class="lang-de">für lokale Unternehmen in der Schweiz.</span><span class="lang-en" style="display:none">for local businesses in Switzerland.</span></p>
     </div>
   </section>
 
   <div class="py-16">
     <div class="container max-w-[900px] mx-auto">
       <section class="mb-12 pb-12 border-b border-gray-200">
-        <h2 class="mb-4">Was ist {result.name}?</h2>
-        <p class="leading-relaxed text-brand-text-light">{result.name} ist eine spezialisierte Dienstleistung unter <a href={`${import.meta.env.BASE_URL}${result.parent.url.slice(1)}`}>{result.parent.name}</a>. Datanalytico bietet dies für Unternehmen in Basel, Zürich und Bern an, die fokussierte Aufmerksamkeit auf diesen Teil ihrer lokalen Suchstrategie benötigen.</p>
+        <h2 class="mb-4"><span class="lang-de">Was ist <span data-i18n={`svc.${result.slug}`}>{result.name}</span>?</span><span class="lang-en" style="display:none">What is <span data-i18n={`svc.${result.slug}`}>{result.name}</span>?</span></h2>
+        <p class="leading-relaxed text-brand-text-light lang-de"><span data-i18n={`svc.${result.slug}`}>{result.name}</span> ist eine spezialisierte Dienstleistung unter <a href={`${import.meta.env.BASE_URL}${result.parent.url.slice(1)}`} data-i18n={`svc.${result.parent.slug}`}>{result.parent.name}</a>. Datanalytico bietet dies für Unternehmen in Basel, Zürich und Bern an, die fokussierte Aufmerksamkeit auf diesen Teil ihrer lokalen Suchstrategie benötigen.</p>
+        <p class="leading-relaxed text-brand-text-light lang-en" style="display:none"><span data-i18n={`svc.${result.slug}`}>{result.name}</span> is a specialized service under <a href={`${import.meta.env.BASE_URL}${result.parent.url.slice(1)}`} data-i18n={`svc.${result.parent.slug}`}>{result.parent.name}</a>. Datanalytico offers this for businesses in Basel, Zurich, and Bern that need focused attention on this part of their local search strategy.</p>
       </section>
 
       <section class="mb-12 pb-12 border-b border-gray-200">
@@ -83,31 +84,36 @@ const schema = {
 
       {data?.processSteps && (
         <section class="mb-12 pb-12 border-b border-gray-200">
-          <h2 class="mb-4">Unser {result.name} Prozess</h2>
+          <h2 class="mb-4"><span class="lang-de">Unser <span data-i18n={`svc.${result.slug}`}>{result.name}</span> Prozess</span><span class="lang-en" style="display:none">Our <span data-i18n={`svc.${result.slug}`}>{result.name}</span> Process</span></h2>
           <ProcessSteps steps={data.processSteps} />
         </section>
       )}
 
       {data?.priceRange && (
         <section class="mb-12 pb-12 border-b border-gray-200">
-          <h2 class="mb-4">Was kostet {result.name}?</h2>
-          <p class="leading-relaxed text-brand-text-light">
+          <h2 class="mb-4"><span class="lang-de">Was kostet <span data-i18n={`svc.${result.slug}`}>{result.name}</span>?</span><span class="lang-en" style="display:none">How much does <span data-i18n={`svc.${result.slug}`}>{result.name}</span> cost?</span></h2>
+          <p class="leading-relaxed text-brand-text-light lang-de">
             {result.name} von Datanalytico kostet zwischen {data.priceRange.min.toLocaleString('de-CH')} CHF und {data.priceRange.max.toLocaleString('de-CH')} CHF pro {data.priceRange.period === 'month' ? 'Monat' : data.priceRange.period}.
             Rufen Sie <a href={business.phoneTel} data-track-location="child_service_pricing">{business.phone}</a> an, um Ihre Bedürfnisse zu besprechen.
+          </p>
+          <p class="leading-relaxed text-brand-text-light lang-en" style="display:none">
+            {result.name} from Datanalytico costs between {data.priceRange.min.toLocaleString('de-CH')} CHF and {data.priceRange.max.toLocaleString('de-CH')} CHF per {data.priceRange.period === 'month' ? 'month' : data.priceRange.period}.
+            Call <a href={business.phoneTel} data-track-location="child_service_pricing">{business.phone}</a> to discuss your needs.
           </p>
         </section>
       )}
 
       <section class="mb-12 pb-12 border-b border-gray-200">
-        <p><a href={`${import.meta.env.BASE_URL}${result.parent.url.slice(1)}`}>&larr; Zurück zu {result.parent.name}</a></p>
+        <p><a href={`${import.meta.env.BASE_URL}${result.parent.url.slice(1)}`}>&larr; <span class="lang-de">Zurück zu <span data-i18n={`svc.${result.parent.slug}`}>{result.parent.name}</span></span><span class="lang-en" style="display:none">Back to <span data-i18n={`svc.${result.parent.slug}`}>{result.parent.name}</span></span></a></p>
       </section>
 
       <section class="text-center p-12 bg-brand-bg rounded-xl my-12">
-        <h2 class="mb-2">Starten Sie mit {result.name}</h2>
-        <p class="text-brand-text-light mb-6">Kontaktieren Sie Datanalytico für eine Beratung.</p>
+        <h2 class="mb-2"><span class="lang-de">Starten Sie mit <span data-i18n={`svc.${result.slug}`}>{result.name}</span></span><span class="lang-en" style="display:none">Get started with <span data-i18n={`svc.${result.slug}`}>{result.name}</span></span></h2>
+        <p class="text-brand-text-light mb-6 lang-de">Kontaktieren Sie Datanalytico für eine Beratung.</p>
+        <p class="text-brand-text-light mb-6 lang-en" style="display:none">Contact Datanalytico for a consultation.</p>
         <div class="flex gap-4 justify-center flex-wrap">
-          <a href={business.phoneTel} class="btn btn--accent" data-track-cta="child_service_call" data-track-location="child_service_cta">Anrufen {business.phone}</a>
-          <a href={`${import.meta.env.BASE_URL}contact`} class="btn btn--primary" data-track-cta="child_service_message">Nachricht senden</a>
+          <a href={business.phoneTel} class="btn btn--accent" data-track-cta="child_service_call" data-track-location="child_service_cta"><span class="lang-de">Anrufen</span><span class="lang-en" style="display:none">Call</span> {business.phone}</a>
+          <a href={`${import.meta.env.BASE_URL}contact`} class="btn btn--primary" data-track-cta="child_service_message"><span class="lang-de">Nachricht senden</span><span class="lang-en" style="display:none">Send a Message</span></a>
         </div>
       </section>
     </div>

@@ -78,7 +78,7 @@ const schema = {
         <ul class="my-4 pl-6">
           {coreServices.map(svc => (
             <li class="list-disc mb-2">
-              <a href={`${import.meta.env.BASE_URL}${svc.url.slice(1)}`}>{svc.name}</a>
+              <a href={`${import.meta.env.BASE_URL}${svc.url.slice(1)}`} data-i18n={`svc.${svc.slug}`}>{svc.name}</a>
             </li>
           ))}
         </ul>

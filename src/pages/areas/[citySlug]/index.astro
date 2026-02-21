@@ -18,9 +18,13 @@ if (!city) return Astro.redirect('/404');
 const fullCity = cityData.find((c: any) => c.slug === citySlug) as any;
 const nearbyCities = cities.filter(c => c.slug !== citySlug);
 const cityAdj: Record<string, string> = { basel: 'Basler', zurich: 'Zürcher', bern: 'Berner' };
+const cityAdjEn: Record<string, string> = { basel: 'Basel', zurich: 'Zurich', bern: 'Bern' };
 const adj = cityAdj[citySlug!] || city.name;
+const adjEn = cityAdjEn[citySlug!] || city.name;
 const cityH1: Record<string, string> = { basel: 'Local SEO Beratung für Basel und Umgebung', zurich: 'Local SEO Beratung für Zürich', bern: 'Local SEO Beratung für Bern' };
+const cityH1En: Record<string, string> = { basel: 'Local SEO Consulting for Basel and Surroundings', zurich: 'Local SEO Consulting for Zurich', bern: 'Local SEO Consulting for Bern' };
 const h1 = cityH1[citySlug!] || `Local SEO Beratung in ${city.name}, Schweiz`;
+const h1En = cityH1En[citySlug!] || `Local SEO Consulting in ${city.name}, Switzerland`;
 
 const crumbs = [
   { label: 'Startseite', url: '/', i18nKey: 'breadcrumb.home' },
@@ -45,8 +49,8 @@ const schema = {
       <div class="container">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
-            <h1 class="text-white mb-4">{h1}</h1>
-            <p class="text-white/75 text-lg">{city.description}</p>
+            <h1 class="text-white mb-4"><span class="lang-de">{h1}</span><span class="lang-en" style="display:none">{h1En}</span></h1>
+            <p class="text-white/75 text-lg" data-i18n={`home.areas.${city.slug}.desc`}>{city.description}</p>
           </div>
           <div>
             <img
@@ -64,8 +68,8 @@ const schema = {
   ) : (
     <section class="bg-brand-dark text-white py-16 text-center">
       <div class="container">
-        <h1 class="text-white mb-4">{h1}</h1>
-        <p class="text-white/75 text-lg">{city.description}</p>
+        <h1 class="text-white mb-4"><span class="lang-de">{h1}</span><span class="lang-en" style="display:none">{h1En}</span></h1>
+        <p class="text-white/75 text-lg" data-i18n={`home.areas.${city.slug}.desc`}>{city.description}</p>
       </div>
     </section>
   )}
@@ -73,32 +77,39 @@ const schema = {
   <div class="py-16">
     <div class="container max-w-[900px] mx-auto">
       <section class="mb-12 pb-12 border-b border-gray-200">
-        <h2 class="mb-4">Warum brauchen Unternehmen in {city.name} Local SEO?</h2>
+        <h2 class="mb-4 lang-de">Warum brauchen Unternehmen in {city.name} Local SEO?</h2>
+        <h2 class="mb-4 lang-en" style="display:none">Why do businesses in {city.name} need Local SEO?</h2>
         <p class="leading-relaxed text-brand-text-light">{fullCity?.localContext || city.description}</p>
-        <p class="leading-relaxed text-brand-text-light">Datanalytico betreut Unternehmen in {city.name} von unserem Standort in {business.city} aus. {fullCity?.responseTime ? `Reaktionszeit: ${fullCity.responseTime}.` : ''} Wir arbeiten mit Unternehmen in {city.name} über alle Dienstleistungsbereiche hinweg — von professionellen Dienstleistungen bis Einzelhandel, Gesundheitswesen bis Gastronomie.</p>
+        <p class="leading-relaxed text-brand-text-light lang-de">Datanalytico betreut Unternehmen in {city.name} von unserem Standort in {business.city} aus. {fullCity?.responseTime ? `Reaktionszeit: ${fullCity.responseTime}.` : ''} Wir arbeiten mit Unternehmen in {city.name} über alle Dienstleistungsbereiche hinweg — von professionellen Dienstleistungen bis Einzelhandel, Gesundheitswesen bis Gastronomie.</p>
+        <p class="leading-relaxed text-brand-text-light lang-en" style="display:none">Datanalytico serves businesses in {city.name} from our location in {business.city}. We work with businesses in {city.name} across all service categories — from professional services to retail, healthcare to hospitality.</p>
       </section>
 
       <section class="mb-12 pb-12 border-b border-gray-200">
-        <h2 class="mb-4">Unsere Dienstleistungen in {city.name}</h2>
-        <p class="leading-relaxed text-brand-text-light">Datanalytico bietet das gesamte Spektrum an Local SEO und Digital Marketing Dienstleistungen für Unternehmen {city.regionPhrase}.</p>
+        <h2 class="mb-4 lang-de">Unsere Dienstleistungen in {city.name}</h2>
+        <h2 class="mb-4 lang-en" style="display:none">Our services in {city.name}</h2>
+        <p class="leading-relaxed text-brand-text-light lang-de">Datanalytico bietet das gesamte Spektrum an Local SEO und Digital Marketing Dienstleistungen für Unternehmen {city.regionPhrase}.</p>
+        <p class="leading-relaxed text-brand-text-light lang-en" style="display:none">Datanalytico offers the full range of Local SEO and digital marketing services for businesses in {city.name} and the surrounding area.</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
           {city.services.map(svc => (
             <a href={`${import.meta.env.BASE_URL}areas/${city.slug}/${svc.slug}`} class="block p-6 bg-white border border-gray-200 rounded-lg hover:border-primary hover:shadow-sm no-underline transition-all" data-track-service={svc.name}>
-              <h3 class="text-base mb-1 text-brand-dark">{svc.name}</h3>
-              <span class="text-sm text-primary font-medium">{svc.name} in {city.name} &rarr;</span>
+              <h3 class="text-base mb-1 text-brand-dark" data-i18n={`svc.${svc.slug}`}>{svc.name}</h3>
+              <span class="text-sm text-primary font-medium"><span data-i18n={`svc.${svc.slug}`}>{svc.name}</span> in {city.name} &rarr;</span>
             </a>
           ))}
         </div>
       </section>
 
       <section class="mb-12 pb-12 border-b border-gray-200">
-        <h2 class="mb-4">Über {city.name}</h2>
-        <p class="leading-relaxed text-brand-text-light">{city.name} hat ungefähr {city.population.toLocaleString('de-CH')} Einwohner. {fullCity?.localContext || ''}</p>
+        <h2 class="mb-4 lang-de">Über {city.name}</h2>
+        <h2 class="mb-4 lang-en" style="display:none">About {city.name}</h2>
+        <p class="leading-relaxed text-brand-text-light lang-de">{city.name} hat ungefähr {city.population.toLocaleString('de-CH')} Einwohner. {fullCity?.localContext || ''}</p>
+        <p class="leading-relaxed text-brand-text-light lang-en" style="display:none">{city.name} has approximately {city.population.toLocaleString('en')} residents. {fullCity?.localContext || ''}</p>
       </section>
 
       {nearbyCities.length > 0 && (
         <section class="mb-12 pb-12 border-b border-gray-200">
-          <h2 class="mb-4">Wir betreuen auch</h2>
+          <h2 class="mb-4 lang-de">Wir betreuen auch</h2>
+          <h2 class="mb-4 lang-en" style="display:none">We also serve</h2>
           <div class="flex flex-col gap-2 mt-4">
             {nearbyCities.map(nc => (
               <a href={`${import.meta.env.BASE_URL}areas/${nc.slug}`} class="inline-block py-2 px-4 bg-brand-bg border border-gray-200 rounded-lg font-medium text-[0.9375rem] hover:border-primary hover:bg-white no-underline transition-all" data-track-area={nc.name}>
@@ -110,15 +121,17 @@ const schema = {
       )}
 
       <section class="text-center p-12 bg-brand-bg rounded-xl my-12">
-        <h2 class="mb-2">Ihr {adj} Unternehmen online wachsen lassen</h2>
-        <p class="text-brand-text-light mb-6">Datanalytico hilft Unternehmen in {city.name}, in der lokalen Suche höher zu ranken. Kontaktieren Sie uns für eine kostenlose Analyse.</p>
+        <h2 class="mb-2 lang-de">Ihr {adj} Unternehmen online wachsen lassen</h2>
+        <h2 class="mb-2 lang-en" style="display:none">Grow your {adjEn} business online</h2>
+        <p class="text-brand-text-light mb-6 lang-de">Datanalytico hilft Unternehmen in {city.name}, in der lokalen Suche höher zu ranken. Kontaktieren Sie uns für eine kostenlose Analyse.</p>
+        <p class="text-brand-text-light mb-6 lang-en" style="display:none">Datanalytico helps businesses in {city.name} rank higher in local search. Contact us for a free analysis.</p>
         <div class="flex gap-4 justify-center flex-wrap">
-          <a href={business.phoneTel} class="btn btn--accent" data-track-cta="city_page_call" data-track-location="city_page_cta">Anrufen {business.phone}</a>
-          <a href={`${import.meta.env.BASE_URL}contact`} class="btn btn--primary" data-track-cta="city_page_free_analysis">Kostenlose Analyse</a>
+          <a href={business.phoneTel} class="btn btn--accent" data-track-cta="city_page_call" data-track-location="city_page_cta"><span class="lang-de">Anrufen</span><span class="lang-en" style="display:none">Call</span> {business.phone}</a>
+          <a href={`${import.meta.env.BASE_URL}contact`} class="btn btn--primary" data-track-cta="city_page_free_analysis"><span class="lang-de">Kostenlose Analyse</span><span class="lang-en" style="display:none">Free Analysis</span></a>
         </div>
       </section>
 
-      <p><a href={`${import.meta.env.BASE_URL}areas`}>&larr; Zurück zu Einzugsgebiete</a></p>
+      <p><a href={`${import.meta.env.BASE_URL}areas`}>&larr; <span class="lang-de">Zurück zu Einzugsgebiete</span><span class="lang-en" style="display:none">Back to Areas We Serve</span></a></p>
     </div>
   </div>
 </BaseLayout>

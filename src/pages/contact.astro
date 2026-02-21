@@ -84,7 +84,7 @@ const schema = {
               <select id="service" required class="w-full py-3 px-4 border border-gray-200 rounded-lg font-sans text-[0.9375rem] text-brand-text bg-white focus:outline-none focus:border-primary">
                 <option value="" disabled selected data-i18n="contact.form.servicePh">Dienstleistung auswählen</option>
                 {coreServices.map(s => (
-                  <option value={s.slug}>{s.name}</option>
+                  <option value={s.slug} data-i18n={`svc.${s.slug}`}>{s.name}</option>
                 ))}
                 <option value="other" data-i18n="contact.form.other">Andere</option>
               </select>

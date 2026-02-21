@@ -119,7 +119,7 @@ const schema = [
           <select class="w-full py-3 px-4 border border-white/30 rounded-lg bg-white/10 text-white font-sans text-[0.9375rem] focus:outline-none focus:border-accent" required>
             <option value="" disabled selected data-i18n="home.form.service">Dienstleistung auswählen</option>
             {coreServices.map(s => (
-              <option value={s.slug} class="text-brand-dark">{s.name}</option>
+              <option value={s.slug} class="text-brand-dark" data-i18n={`svc.${s.slug}`}>{s.name}</option>
             ))}
           </select>
           <textarea placeholder="Erzählen Sie uns von Ihrem Unternehmen" data-i18n-placeholder="home.form.message" class="w-full py-3 px-4 border border-white/30 rounded-lg bg-white/10 text-white font-sans text-[0.9375rem] placeholder:text-white/50 focus:outline-none focus:border-accent resize-y" rows="3"></textarea>

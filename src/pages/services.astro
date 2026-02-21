@@ -25,15 +25,15 @@ const crumbs = [
         {coreServices.map(service => (
           <div>
             <h2 class="mb-4 pb-2 border-b-2 border-primary">
-              <a href={`${import.meta.env.BASE_URL}${service.url.slice(1)}`} class="no-underline">{service.name}</a>
+              <a href={`${import.meta.env.BASE_URL}${service.url.slice(1)}`} class="no-underline" data-i18n={`svc.${service.slug}`}>{service.name}</a>
             </h2>
             <div class="flex flex-col gap-2">
               <a href={`${import.meta.env.BASE_URL}${service.url.slice(1)}`} class="flex items-center gap-2 p-4 bg-white border border-gray-200 rounded-lg hover:border-primary hover:shadow-md no-underline text-brand-text transition-all" data-track-service={service.name}>
-                {service.name} &rarr;
+                <span data-i18n={`svc.${service.slug}`}>{service.name}</span> &rarr;
               </a>
               {service.children.map(child => (
                 <a href={`${import.meta.env.BASE_URL}${child.url.slice(1)}`} class="flex items-center gap-2 p-4 pl-8 bg-white border border-gray-200 rounded-lg hover:border-primary hover:shadow-md no-underline text-brand-text text-[0.9375rem] transition-all" data-track-service={child.name}>
-                  {child.name} &rarr;
+                  <span data-i18n={`svc.${child.slug}`}>{child.name}</span> &rarr;
                 </a>
               ))}
             </div>

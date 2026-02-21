@@ -21,7 +21,7 @@ const data = serviceData[serviceSlug as keyof typeof serviceData] as any;
 const crumbs = [
   { label: 'Startseite', url: '/', i18nKey: 'breadcrumb.home' },
   { label: 'Dienstleistungen', url: '/services', i18nKey: 'breadcrumb.services' },
-  { label: service.name, url: service.url }
+  { label: service.name, url: service.url, i18nKey: `svc.${service.slug}` }
 ];
 
 const schema = {
@@ -39,15 +39,15 @@ const schema = {
 
   <section class="bg-brand-dark text-white py-16 text-center">
     <div class="container">
-      <h1 class="text-white mb-4">{service.name} in der Schweiz</h1>
-      <p class="text-white/75 text-lg">{service.name} für lokale Unternehmen in Basel, Zürich und Bern.</p>
+      <h1 class="text-white mb-4"><span data-i18n={`svc.${service.slug}`}>{service.name}</span> <span class="lang-de">in der Schweiz</span><span class="lang-en" style="display:none">in Switzerland</span></h1>
+      <p class="text-white/75 text-lg"><span data-i18n={`svc.${service.slug}`}>{service.name}</span> <span class="lang-de">für lokale Unternehmen in Basel, Zürich und Bern.</span><span class="lang-en" style="display:none">for local businesses in Basel, Zurich, and Bern.</span></p>
     </div>
   </section>
 
   <div class="py-16">
     <div class="container max-w-[900px] mx-auto">
       <section class="mb-12 pb-12 border-b border-gray-200">
-        <h2 class="mb-4">Wie hilft {service.name} Ihrem Unternehmen?</h2>
+        <h2 class="mb-4"><span class="lang-de">Wie hilft <span data-i18n={`svc.${service.slug}`}>{service.name}</span> Ihrem Unternehmen?</span><span class="lang-en" style="display:none">How does <span data-i18n={`svc.${service.slug}`}>{service.name}</span> help your business?</span></h2>
         <div class="flex flex-col md:flex-row gap-6 items-start">
           {serviceSlug === 'google-business-profile' && (
             <img
@@ -61,37 +61,43 @@ const schema = {
             />
           )}
           <div>
-            <p class="leading-relaxed text-brand-text-light">{service.name} ist eine der effektivsten Methoden für lokale Unternehmen in der Schweiz, um Sichtbarkeit auf Google zu gewinnen. Wenn Kunden in Basel, Zürich oder Bern nach Ihrem Angebot suchen, muss Ihr Unternehmen in Google Maps, in den organischen Ergebnissen und in AI-generierten Antworten erscheinen.</p>
-            <p class="leading-relaxed text-brand-text-light">Datanalytico liefert {service.name} basierend auf verifizierten Schweizer Suchdaten. Wir recherchieren, was Ihre Kunden tatsächlich bei Google eingeben, identifizieren Lücken, die Ihre Wettbewerber übersehen, und erstellen einen Plan, der Ihre Rankings Monat für Monat verbessert.</p>
+            <p class="leading-relaxed text-brand-text-light lang-de">{service.name} ist eine der effektivsten Methoden für lokale Unternehmen in der Schweiz, um Sichtbarkeit auf Google zu gewinnen. Wenn Kunden in Basel, Zürich oder Bern nach Ihrem Angebot suchen, muss Ihr Unternehmen in Google Maps, in den organischen Ergebnissen und in AI-generierten Antworten erscheinen.</p>
+            <p class="leading-relaxed text-brand-text-light lang-en" style="display:none">{service.name} is one of the most effective ways for local businesses in Switzerland to gain visibility on Google. When customers in Basel, Zurich, or Bern search for your services, your business needs to appear in Google Maps, organic results, and AI-generated answers.</p>
+            <p class="leading-relaxed text-brand-text-light lang-de">Datanalytico liefert {service.name} basierend auf verifizierten Schweizer Suchdaten. Wir recherchieren, was Ihre Kunden tatsächlich bei Google eingeben, identifizieren Lücken, die Ihre Wettbewerber übersehen, und erstellen einen Plan, der Ihre Rankings Monat für Monat verbessert.</p>
+            <p class="leading-relaxed text-brand-text-light lang-en" style="display:none">Datanalytico delivers {service.name} based on verified Swiss search data. We research what your customers actually type into Google, identify gaps your competitors are missing, and build a plan that improves your rankings month over month.</p>
           </div>
         </div>
       </section>
 
       {data?.processSteps && (
         <section class="mb-12 pb-12 border-b border-gray-200">
-          <h2 class="mb-4">Wie sieht unser {service.name} Prozess aus?</h2>
+          <h2 class="mb-4"><span class="lang-de">Wie sieht unser <span data-i18n={`svc.${service.slug}`}>{service.name}</span> Prozess aus?</span><span class="lang-en" style="display:none">What does our <span data-i18n={`svc.${service.slug}`}>{service.name}</span> process look like?</span></h2>
           <ProcessSteps steps={data.processSteps} />
         </section>
       )}
 
       {data?.priceRange && (
         <section class="mb-12 pb-12 border-b border-gray-200">
-          <h2 class="mb-4">Was kostet {service.name} in der Schweiz?</h2>
-          <p class="leading-relaxed text-brand-text-light">
+          <h2 class="mb-4"><span class="lang-de">Was kostet <span data-i18n={`svc.${service.slug}`}>{service.name}</span> in der Schweiz?</span><span class="lang-en" style="display:none">How much does <span data-i18n={`svc.${service.slug}`}>{service.name}</span> cost in Switzerland?</span></h2>
+          <p class="leading-relaxed text-brand-text-light lang-de">
             {service.name} von Datanalytico kostet typischerweise zwischen {data.priceRange.min.toLocaleString('de-CH')} CHF und {data.priceRange.max.toLocaleString('de-CH')} CHF pro {data.priceRange.period === 'month' ? 'Monat' : data.priceRange.period}.
             Die Preise hängen vom Wettbewerbsniveau, der Anzahl der Zielstädte und dem Umfang ab. Rufen Sie <a href={business.phoneTel} data-track-location="service_page_pricing">{business.phone}</a> an für ein Angebot.
+          </p>
+          <p class="leading-relaxed text-brand-text-light lang-en" style="display:none">
+            {service.name} from Datanalytico typically costs between {data.priceRange.min.toLocaleString('de-CH')} CHF and {data.priceRange.max.toLocaleString('de-CH')} CHF per {data.priceRange.period === 'month' ? 'month' : data.priceRange.period}.
+            Pricing depends on competition level, number of target cities, and scope. Call <a href={business.phoneTel} data-track-location="service_page_pricing">{business.phone}</a> for a quote.
           </p>
         </section>
       )}
 
       {service.children.length > 0 && (
         <section class="mb-12 pb-12 border-b border-gray-200">
-          <h2 class="mb-4">Spezialisierte Dienstleistungen</h2>
+          <h2 class="mb-4"><span class="lang-de">Spezialisierte Dienstleistungen</span><span class="lang-en" style="display:none">Specialized Services</span></h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
             {service.children.map(child => (
               <a href={`${import.meta.env.BASE_URL}${child.url.slice(1)}`} class="block p-6 bg-white border border-gray-200 rounded-lg hover:border-primary hover:shadow-sm no-underline transition-all" data-track-service={child.name}>
-                <h3 class="text-base mb-1 text-brand-dark">{child.name}</h3>
-                <span class="text-sm text-primary font-medium">Mehr erfahren &rarr;</span>
+                <h3 class="text-base mb-1 text-brand-dark" data-i18n={`svc.${child.slug}`}>{child.name}</h3>
+                <span class="text-sm text-primary font-medium lang-de">Mehr erfahren &rarr;</span><span class="text-sm text-primary font-medium lang-en" style="display:none">Learn more &rarr;</span>
               </a>
             ))}
           </div>
@@ -99,22 +105,24 @@ const schema = {
       )}
 
       <section class="mb-12 pb-12 border-b border-gray-200">
-        <h2 class="mb-4">{service.name} nach Stadt</h2>
+        <h2 class="mb-4"><span data-i18n={`svc.${service.slug}`}>{service.name}</span> <span class="lang-de">nach Stadt</span><span class="lang-en" style="display:none">by city</span></h2>
         <div class="flex flex-col gap-2 mt-4">
           {cities.map(city => (
             <a href={`${import.meta.env.BASE_URL}areas/${city.slug}/${serviceSlug}`} class="inline-block py-2 px-4 bg-brand-bg border border-gray-200 rounded-lg font-medium text-[0.9375rem] hover:border-primary hover:bg-white no-underline transition-all" data-track-area={city.name}>
-              {service.name} in {city.name} &rarr;
+              <span data-i18n={`svc.${service.slug}`}>{service.name}</span> in {city.name} &rarr;
             </a>
           ))}
         </div>
       </section>
 
       <section class="text-center p-12 bg-brand-bg rounded-xl my-12">
-        <h2 class="mb-2">Bereit, Ihre lokalen Rankings zu verbessern?</h2>
-        <p class="text-brand-text-light mb-6">Datanalytico liefert {service.name} mit messbaren Ergebnissen. Keine Langzeitverträge erforderlich.</p>
+        <h2 class="mb-2 lang-de">Bereit, Ihre lokalen Rankings zu verbessern?</h2>
+        <h2 class="mb-2 lang-en" style="display:none">Ready to improve your local rankings?</h2>
+        <p class="text-brand-text-light mb-6 lang-de">Datanalytico liefert {service.name} mit messbaren Ergebnissen. Keine Langzeitverträge erforderlich.</p>
+        <p class="text-brand-text-light mb-6 lang-en" style="display:none">Datanalytico delivers {service.name} with measurable results. No long-term contracts required.</p>
         <div class="flex gap-4 justify-center flex-wrap">
-          <a href={business.phoneTel} class="btn btn--accent" data-track-cta="service_page_call" data-track-location="service_page_cta">Anrufen {business.phone}</a>
-          <a href={`${import.meta.env.BASE_URL}contact`} class="btn btn--primary" data-track-cta="service_page_free_analysis">Kostenlose Analyse</a>
+          <a href={business.phoneTel} class="btn btn--accent" data-track-cta="service_page_call" data-track-location="service_page_cta"><span class="lang-de">Anrufen</span><span class="lang-en" style="display:none">Call</span> {business.phone}</a>
+          <a href={`${import.meta.env.BASE_URL}contact`} class="btn btn--primary" data-track-cta="service_page_free_analysis"><span class="lang-de">Kostenlose Analyse</span><span class="lang-en" style="display:none">Free Analysis</span></a>
         </div>
       </section>
     </div>
