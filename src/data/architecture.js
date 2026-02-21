@@ -20,7 +20,7 @@ export const navigation = [
 
 export const coreServices = [
   {
-    name: 'Local SEO Services',
+    name: 'Local SEO Beratung',
     slug: 'local-seo',
     url: '/local-seo',
     children: [

@@ -29,13 +29,13 @@ const crumbs = [
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  serviceType: 'Local SEO Services',
+  serviceType: 'Local SEO Beratung',
   provider: { '@id': `https://${business.domain}/#business` },
   areaServed: { '@type': 'City', name: city.name, '@id': `https://en.wikipedia.org/wiki/${city.name}` }
 };
 ---
 
-<BaseLayout title={citySlug === 'basel' ? 'Local SEO Beratung in Basel — Datanalytico' : `Local SEO Dienstleistungen in ${city.name}, Schweiz — Datanalytico`} description={city.description} schema={schema}>
+<BaseLayout title={`Local SEO Beratung in ${city.name}, Schweiz — Datanalytico`} description={city.description} schema={schema}>
   <Breadcrumb crumbs={crumbs} />
 
   {citySlug === 'basel' ? (
@@ -43,13 +43,13 @@ const schema = {
       <div class="container">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
-            <h1 class="text-white mb-4">Local SEO Beratung in Basel</h1>
+            <h1 class="text-white mb-4">Local SEO Beratung in Basel, Schweiz</h1>
             <p class="text-white/75 text-lg">{city.description}</p>
           </div>
           <div>
             <img
               src="/brand/2024-basler-herbstmesse-kasernenareal-04.webp"
-              alt="Basler Herbstmesse am Kasernenareal — Local SEO Beratung für Unternehmen in Basel"
+              alt="Basler Herbstmesse am Kasernenareal — Local SEO Beratung für Unternehmen in Basel, Schweiz"
               class="rounded-lg w-full"
               width="640"
               height="427"
@@ -62,7 +62,7 @@ const schema = {
   ) : (
     <section class="bg-brand-dark text-white py-16 text-center">
       <div class="container">
-        <h1 class="text-white mb-4">Local SEO Dienstleistungen in {city.name}, Schweiz</h1>
+        <h1 class="text-white mb-4">Local SEO Beratung in {city.name}, Schweiz</h1>
         <p class="text-white/75 text-lg">{city.description}</p>
       </div>
     </section>
