@@ -30,18 +30,18 @@
         "url": "/local-seo",
         "description": "Data-driven local SEO that puts your business on the map. We build your online visibility so local customers find you first.",
         "children": [
-          { "name": "Citation Building & Management", "slug": "citation-building", "url": "/local-seo/citation-building" },
+          { "name": "Eintragsaufbau & Verwaltung", "slug": "citation-building", "url": "/local-seo/citation-building" },
           { "name": "On-Page SEO", "slug": "on-page-seo", "url": "/local-seo/on-page-seo" },
-          { "name": "Link Building for Local Businesses", "slug": "link-building", "url": "/local-seo/link-building" }
+          { "name": "Linkaufbau Für Lokale Unternehmen", "slug": "link-building", "url": "/local-seo/link-building" }
         ]
       },
       {
-        "name": "Website Design & Development",
+        "name": "Webdesign & Entwicklung",
         "slug": "website-design",
         "url": "/website-design",
         "description": "SEO-optimized websites built to convert local searchers into customers. Fast, mobile-first, and designed around how people actually search.",
         "children": [
-          { "name": "Service Area Website Design", "slug": "service-area-websites", "url": "/website-design/service-area-websites" },
+          { "name": "Einzugsgebiet Webdesign", "slug": "service-area-websites", "url": "/website-design/service-area-websites" },
           { "name": "Website Redesign", "slug": "website-redesign", "url": "/website-design/website-redesign" },
           { "name": "Landing Page Design", "slug": "landing-pages", "url": "/website-design/landing-pages" }
         ]
@@ -52,29 +52,29 @@
         "url": "/google-business-profile",
         "description": "Your Google Business Profile drives 60-70% of local leads. We optimize, manage, and grow your GBP so you show up in the map pack.",
         "children": [
-          { "name": "GBP Optimization", "slug": "gbp-optimization", "url": "/google-business-profile/gbp-optimization" },
-          { "name": "Review Management", "slug": "review-management", "url": "/google-business-profile/review-management" },
+          { "name": "GBP-Optimierung", "slug": "gbp-optimization", "url": "/google-business-profile/gbp-optimization" },
+          { "name": "Bewertungsmanagement", "slug": "review-management", "url": "/google-business-profile/review-management" },
           { "name": "Google Maps SEO", "slug": "google-maps-seo", "url": "/google-business-profile/google-maps-seo" }
         ]
       },
       {
-        "name": "Content Creation",
+        "name": "Content-Erstellung",
         "slug": "content-creation",
         "url": "/content-creation",
         "description": "Strategic content that ranks and converts. Service pages, blog posts, and city pages built on keyword research and local search intent.",
         "children": [
-          { "name": "Blog Writing Services", "slug": "blog-writing", "url": "/content-creation/blog-writing" },
-          { "name": "Service Page Content", "slug": "service-page-content", "url": "/content-creation/service-page-content" }
+          { "name": "Blog-Texterstellung", "slug": "blog-writing", "url": "/content-creation/blog-writing" },
+          { "name": "Serviceseiten-Content", "slug": "service-page-content", "url": "/content-creation/service-page-content" }
         ]
       },
       {
-        "name": "Local Social Media",
+        "name": "Lokale Social Media",
         "slug": "local-social-media",
         "url": "/local-social-media",
         "description": "Social media strategy that amplifies your local search visibility. We turn social signals into search signals.",
         "children": [
-          { "name": "Social Media Setup & Optimization", "slug": "social-media-setup", "url": "/local-social-media/social-media-setup" },
-          { "name": "Social Content Calendar", "slug": "content-calendar", "url": "/local-social-media/content-calendar" }
+          { "name": "Social Media Einrichtung & Optimierung", "slug": "social-media-setup", "url": "/local-social-media/social-media-setup" },
+          { "name": "Social Content Kalender", "slug": "content-calendar", "url": "/local-social-media/content-calendar" }
         ]
       },
       {
@@ -327,10 +327,10 @@
         "localContext": "Heimat der Novartis- und Roche-Campus, des Messegeländes Messe Basel und einer wachsenden Startup-Szene im Dreispitz. Das trinationale Metropolgebiet (CH/DE/FR) bedeutet, dass Unternehmen häufig mehrsprachiges SEO benötigen. Wichtige Geschäftsviertel sind St. Johann, Gundeldingen und Kleinbasel.",
         "services": [
           { "name": "Local SEO Beratung", "slug": "local-seo", "url": "/areas/basel/local-seo" },
-          { "name": "Website Design & Development", "slug": "website-design", "url": "/areas/basel/website-design" },
+          { "name": "Webdesign & Entwicklung", "slug": "website-design", "url": "/areas/basel/website-design" },
           { "name": "Google Business Profile Management", "slug": "google-business-profile", "url": "/areas/basel/google-business-profile" },
-          { "name": "Content Creation", "slug": "content-creation", "url": "/areas/basel/content-creation" },
-          { "name": "Local Social Media", "slug": "local-social-media", "url": "/areas/basel/local-social-media" },
+          { "name": "Content-Erstellung", "slug": "content-creation", "url": "/areas/basel/content-creation" },
+          { "name": "Lokale Social Media", "slug": "local-social-media", "url": "/areas/basel/local-social-media" },
           { "name": "PPC & Google Ads", "slug": "ppc-google-ads", "url": "/areas/basel/ppc-google-ads" }
         ]
       },
@@ -351,10 +351,10 @@
         "localContext": "Europas Fintech-Zentrum mit Google, UBS und Zurich Insurance als Hauptsitz. Zürich-West (Kreis 5) ist das Tech- und Startup-Epizentrum. Bahnhofstrasse und Kreis 1 beherbergen Premium-Dienstleistungen. Über 434'000 Einwohner und ein Metropolgebiet von 1,4 Millionen machen Zürich zum wettbewerbsintensivsten Schweizer Markt für lokale Suche.",
         "services": [
           { "name": "Local SEO Beratung", "slug": "local-seo", "url": "/areas/zurich/local-seo" },
-          { "name": "Website Design & Development", "slug": "website-design", "url": "/areas/zurich/website-design" },
+          { "name": "Webdesign & Entwicklung", "slug": "website-design", "url": "/areas/zurich/website-design" },
           { "name": "Google Business Profile Management", "slug": "google-business-profile", "url": "/areas/zurich/google-business-profile" },
-          { "name": "Content Creation", "slug": "content-creation", "url": "/areas/zurich/content-creation" },
-          { "name": "Local Social Media", "slug": "local-social-media", "url": "/areas/zurich/local-social-media" },
+          { "name": "Content-Erstellung", "slug": "content-creation", "url": "/areas/zurich/content-creation" },
+          { "name": "Lokale Social Media", "slug": "local-social-media", "url": "/areas/zurich/local-social-media" },
           { "name": "PPC & Google Ads", "slug": "ppc-google-ads", "url": "/areas/zurich/ppc-google-ads" }
         ]
       },
@@ -375,10 +375,10 @@
         "localContext": "Die UNESCO-Welterbe-Altstadt ist das politische Zentrum, doch Berns Wirtschaft lebt von KMU in Präzisionsfertigung, Medizintechnik und professionellen Dienstleistungen. Der nahe gelegene Innovationspark Biel/Bienne treibt das Technologiewachstum voran. Wichtige Quartiere: Kirchenfeld, Mattenhof, Breitenrain, Bümpliz.",
         "services": [
           { "name": "Local SEO Beratung", "slug": "local-seo", "url": "/areas/bern/local-seo" },
-          { "name": "Website Design & Development", "slug": "website-design", "url": "/areas/bern/website-design" },
+          { "name": "Webdesign & Entwicklung", "slug": "website-design", "url": "/areas/bern/website-design" },
           { "name": "Google Business Profile Management", "slug": "google-business-profile", "url": "/areas/bern/google-business-profile" },
-          { "name": "Content Creation", "slug": "content-creation", "url": "/areas/bern/content-creation" },
-          { "name": "Local Social Media", "slug": "local-social-media", "url": "/areas/bern/local-social-media" },
+          { "name": "Content-Erstellung", "slug": "content-creation", "url": "/areas/bern/content-creation" },
+          { "name": "Lokale Social Media", "slug": "local-social-media", "url": "/areas/bern/local-social-media" },
           { "name": "PPC & Google Ads", "slug": "ppc-google-ads", "url": "/areas/bern/ppc-google-ads" }
         ]
       }
