@@ -61,7 +61,12 @@ const year = new Date().getFullYear();
     </div>
 
     <div class="pt-8 border-t border-white/10 text-center text-[0.8125rem] text-white/50">
-      &copy; 2024–{year} {business.name}. <span data-i18n="footer.rights">Alle Rechte vorbehalten.</span>
+      <div>&copy; 2024–{year} {business.name}. <span data-i18n="footer.rights">Alle Rechte vorbehalten.</span></div>
+      <button
+        onclick="if(window.openCookieBanner)window.openCookieBanner()"
+        class="mt-2 text-white/40 hover:text-white/70 text-[0.75rem] underline cursor-pointer bg-transparent border-0 p-0"
+        data-i18n="footer.cookieSettings"
+      >Cookie-Einstellungen</button>
     </div>
   </div>
 </footer>
