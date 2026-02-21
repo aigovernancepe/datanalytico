@@ -138,7 +138,7 @@ const schema = [
           const slug = svc.slug === 'google-ads' ? 'ppc-google-ads' : svc.slug;
           return (
             <div class="p-8 bg-white border border-gray-200 rounded-xl hover:border-primary hover:shadow-md transition-all">
-              <h3 class="mb-2"><a href={`${import.meta.env.BASE_URL}${slug}`} class="text-brand-dark hover:text-primary no-underline" data-track-service={svc.name}>{svc.name}</a></h3>
+              <h3 class="mb-2"><a href={`${import.meta.env.BASE_URL}${slug}`} class="text-brand-dark hover:text-primary no-underline" data-track-service={svc.name} data-i18n={`home.svcName.${svc.slug}`}>{svc.name}</a></h3>
               <p class="text-brand-text-light text-[0.9375rem] leading-relaxed" data-i18n={`home.svc.${svc.slug}`}>{svc.description}</p>
               <a href={`${import.meta.env.BASE_URL}${slug}`} class="font-semibold text-sm text-primary" data-track-service={svc.name}><span data-i18n="home.services.learnMore">Mehr erfahren</span> &rarr;</a>
             </div>
