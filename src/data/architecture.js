@@ -84,6 +84,7 @@ export const cities = [
     slug: 'basel',
     url: '/areas/basel',
     canton: 'Basel-Stadt',
+    regionPhrase: 'in Basel und Umgebung',
     population: 180000,
     description: 'Basel ist die drittgrösste Stadt der Schweiz und ein globales Zentrum für Life Sciences und Pharma. Hunderte von KMU im Raum Basel brauchen lokale Sichtbarkeit, um wettbewerbsfähig zu bleiben.',
     services: coreServices.map(s => ({ name: s.name, slug: s.slug, url: `/areas/basel/${s.slug}` }))
@@ -93,6 +94,7 @@ export const cities = [
     slug: 'zurich',
     url: '/areas/zurich',
     canton: 'Zürich',
+    regionPhrase: 'im Kanton Zürich',
     population: 434335,
     description: 'Zürich ist die grösste Stadt der Schweiz und Finanzhauptstadt. Mit über 116\'000 Unternehmen ist der Wettbewerb um lokale Suchsichtbarkeit intensiv.',
     services: coreServices.map(s => ({ name: s.name, slug: s.slug, url: `/areas/zurich/${s.slug}` }))
@@ -102,6 +104,7 @@ export const cities = [
     slug: 'bern',
     url: '/areas/bern',
     canton: 'Bern',
+    regionPhrase: 'in Bern und Umgebung',
     population: 146000,
     description: 'Bern ist die Bundeshauptstadt der Schweiz und ein KMU-Zentrum — 67 % der Arbeitsplätze sind in Unternehmen mit weniger als 250 Mitarbeitern.',
     services: coreServices.map(s => ({ name: s.name, slug: s.slug, url: `/areas/bern/${s.slug}` }))
