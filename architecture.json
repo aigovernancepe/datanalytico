@@ -25,7 +25,7 @@
     "secondaryCategories": [],
     "coreServices": [
       {
-        "name": "Local SEO Services",
+        "name": "Local SEO Beratung",
         "slug": "local-seo",
         "url": "/local-seo",
         "description": "Data-driven local SEO that puts your business on the map. We build your online visibility so local customers find you first.",
@@ -326,7 +326,7 @@
         "description": "Basel ist die drittgrösste Stadt der Schweiz und ein globales Zentrum für Life Sciences und Pharma. Hunderte von KMU im Raum Basel brauchen lokale Sichtbarkeit, um im Wettbewerb um Talente, Kunden und Aufmerksamkeit bestehen zu können.",
         "localContext": "Heimat der Novartis- und Roche-Campus, des Messegeländes Messe Basel und einer wachsenden Startup-Szene im Dreispitz. Das trinationale Metropolgebiet (CH/DE/FR) bedeutet, dass Unternehmen häufig mehrsprachiges SEO benötigen. Wichtige Geschäftsviertel sind St. Johann, Gundeldingen und Kleinbasel.",
         "services": [
-          { "name": "Local SEO Services", "slug": "local-seo", "url": "/areas/basel/local-seo" },
+          { "name": "Local SEO Beratung", "slug": "local-seo", "url": "/areas/basel/local-seo" },
           { "name": "Website Design & Development", "slug": "website-design", "url": "/areas/basel/website-design" },
           { "name": "Google Business Profile Management", "slug": "google-business-profile", "url": "/areas/basel/google-business-profile" },
           { "name": "Content Creation", "slug": "content-creation", "url": "/areas/basel/content-creation" },
@@ -350,7 +350,7 @@
         "description": "Zürich ist die grösste Stadt der Schweiz und ihre Finanzhauptstadt. Mit über 116'000 registrierten Unternehmen im Kanton ist der Wettbewerb um lokale Suchsichtbarkeit intensiv — und die meisten Unternehmen investieren zu wenig in Local SEO.",
         "localContext": "Europas Fintech-Zentrum mit Google, UBS und Zurich Insurance als Hauptsitz. Zürich-West (Kreis 5) ist das Tech- und Startup-Epizentrum. Bahnhofstrasse und Kreis 1 beherbergen Premium-Dienstleistungen. Über 434'000 Einwohner und ein Metropolgebiet von 1,4 Millionen machen Zürich zum wettbewerbsintensivsten Schweizer Markt für lokale Suche.",
         "services": [
-          { "name": "Local SEO Services", "slug": "local-seo", "url": "/areas/zurich/local-seo" },
+          { "name": "Local SEO Beratung", "slug": "local-seo", "url": "/areas/zurich/local-seo" },
           { "name": "Website Design & Development", "slug": "website-design", "url": "/areas/zurich/website-design" },
           { "name": "Google Business Profile Management", "slug": "google-business-profile", "url": "/areas/zurich/google-business-profile" },
           { "name": "Content Creation", "slug": "content-creation", "url": "/areas/zurich/content-creation" },
@@ -374,7 +374,7 @@
         "description": "Bern ist die Bundeshauptstadt der Schweiz und ein KMU-Zentrum — 67 % der Arbeitsplätze sind in Unternehmen mit weniger als 250 Mitarbeitern. Genau diese kleinen und mittleren Unternehmen profitieren am meisten von Local SEO.",
         "localContext": "Die UNESCO-Welterbe-Altstadt ist das politische Zentrum, doch Berns Wirtschaft lebt von KMU in Präzisionsfertigung, Medizintechnik und professionellen Dienstleistungen. Der nahe gelegene Innovationspark Biel/Bienne treibt das Technologiewachstum voran. Wichtige Quartiere: Kirchenfeld, Mattenhof, Breitenrain, Bümpliz.",
         "services": [
-          { "name": "Local SEO Services", "slug": "local-seo", "url": "/areas/bern/local-seo" },
+          { "name": "Local SEO Beratung", "slug": "local-seo", "url": "/areas/bern/local-seo" },
           { "name": "Website Design & Development", "slug": "website-design", "url": "/areas/bern/website-design" },
           { "name": "Google Business Profile Management", "slug": "google-business-profile", "url": "/areas/bern/google-business-profile" },
           { "name": "Content Creation", "slug": "content-creation", "url": "/areas/bern/content-creation" },

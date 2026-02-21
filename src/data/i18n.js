@@ -221,7 +221,7 @@ export const translations = {
     'child.cta.message': 'Send a Message',
 
     // Dynamic city pages
-    'city.h1': 'Local SEO Services in {city}, Switzerland',
+    'city.h1': 'Local SEO Consulting in {city}, Switzerland',
     'city.why.title': 'Why Do {city} Businesses Need Local SEO?',
     'city.services.title': 'Our Services in {city}',
     'city.services.desc': 'Datanalytico provides the full range of local SEO and digital marketing services to businesses in {city}, {canton}.',
