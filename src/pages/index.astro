@@ -137,7 +137,7 @@ const schema = [
         {cities.map(city => (
           <a href={`${import.meta.env.BASE_URL}areas/${city.slug}`} class="block p-8 bg-white border border-gray-200 rounded-xl hover:border-primary hover:shadow-md transition-all no-underline">
             <h3 class="mb-1">{city.name}</h3>
-            <p class="text-[0.8125rem] text-primary mb-2">{city.canton} &middot; {city.population.toLocaleString()} <span data-i18n="home.areas.residents">Einwohner</span></p>
+            <p class="text-[0.8125rem] text-primary mb-2">{city.canton} &middot; {city.population.toLocaleString('de-CH')} <span data-i18n="home.areas.residents">Einwohner</span></p>
             <p class="text-[0.9375rem] text-brand-text-light mb-0">{city.description}</p>
           </a>
         ))}
